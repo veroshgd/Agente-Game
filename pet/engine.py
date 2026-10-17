@@ -15,13 +15,23 @@ spec.loader.exec_module(core)
 
 MAX_TICKS = 10000
 MAX_COMMANDS = 12000
+# Saves replay under the rules they were created with, so old pets never rewrite history.
+# 1 = original prototype. 2 = trait homeostasis + eating before hunger harms the body
+# (audit 2026-10-14: under v1 every pet drifted to curiosity 100 / caution 0 and all
+# 24 audited pets formed a hunger trauma in the "safe" home).
+RULES = 2
+TRAIT_HOME_PULL = 0.004      # per hour, fraction of the gap back to the trait's anchor
+EAT_URGENCY_FROM = 55        # hunger where eating starts to outrank leisure
+EAT_URGENCY = 6.0            # extra eat score per hunger point above that
 LABELS = {'eat': '吃点东西', 'sleep': '休息', 'gather_food': '收集食物',
           'gather_material': '收集材料', 'build': '整理小屋', 'explore': '四处探索',
           'read': '读书', 'garden': '照料花园', 'visit': '和米粒一起种花'}
 
 class PetAgent(core.Agent):
-    def __init__(self, seed, world):
+    def __init__(self, seed, world, rules=RULES):
         super().__init__(seed, world)
+        self.rules = rules
+        self.birth = dict(self.traits)
         self.shelter = 80.0
         self.inventory['food'] = 6.0
         self.shared = []
@@ -39,6 +49,9 @@ class PetAgent(core.Agent):
 
     def score(self, action, day):
         base = super().score(action, day)
+        if base is not None and action == 'eat' and self.rules >= 2:
+            # Product safe-home: eat before the core's condition drain (hunger 70) starts.
+            return base + max(0, self.hunger - EAT_URGENCY_FROM) * EAT_URGENCY
         if base is None or action != 'explore' or not self.world.has('garden'):
             return base
         bonus, _ = self.influence()
@@ -61,6 +74,8 @@ class PetAgent(core.Agent):
             wants_visit = invited or (ids and self.rng.random() < min(.75, .15 + bonus / 14))
             outcome = 'visit' if neighbor_home and wants_visit else 'garden'
         super().act(action, day, hour)
+        if self.rules >= 2:
+            self.settle()
         self.last = {'action': outcome, 'core_action': action,
                      'cause_ids': ids if action == 'explore' else [],
                      'memory_bonus': round(bonus, 3) if action == 'explore' else 0,
@@ -68,14 +83,24 @@ class PetAgent(core.Agent):
                      'invited': invited and outcome == 'visit',
                      'before': before, 'after': dict(self.traits)}
 
+    def settle(self):
+        """Homeostasis: the safe home removes the storms and scarcity that balanced
+        exploration in the research world, so pull each trait gently back toward its
+        anchor. Daily life still shapes it; it just cannot run away to 0 or 100.
+        Landmark identity (sim.py) raises the anchor, so key experiences still last."""
+        for t, v in self.traits.items():
+            anchor = max(self.birth[t], self.trait_identity[t])
+            self.traits[t] = max(self.trait_floor[t], min(100.0, v + (anchor - v) * TRAIT_HOME_PULL))
+
 class Session:
-    def __init__(self, seed=42):
+    def __init__(self, seed=42, rules=RULES):
         self.seed = seed
+        self.rules = rules
         self.tick = 0
         self.name = '芽芽'
         self.world = core.World(seed=seed ^ 0x5EED, food_regen=8, food_cap=20,
                                 storm_chance=0, season_amplitude=0)
-        self.agent = PetAgent(seed, self.world)
+        self.agent = PetAgent(seed, self.world, rules)
         self.birth_traits = dict(self.agent.traits)
         self.events = []
         self.commands = []
@@ -97,8 +122,10 @@ class Session:
         if a.inventory['food'] < 1:
             a.inventory['food'] += 3
             self.event('home', '厨房补充了食物', '小屋会自动补充食物，饿了它会自己决定去吃。')
-        if a.hunger > 85:
-            a.hunger = 65
+        # v2 steps in before this tick's hunger would cross the core's condition drain.
+        limit, reset = (core.COND_DRAIN_AT - core.HUNGER_RATE, 60) if self.rules >= 2 else (85, 65)
+        if a.hunger > limit:
+            a.hunger = reset
             self.event('home', '小屋提供了应急照料', '原型的安全照料降低了饥饿，避免生存惩罚。')
         old_memory_count = len(a.memories)
         a.tick(day, hour)
@@ -163,17 +190,17 @@ class Session:
         self.commands.append(dict(command))
 
     def archive(self):
-        return {'version': 1, 'seed': self.seed, 'commands': self.commands}
+        return {'version': self.rules, 'seed': self.seed, 'commands': self.commands}
 
     @classmethod
     def restore(cls, data):
-        if not isinstance(data, dict) or set(data) != {'version','seed','commands'} or type(data['version']) is not int or data['version'] != 1:
+        if not isinstance(data, dict) or set(data) != {'version','seed','commands'} or type(data['version']) is not int or not 1 <= data['version'] <= RULES:
             raise ValueError('不支持的存档版本')
         if type(data['seed']) is not int or not 0 <= data['seed'] <= 2**31:
             raise ValueError('存档种子无效')
         if not isinstance(data['commands'], list) or len(data['commands']) > MAX_COMMANDS:
             raise ValueError('存档指令数量无效')
-        result = cls(data['seed'])
+        result = cls(data['seed'], data['version'])
         for command in data['commands']:
             result.apply(command)
         return result

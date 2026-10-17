@@ -4,13 +4,14 @@ import json
 from pathlib import Path
 import sys
 import threading
+import time
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 import pytest
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from pet.engine import Session
-from pet.server import create_server, save_atomic
+from pet.server import AWAY_CAP_HOURS, create_server, hours_owed, save_atomic, split_clock
 
 def run(s, days):
     for _ in range(days):
@@ -85,10 +86,52 @@ def test_safe_home_and_bounded_memory_influence():
         assert 0<=s.agent.influence()[0]<=10
         assert all(0<=v<=100 for v in s.agent.traits.values())
 
+def test_traits_stay_individual_and_no_hunger_trauma():
+    # Audit 2026-10-14: under rules v1 every pet reached curiosity 100 and a hunger trauma.
+    finals=[]
+    for seed in (1,42,901):
+        s=Session(seed);s.apply({'kind':'object','value':'garden'})
+        s.apply({'kind':'invite','value':None});run(s,60)
+        assert 'fears_hunger' not in s.agent.flags and s.agent.condition>=99
+        assert all(20<=v<=90 for v in s.agent.traits.values())
+        finals.append(s.agent.traits['curiosity'])
+    assert len({round(v) for v in finals})>1
+
+def test_old_saves_keep_their_rules():
+    old=Session(42,rules=1);old.apply({'kind':'object','value':'garden'});run(old,40)
+    assert old.archive()['version']==1
+    again=Session.restore(json.loads(json.dumps(old.archive())))
+    assert again.rules==1 and again.view()==old.view()
+    assert again.view()['traits']!=Session.restore({**old.archive(),'version':2}).view()['traits']
+
 def test_corrupt_save_not_overwritten(tmp_path):
     path=tmp_path/'pet.json';path.write_text('not json')
     with pytest.raises(ValueError):create_server(path,0)
     assert path.read_text()=='not json'
+
+def test_hours_owed_keeps_leftover_and_caps_long_absence():
+    assert hours_owed(0, 3*3600+1200, 1) == (3, 3*3600)
+    assert hours_owed(0, 30*60, 2) == (1, 1800)
+    assert hours_owed(0, 1000*3600, 1) == (AWAY_CAP_HOURS, 1000*3600)
+    assert hours_owed(5000, 100, 1) == (0, 5000)
+
+def test_pet_lives_while_page_and_server_are_closed(tmp_path):
+    path=tmp_path/'pet.json'
+    s=garden();save_atomic(path,s,time.time()-5*3600-60)
+    server=create_server(path,0)
+    thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+    base=f'http://127.0.0.1:{server.server_port}'
+    try:
+        with urlopen(base+'/api/state') as response:data=json.load(response)
+        assert data['state']['tick']==5 and data['away']['hours']==5
+        assert sum(data['away']['counts'].values())==5
+        saved=json.loads(path.read_text(encoding='utf-8'))
+        assert 0<time.time()-saved['last_seen']<120
+        assert Session.restore(split_clock(saved)[0]).view()==data['state']
+        with urlopen(base+'/api/state') as response:again=json.load(response)
+        assert again['away'] is None and again['state']['tick']==5
+    finally:
+        server.shutdown();server.server_close();thread.join()
 
 def test_http_save_restart_and_access_checks(tmp_path):
     path=tmp_path/'pet.json'
@@ -104,7 +147,7 @@ def test_http_save_restart_and_access_checks(tmp_path):
         assert exc.value.code==403
         with urlopen(Request(base+'/api/command',body,headers={'X-Pet-Token':data['token']})) as response:result=json.load(response)
         assert result['state']['tick']==6
-        assert Session.restore(json.loads(path.read_text())).view()==result['state']
+        assert Session.restore(split_clock(json.loads(path.read_text()))[0]).view()==result['state']
         with pytest.raises(HTTPError) as exc:urlopen(base+'/../sim.py')
         assert exc.value.code==404
     finally:
