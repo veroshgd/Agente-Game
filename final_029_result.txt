@@ -1,0 +1,84 @@
+029 FINAL  seeds 80000-81499  N=1500
+task_fp=26778f672e9e7009  lambda=1.0  SESOI=1.0  RETENTION_MAX=0.25
+analysis_seed=8181 n_boot=10000  donor=(i+750)%1500  shuffle_salt=0x29c10
+modules novel_task.py:9db73d14 memory_transfer_probe.py:b4327de3 memory_transfer_probe3.py:f0664436 memory_acquisition_probe.py:7b88b9f7 memory_lambda_calibration.py:9323f22b memory_transfer_rehearsal.py:b29b2d41
+ledger:
+0–1499        development（029 探针 / 校准 / rehearsal 用 0–399）
+10000–11499   021 留出集 / 028 transport rehearsal / ★029 full-shape rehearsal★
+20000–21499   022 预注册段 / 027 + 028 group-blind calibration
+50000–51499   v3 / 025 persistence FINAL
+60000–61499   027 novel-task FINAL
+70000–71499   028 breadth FINAL
+80000–81499   ★★ 029 FINAL ★★
+
+==============================================================================
+1. ACQUISITION / COMPLETENESS
+==============================================================================
+  memory completeness（primary extensive margin）  Stable 65.40%   Volatile 74.80%
+  non-zero evidence rate（不叫 availability）      Stable 64.13%   Volatile 74.53%
+  ★ 所有 primary 分析使用全部预定义 agent，含 incomplete 与 m=0 ★
+
+==============================================================================
+2. G2 INTERFACE-CAPACITY TRANSPORT（group-blind：label 在输入处丢弃）
+==============================================================================
+  pooled m: n=3000  m=0 占 30.7%   eligible states=9324
+  saturation            0.0000   门槛 0.05    ✓
+  median|Δp|            0.0737   门槛 0.02    ✓
+  preference flip       0.1476   门槛 0.25    ✓
+  max exposure/80       6.3633   门槛 20      ✓
+
+==============================================================================
+3. VALIDITY VERDICT（★先于 outcome★）
+==============================================================================
+  G1 acquisition manipulation   ✓   （异常前逐位相同=True，reward opportunity 相等）
+  G2 interface capacity         ✓
+  G3 integrity assertions       ✓
+
+  ★ confirmatory interpretation：启用
+
+==============================================================================
+4. PRIMARY  ΔC = C(Volatile) − C(Stable)  同种子配对，全人群
+==============================================================================
+  OWN           ΔC =  -0.8833   95% CI [-1.0160, -0.7533]
+  DELETE        ΔC =  +0.0000   95% CI [+0.0000, +0.0000]
+  SWAP          ΔC =  +0.8833   95% CI [+0.7540, +1.0160]
+  SHUFFLE       ΔC =  +0.0093   95% CI [-0.0733, +0.0913]
+  XSEED-DONOR   ΔC =  -0.9240   95% CI [-1.0533, -0.7960]
+
+==============================================================================
+5. SESOI 三档判读（SESOI = 1.0 post-change error）
+==============================================================================
+  95% CI [-1.0160, -0.7533]  →  ★ Detectable memory-mediated transfer, but functional significance not established. ★
+
+==============================================================================
+6. SHUFFLE —— conditional retention ratio
+==============================================================================
+  R = |ΔC_SHUFFLE| / |ΔC_OWN| = 0.0106   95% CI [0.0015, 0.1102]
+  joint same-seed bootstrap，abs 与除法逐 replicate 施加
+  判据 CI 上界 < 0.25  →  满足 ✓
+  → ≥75% attenuation established：transfer 由关系结构承载
+  披露：§6.3 的 CI-upper interpretation was finalized after observing the
+        development rehearsal retention estimate R=0.094, 95%CI[0.005,0.261],
+        but before any observation from the confirmatory seed block.
+
+==============================================================================
+7. XSEED-DONOR（donor mapping (i+N/2)%N，无 self-donor、一一映射）
+==============================================================================
+  ΔC = -0.9240  95% CI [-1.0533, -0.7960]   保留 OWN 的 104.6%
+
+==============================================================================
+8. INTEGRITY ASSERTIONS（★断言，不是科学证据 —— 规则 93★）
+==============================================================================
+  DELETE ΔC ≡ 0：1500/1500 种子       ✓
+  SWAP  ΔC ≡ −ΔC(OWN)：1500/1500 种子  ✓
+  → 证明发育史除记忆外没有第二条通路；memory-only 架构下这是代数恒等式。
+
+==============================================================================
+9. SECONDARY MECHANISTIC
+==============================================================================
+  臂                Δlatency    expo S    expo V   ACTIVE S   ACTIVE V
+  OWN               -1.5733      6.30      6.25       6.25       6.22
+  DELETE            +0.0000      6.22      6.22       6.18       6.18
+  SWAP              +1.5733      6.25      6.30       6.22       6.25
+  SHUFFLE           +0.0527      6.25      6.22       6.21       6.18
+  XSEED-DONOR       -1.8433      6.27      6.21       6.23       6.18

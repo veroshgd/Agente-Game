@@ -1,0 +1,68 @@
+029 REHEARSAL — natural Stable/Volatile memory x novel task
+run 2026-08-18   seeds 0-399 (BURNED development block)   80000-81499 untouched
+NOT a confirmatory result. No preregistration, no SESOI, no final seeds.
+
+FROZEN INPUTS (none touched by this file)
+  acquisition  ANOMALY_AT=36 ANOMALY_LEN=8 T_PROBLEM=66 (post-anomaly 22)
+  retrieval    stateful, RESOLVED evaluated after the Q update (probe3)
+  interface    MEMORY_LAMBDA = 1.00  (group-blind capacity calibration)
+  gates        sat<=5% / median|dp|>=.02 / flip<=25% / max exposure<=20/80
+  primary      dC = post-change cumulative errors (trials 40-79)
+  population   ALL 400 seeds, including agents with m=0 (rule 91)
+
+EXTENSIVE MARGIN
+  usable memory (m != 0):   Stable 64.2%   Volatile 73.2%
+  complete (both relations present): Stable 65.75%  Volatile 73.25%
+  -> 6 Stable agents (1.5%) have both stay and switch episodes but the two means
+     are exactly equal, so m == 0. "complete" and "usable" are NOT the same
+     margin; report whichever is used and do not mix them.
+
+PRIMARY   dC = C(Volatile) - C(Stable), same-seed paired, full population
+  arm        C Stable  C Volatile      dC     95% CI (descriptive)   rel. OWN
+  OWN         20.867     19.940     -0.927   [-1.202, -0.677]          1.00
+  DELETE      20.545     20.545     +0.000   [+0.000, +0.000]          0.00
+  SWAP        19.940     20.867     +0.927   [+0.680, +1.202]         -1.00
+  SHUFFLE     20.490     20.578     +0.087   [-0.068, +0.242]         -0.09
+  SWAP-XS     20.812     19.922     -0.890   [-1.140, -0.660]          0.96
+
+IDENTITY ASSERTIONS (not evidence)
+  Body is constant (NeutralBody) and development carries nothing into the task
+  except memory. Therefore, for a given seed the two conditions differ ONLY in
+  memory, and:
+    DELETE  ->  dC == 0 exactly          (asserted, 400/400 bit-identical)
+    SWAP    ->  dC == -dC(OWN) exactly   (asserted, per seed)
+  Both PASS. They prove there is no second leakage path from development into
+  the task. They are NOT evidence that outcomes follow memory identity -- under
+  a constant body that is algebra.
+  DESIGN CONSEQUENCE FOR REAL 029: a non-trivial SWAP requires development to
+  carry something besides memory (e.g. the 027/028 trait channel). Otherwise the
+  agent's entire identity IS its memory.
+
+THE INFORMATIVE CONTROLS
+  SHUFFLE (action_relation permuted within each agent's own episodes; episode
+  count, stay/switch counts and outcome marginals all preserved, only the
+  action<->outcome association destroyed):
+      dC collapses from -0.927 to +0.087, i.e. -9.4% of OWN, CI straddles 0.
+      -> the effect is carried by the RELATIONAL structure, not by marginal
+         statistics of the memory store.
+  SWAP-XS (seed s uses the memories acquired at seed (s+200)%400):
+      dC = -0.890, 96.0% of OWN.
+      -> the effect is carried by memory CONTENT, not by any coupling between a
+         seed's development and its own test instance.
+
+SECONDARY MECHANISTIC
+  arm        d_latency   exposure S   exposure V   ACTIVE run S   ACTIVE run V
+  OWN          -1.962       6.92         6.65          6.81           6.56
+  DELETE       +0.000       6.77         6.77          6.66           6.66
+  SHUFFLE      +0.275       6.82         6.70          6.72           6.60
+  SWAP-XS      -1.810       6.82         6.55          6.71           6.45
+  Memory stays event-triggered throughout (~6.6-6.9 of 80 trials).
+
+READING
+  Natural Stable/Volatile developmental histories, passed through the frozen
+  lambda=1 interface, produce a downstream difference of about one fewer
+  post-change error for Volatile-type memory, and that difference survives
+  re-pairing across seeds but is destroyed by shuffling the action-outcome
+  relation while holding marginals fixed.
+  CI is DESCRIPTIVE. No SESOI -> no functional-significance claim.
+  Nothing here may be used to change lambda or any acquisition parameter.

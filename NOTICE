@@ -1,0 +1,48 @@
+LifeEngine
+Copyright 2026 Yinan Qin
+
+==========================================================================
+DUAL LICENSED -- read this before assuming a single license applies
+==========================================================================
+
+  Source code (*.py)                      Apache License 2.0   -> LICENSE
+  Documentation, preregistration texts,
+  result records, and data               CC BY 4.0            -> LICENSE-DOCS.md
+
+Package registries and archives (Zenodo among them) usually record only one
+license per record. Where that happens the value shown is Apache-2.0, which
+applies to the repository as a whole and is the less permissive of the two.
+Nothing in this repository is more restrictively licensed than Apache-2.0.
+
+This product includes software and research materials developed by Yinan Qin
+(Independent Researcher).
+
+Licensing is split by material type. See LICENSE (Apache License 2.0) for
+source code, and LICENSE-DOCS.md (CC BY 4.0) for prose documentation,
+preregistration texts, and result data.
+
+--------------------------------------------------------------------------
+Integrity notice
+--------------------------------------------------------------------------
+
+This repository gates several artifacts on SHA-256 digests recorded at the
+time the confirmatory experiments were run:
+
+  - docs/MEMORY_TRANSFER029_PREREGISTRATION.md   (frozen in final_029.py)
+  - six frozen runtime modules                   (frozen in final_029.py)
+  - v2_frozen/ and v3_frozen/                    (SHA256SUMS.txt manifests)
+  - interface028_frozen.json                     (self-hash)
+
+Modifying the bytes of any of those files -- including reformatting,
+re-indenting, translating comments, or converting line endings -- will cause
+the integrity gates in tools/verify_provenance.py and tests/test_selfcheck.py
+to fail. That failure is the intended behaviour, not a bug.
+
+Section 4(b) of the Apache License requires that modified files carry
+prominent notices stating that they were changed. For the frozen artifacts
+listed above, please treat that requirement as a hard rule: a fork that
+silently regenerates a manifest defeats the entire provenance argument this
+repository exists to support.
+
+The `* -text` line in .gitattributes disables line-ending conversion
+repository-wide and must not be removed.

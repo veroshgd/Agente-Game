@@ -1,0 +1,78 @@
+029 MEMORY TRANSFER PROBE v2 — stateful retrieval (identifiability, NOT an experiment)
+run 2026-08-18   seeds 0-399 (development)   task fp=26778f672e9e7009
+knobs UNCHANGED from v1: GOOD_THRESH=0.60 PE_THRESH=0.30 SURPRISE_RUN_MIN=3
+single reversal, lambda swept not fixed, 80000-81499 untouched
+ONLY CHANGE: one-shot retrieval -> stateful (RETRIEVE -> ACTIVE -> RESOLVED)
+
+RETIRED CRITERION (recorded, not overwritten)
+  Original SWAP dominance criterion |memory effect| > |body effect| failed at
+  all tested lambda, after which inspection showed that the criterion compared
+  an event-triggered channel active on ~0.69/80 trials with an always-on trait
+  channel. The dominance criterion was therefore retired before any
+  Stable/Volatile outcome was observed.
+  v1 still reproduces bit-for-bit (lambda=1: 71/400 changed, d_latency -0.125).
+
+NEW SWAP ESTIMAND
+  M_C = L(Body C, Mem V) - L(Body C, Mem S)
+  M_K = L(Body K, Mem V) - L(Body K, Mem S)
+  M   = (M_C + M_K)/2      body effect = robustness diagnostic only
+
+(1)(2) EXPOSURE            eligible seeds   potential trials   realized (l=1)
+  v1 one-shot  Body C           45.0%             0.75              0.69
+  v1 one-shot  Body K           45.8%             0.75              0.69
+  v2 stateful  Body C           45.0%             7.18              6.96
+  v2 stateful  Body K           45.8%             7.23              7.00
+  -> mechanism exposure 0.75 -> 7.18 trials (9.6x). Still event-triggered
+     (7.2 of 80), NOT equal to the always-on body channel. That is correct.
+
+(3) POTENCY   (frozen decision states from the lambda=0 memory-blind trajectory)
+  v1  eligible opportunities = 300    base p(switch) median 0.208  saturated 0.0%
+  v2  eligible opportunities = 2873   base p(switch) median 0.400  saturated 0.0%
+        lambda   mean|dp|   median|dp|   p90|dp|
+  v1     1.00     0.2205      0.2199     0.2623
+  v2     1.00     0.2807      0.2941     0.3209
+  v1     4.00     0.7704      0.7732     0.8199
+  v2     4.00     0.8330      0.8486     0.8696
+  -> per-opportunity potency was ALREADY high in v1 (0.22 at lambda=1).
+     v1's problem was exposure, not potency. Confirms the v1 diagnosis.
+
+(4) NEW SWAP        M_C      M_K    pooled M    95% CI (descriptive)   same sign  interaction
+  v1  l=0.25      -0.095   -0.087     -0.091   [-0.199, -0.002]          yes      -0.008
+  v1  l=1.00      -0.125   -0.083     -0.104   [-0.410, +0.215]          yes      -0.042
+  v1  l=4.00      -0.168   -0.048     -0.108   [-0.554, +0.340]          yes      -0.120
+  v2  l=0.25      -0.875   -0.900     -0.887   [-1.343, -0.471]          yes      +0.025
+  v2  l=0.50      -2.143   -2.138     -2.140   [-2.759, -1.560]          yes      -0.005
+  v2  l=1.00      -4.058   -3.920     -3.989   [-4.785, -3.231]          yes      -0.138
+  v2  l=2.00      -7.045   -7.098     -7.071   [-8.044, -6.145]          yes      +0.053
+  v2  l=4.00      -9.607   -9.710     -9.659   [-10.815, -8.549]         yes      +0.103
+  Directional SWAP check: PASS (M_C, M_K same sign at every lambda, both versions)
+  Body x Memory interaction is tiny next to M (e.g. -0.138 vs -3.99 at l=1)
+  -> memory does NOT need a particular body to work.
+  CI is DESCRIPTIVE (seed cluster bootstrap, n_boot=10000, analysis seed 8181).
+  No SESOI today -> no functional-significance reading.
+
+(5) DOWNSTREAM (Body C)   traj changed   d_latency(V-S)   d_post_correct
+  v1  l=1.00                  17.8%          -0.125          +0.0029
+  v2  l=0.25                  30.8%          -0.875          +0.0115
+  v2  l=1.00                  43.2%          -4.058          +0.0535
+  v2  l=4.00                  45.0%          -9.607          +0.1688
+  NOTE: 45.0% at l=4 equals the eligible-seed fraction exactly -> the ceiling is
+  eligibility, as it should be. Ineligible seeds are untouched by construction.
+
+CONCLUSION OF THE PROBE STAGE
+  The v1 problem was retrieved evidence not forming a persistent decision state,
+  NOT insufficient lambda. Making retrieval stateful raised pooled M from
+  -0.10 to -3.99 trials at lambda=1 (38x) with knobs, task and seeds unchanged.
+
+NEW RISK (flipped direction) - for calibration, not for today
+  The mechanism may now be TOO strong: -9.7 trials at l=4 on a 0-36 scale, and
+  hand-built memories sit at the maximum possible contrast (m_S=-0.667,
+  m_V=+0.667). Real Stable/Volatile histories will produce far smaller |m|.
+  The -4 trial figure is an UPPER BOUND under maximal memory contrast.
+CAVEAT to watch later
+  ACTIVE window and the latency endpoint overlap by construction (the doubt
+  resolves roughly when the switch succeeds). Needs an endpoint not defined by
+  the same window before any strong claim.
+
+STILL NOT 029 SCIENTIFIC SUCCESS: memories are hand-built, lambda not frozen,
+Stable/Volatile not run.

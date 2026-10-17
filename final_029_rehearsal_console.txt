@@ -1,0 +1,130 @@
+==============================================================================
+029 FULL-SHAPE REHEARSAL（已烧段）
+==============================================================================
+==============================================================================
+PREFLIGHT
+==============================================================================
+  任务指纹            26778f672e9e7009   ✓
+  novel_task.py                   9db73d140853f6b0   ✓
+  memory_transfer_probe.py        b4327de32216d0c1   ✓
+  memory_transfer_probe3.py       f0664436301cf459   ✓
+  memory_acquisition_probe.py     7b88b9f7c19062bd   ✓
+  memory_lambda_calibration.py    9323f22b69eacd1c   ✓
+  memory_transfer_rehearsal.py    b29b2d417fdaed52   ✓
+  MEMORY_LAMBDA                   1.0         ✓
+  SATURATION_MAX                  0.05        ✓
+  MEDIAN_ABS_DP_MIN               0.02        ✓
+  PREF_FLIP_MAX                   0.25        ✓
+  ACTIVE_EXPOSURE_MAX             20          ✓
+  ANOMALY_AT                      36          ✓
+  ANOMALY_LEN                     8           ✓
+  T_PROBLEM                       66          ✓
+  N_PROBLEMS                      3           ✓
+  GOOD_THRESH                     0.6         ✓
+  PE_THRESH                       0.3         ✓
+  SURPRISE_RUN_MIN                3           ✓
+  SHUFFLE_SALT                    171024      ✓
+  SESOI                           1.0         ✓
+  RETENTION_MAX                   0.25        ✓
+  XSEED donor mapping             (i+750)%1500✓
+  预注册 sha256                   29e45930a07f2649…  ✓
+
+  ✓ preflight 全过
+
+种子账本：
+0–1499        development（029 探针 / 校准 / rehearsal 用 0–399）
+10000–11499   021 留出集 / 028 transport rehearsal / ★029 full-shape rehearsal★
+20000–21499   022 预注册段 / 027 + 028 group-blind calibration
+50000–51499   v3 / 025 persistence FINAL
+60000–61499   027 novel-task FINAL
+70000–71499   028 breadth FINAL
+80000–81499   ★★ 029 FINAL ★★
+
+本次运行：seed0=10000  N=1500  → 10000–11499   彩排（已烧段）
+==============================================================================
+SELF-TESTS
+==============================================================================
+  ✓ lock helper：O_CREAT|O_EXCL 原子独占，二次创建被拒
+  ✓ worker determinism：acquisition 与 transfer 逐 trial 可复现
+  ✓ XSEED mapping：无 self-donor、一一映射（N=400 与 N=1500）
+      FINAL donor_index(i) = (i+750)%1500
+  ✓ SHUFFLE：同 (seed, n_episodes) 置换确定；stay/switch 条数与 outcome 边际保持不变
+  ✓ Stable / Volatile 共用同一 donor permutation（函数只依赖 i 与 N）
+
+==============================================================================
+1. ACQUISITION / COMPLETENESS
+==============================================================================
+  memory completeness（primary extensive margin）  Stable 70.07%   Volatile 76.40%
+  non-zero evidence rate（不叫 availability）      Stable 67.93%   Volatile 75.87%
+  ★ 所有 primary 分析使用全部预定义 agent，含 incomplete 与 m=0 ★
+
+==============================================================================
+2. G2 INTERFACE-CAPACITY TRANSPORT（group-blind：label 在输入处丢弃）
+==============================================================================
+  pooled m: n=3000  m=0 占 28.1%   eligible states=9711
+  saturation            0.0000   门槛 0.05    ✓
+  median|Δp|            0.0742   门槛 0.02    ✓
+  preference flip       0.1443   门槛 0.25    ✓
+  max exposure/80       6.5007   门槛 20      ✓
+
+==============================================================================
+3. VALIDITY VERDICT（★先于 outcome★）
+==============================================================================
+  G1 acquisition manipulation   ✓   （异常前逐位相同=True，reward opportunity 相等）
+  G2 interface capacity         ✓
+  G3 integrity assertions       ✓
+
+  ★ confirmatory interpretation：启用
+
+==============================================================================
+4. PRIMARY  ΔC = C(Volatile) − C(Stable)  同种子配对，全人群
+==============================================================================
+  OWN           ΔC =  -0.8187   95% CI [-0.9387, -0.6993]
+  DELETE        ΔC =  +0.0000   95% CI [+0.0000, +0.0000]
+  SWAP          ΔC =  +0.8187   95% CI [+0.6993, +0.9393]
+  SHUFFLE       ΔC =  +0.0200   95% CI [-0.0520, +0.0933]
+  XSEED-DONOR   ΔC =  -0.9180   95% CI [-1.0527, -0.7880]
+
+==============================================================================
+5. SESOI 三档判读（SESOI = 1.0 post-change error）
+==============================================================================
+  95% CI [-0.9387, -0.6993]  →  ★ Detectable memory-mediated transfer, but functional significance not established. ★
+
+==============================================================================
+6. SHUFFLE —— conditional retention ratio
+==============================================================================
+  R = |ΔC_SHUFFLE| / |ΔC_OWN| = 0.0244   95% CI [0.0016, 0.1132]
+  joint same-seed bootstrap，abs 与除法逐 replicate 施加
+  判据 CI 上界 < 0.25  →  满足 ✓
+  → ≥75% attenuation established：transfer 由关系结构承载
+  披露：§6.3 的 CI-upper interpretation was finalized after observing the
+        development rehearsal retention estimate R=0.094, 95%CI[0.005,0.261],
+        but before any observation from the confirmatory seed block.
+
+==============================================================================
+7. XSEED-DONOR（donor mapping (i+N/2)%N，无 self-donor、一一映射）
+==============================================================================
+  ΔC = -0.9180  95% CI [-1.0527, -0.7880]   保留 OWN 的 112.1%
+
+==============================================================================
+8. INTEGRITY ASSERTIONS（★断言，不是科学证据 —— 规则 93★）
+==============================================================================
+  DELETE ΔC ≡ 0：1500/1500 种子       ✓
+  SWAP  ΔC ≡ −ΔC(OWN)：1500/1500 种子  ✓
+  → 证明发育史除记忆外没有第二条通路；memory-only 架构下这是代数恒等式。
+
+==============================================================================
+9. SECONDARY MECHANISTIC
+==============================================================================
+  臂                Δlatency    expo S    expo V   ACTIVE S   ACTIVE V
+  OWN               -1.7907      6.43      6.52       6.38       6.47
+  DELETE            +0.0000      6.47      6.47       6.44       6.44
+  SWAP              +1.7907      6.52      6.43       6.47       6.38
+  SHUFFLE           +0.1440      6.45      6.45       6.40       6.40
+  XSEED-DONOR       -1.9607      6.47      6.41       6.42       6.38
+
+  ✓ analysis ordering：1-acquisition → 2-G2 → 3-validity → 4-primary → 5-sesoi → 6-shuffle → 7-xseed → 8-integrity → 9-secondary
+  用时 18.0s
+  已落盘 final_029_rehearsal_result.txt
+
+⚠ 这是彩排：80000–81499 一颗未碰，未创建 FINAL lock。

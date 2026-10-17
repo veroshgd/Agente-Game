@@ -1,0 +1,47 @@
+029 MEMORY TRANSFER PROBE  (identifiability check, NOT an experiment)
+run 2026-08-18   seeds 0-399 (development block)   task fp=26778f672e9e7009
+knobs (UNCALIBRATED): GOOD_THRESH=0.60 PE_THRESH=0.30 SURPRISE_RUN_MIN=3
+
+engineering self-checks
+  relational-only      PASS   m(S)=-0.6667  m(V)=+0.6667  m(empty)=0
+  determinism          PASS
+  memory-blind (l=0)   PASS   400/400 seeds bit-identical
+  retrieval fires      180/400 seeds ever fire (45.0%)
+                       mean 0.69 of 80 trials per seed
+                       median first fire = trial 43 (reversal at 40)
+                       pre-reversal fires = 0.04
+  base p(switch) at fire time   median 0.208  IQR [0.179,0.245]  >=0.9: 0.0%
+
+POSITIVE CONTROL  (same body/Q/reward table/u, memory swapped only)
+lambda   traj changed   first div   d_latency(V-S)   d_post_correct
+0.00       0/400  0.0%      -           +0.000          +0.0000
+0.25      18/400  4.5%      45          -0.095          +0.0015
+0.50      37/400  9.2%      45          -0.138          +0.0021
+1.00      71/400 17.8%      45          -0.125          +0.0029
+2.00     114/400 28.5%      44          -0.180          +0.0068
+4.00     166/400 41.5%      44          -0.168          +0.0099
+VERDICT: PASS  (memory alone changes the choice sequence; direction consistent:
+         Memory V = "switch paid off" -> faster switching + better post-reversal)
+
+SWAP TEST  (Body x Memory 2x2, latency in trials)
+lambda   |memory effect|   |body effect|   ratio   verdict
+0.25          0.091            0.351       0.26x   FAIL
+0.50          0.140            0.370       0.38x   FAIL
+1.00          0.104            0.384       0.27x   FAIL
+2.00          0.134            0.399       0.34x   FAIL
+4.00          0.107            0.447       0.24x   FAIL
+memory effect direction consistent across both bodies at every lambda: YES
+trajectory-change share: memory 4.5%->41.5% (rises with lambda)
+                         body   ~23.5%       (flat)
+
+DIAGNOSIS (not a lambda problem)
+  exposure asymmetry: memory enters the decision on ~0.69 trials out of 80;
+  body (beta) enters on all 80. ~116x.
+  base p(switch) at fire time is 0.208, NOT saturated -> there IS room to act;
+  raising lambda moves more trajectories but not the endpoint, because a
+  one-trial nudge only shifts WHEN a switch happens, then washes out.
+  => the fix is retrieval EXPOSURE/persistence, not coupling strength.
+
+NOT DONE TODAY (deliberately): stable/volatile comparison, final seeds,
+preregistration, SESOI, final lambda, writing memory into sim.py.
+80000-81499 untouched.

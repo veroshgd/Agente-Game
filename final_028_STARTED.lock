@@ -1,0 +1,5 @@
+028 FINAL STARTED
+seeds=70000-71499
+interface_sha=f82497fb5b1ff535f5a88b4d96e669de4e610b88b024060c80c74cc756c9635b
+task_fp=26778f672e9e7009
+ledger=0–1499:development | 10000–11499:021 留出集 / 028 transport rehearsal | 20000–21499:022 预注册段 / 027 + 028 group-blind calibration | 50000–51499:v3 persistence FINAL | 60000–61499:027 novel-task FINAL | 70000–71499:★028 breadth FINAL★

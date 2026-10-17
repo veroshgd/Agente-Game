@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: "If you use this software or its experimental records, please cite both the software (this file) and the accompanying paper (preferred-citation below)."
+title: "LifeEngine: a preregistered agent-based apparatus for testing persistence of developmental differences and reuse of experience"
+type: software
+version: 1.0.0
+date-released: 2026-08-22
+# Dual licensed. CFF permits a list; the first entry, Apache-2.0, applies to the
+# repository as a whole and is the less permissive of the two. Documentation,
+# preregistration texts, and result data are additionally available under
+# CC BY 4.0. See LICENSE, LICENSE-DOCS.md and NOTICE for the file-by-file split.
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+abstract: >-
+  A pure-Python, zero-LLM, dependency-free artificial-life agent-based model
+  built as a minimal apparatus for one question: do different experiences
+  during a developmental period still leave a difference after an agent is
+  transplanted into an identical environment, and can those differences be put
+  to use on an unfamiliar new problem? The repository contains the model core,
+  two byte-frozen model versions with SHA-256 manifests, the preregistration
+  texts and amendments for every confirmatory experiment, a non-recyclable
+  random-seed ledger, one-shot confirmation runners with crash-safe burn locks,
+  and the verbatim result records of experiments 025 and 027-029, including
+  conclusions later withdrawn.
+authors:
+  - family-names: Qin
+    given-names: Yinan
+    affiliation: "Independent Researcher"
+    orcid: "https://orcid.org/0009-0005-4448-3969"
+keywords:
+  - artificial life
+  - agent-based modeling
+  - developmental plasticity
+  - path dependence
+  - common-garden design
+  - preregistration
+  - individual differences
+  - experience transfer
+  - relational memory structure
+  - agent memory architecture
+  - reproducibility
+references:
+  - type: generic
+    title: "Preregistration for Experiment 029 (relational-memory transfer)"
+    notes: >-
+      Authoritative Chinese original, released unmodified as
+      docs/MEMORY_TRANSFER029_PREREGISTRATION.md. Its SHA-256 is
+      29e45930a07f2649c7958fdc0cd20a389005ca43e93287b9f69e2ccdcf867145,
+      which is the value frozen in final_029.py and independently recomputed
+      by tools/verify_provenance.py.
+    authors:
+      - family-names: Qin
+        given-names: Yinan
+preferred-citation:
+  type: article
+  title: "Persistent Individual Differences and Experience Transfer Depend on Distinct Mechanisms: Causal Intervention Evidence from a Simplified Agent Architecture"
+  year: 2026
+  authors:
+    - family-names: Qin
+      given-names: Yinan
+      affiliation: "Independent Researcher"
+      orcid: "https://orcid.org/0009-0005-4448-3969"

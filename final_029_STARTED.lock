@@ -1,0 +1,24 @@
+029 FINAL STARTED  2026-08-18 17:16:46
+seeds 80000-81499  N=1500
+task_fingerprint 26778f672e9e7009
+MEMORY_LAMBDA 1.0
+gates 0.05/0.02/0.25/20
+SESOI 1.0  RETENTION_MAX 0.25
+shuffle_salt 0x29c10
+donor_mapping (i+750)%1500
+analysis_seed 8181  n_boot 10000
+prereg_sha256 29e45930a07f2649c7958fdc0cd20a389005ca43e93287b9f69e2ccdcf867145
+module novel_task.py 9db73d140853f6b0
+module memory_transfer_probe.py b4327de32216d0c1
+module memory_transfer_probe3.py f0664436301cf459
+module memory_acquisition_probe.py 7b88b9f7c19062bd
+module memory_lambda_calibration.py 9323f22b69eacd1c
+module memory_transfer_rehearsal.py b29b2d417fdaed52
+ledger:
+0–1499        development（029 探针 / 校准 / rehearsal 用 0–399）
+10000–11499   021 留出集 / 028 transport rehearsal / ★029 full-shape rehearsal★
+20000–21499   022 预注册段 / 027 + 028 group-blind calibration
+50000–51499   v3 / 025 persistence FINAL
+60000–61499   027 novel-task FINAL
+70000–71499   028 breadth FINAL
+80000–81499   ★★ 029 FINAL ★★

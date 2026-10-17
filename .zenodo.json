@@ -1,0 +1,38 @@
+{
+  "title": "LifeEngine: a preregistered agent-based apparatus for testing persistence of developmental differences and reuse of experience",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Qin, Yinan",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0005-4448-3969"
+    }
+  ],
+  "description": "<p><strong>Licensing: dual.</strong> Source code is under the Apache License 2.0; documentation, preregistration texts, and result data are additionally available under CC BY 4.0. Zenodo records a single license per deposit, so the field above shows Apache-2.0, which covers the repository as a whole and is the less permissive of the two &mdash; nothing here is more restricted than Apache-2.0. See <code>LICENSE</code>, <code>LICENSE-DOCS.md</code> and <code>NOTICE</code> in the archive for the file-by-file split.</p><p>A pure-Python, zero-LLM, dependency-free artificial-life agent-based model. It is a minimal apparatus built to test one question: do different experiences during a developmental period still leave a difference after the agent is transplanted into an identical environment, and if so, can those differences be put to use on an unfamiliar new problem?</p><p><strong>Contents.</strong> The model core; two byte-frozen model versions (<code>v2_frozen/</code>, <code>v3_frozen/</code>) with SHA-256 manifests; the preregistration texts and amendments for every confirmatory experiment; a non-recyclable random-seed ledger; one-shot confirmation runners with crash-safe burn locks; and the verbatim result records of Experiments 025 and 027&ndash;029, including conclusions that were later overturned and are retained as withdrawn rather than deleted.</p><p><strong>Verification.</strong> From a fresh clone, <code>python3 tools/verify_provenance.py</code> recomputes the digests of the Experiment 029 preregistration, the six frozen runtime modules, both frozen model directories, and the frozen Experiment 028 interface (10/10), and <code>python3 -m pytest -q</code> runs the core self-check suite (8/8). Set <code>PYTHONUTF8=1</code> first; on Windows the legacy console codec otherwise causes two unrelated failures. Verified on Linux (Python 3.12) and Windows 11 (Python 3.13).</p><p><strong>Integrity caveat.</strong> Several artifacts are gated on SHA-256 digests recorded at the time the confirmatory runs completed. Reformatting, re-indenting, translating comments, or converting line endings in those files will cause the integrity gates to fail; that is intended behaviour. See <code>NOTICE</code>.</p><p><strong>Scope of claims.</strong> This package makes no claim that the agent learns, understands, or becomes aware of anything, and no claim of analogical reasoning or generalized individuality. The evidence grade and boundary of each claim, together with a table of forbidden wordings, are set out in <code>CLAIMS.md</code>.</p>",
+  "keywords": [
+    "artificial life",
+    "agent-based modeling",
+    "developmental plasticity",
+    "path dependence",
+    "common-garden design",
+    "preregistration",
+    "individual differences",
+    "experience transfer",
+    "relational memory structure",
+    "agent memory architecture",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22058466",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "DUAL LICENSED. Code: Apache-2.0 (see LICENSE). Documentation, preregistrations, and result data: CC BY 4.0 (see LICENSE-DOCS.md). The Zenodo license field can hold only one value and records Apache-2.0, which applies to the repository as a whole."
+}

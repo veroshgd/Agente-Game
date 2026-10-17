@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 本机工具配置（含本机绝对路径，不应公开）
+.claude/settings.local.json
+
+# replay harness scratch output (tools/replay_paper_results.py)
+replay_out/
+*.replay-backup
