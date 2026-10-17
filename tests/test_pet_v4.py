@@ -173,7 +173,7 @@ def test_decision_parts_add_up_and_cite_only_prior_shared_events():
             continue
         d = e['decision']
         total = (d['core'] - d['boredom'] + d['eat_urgency'] + d['home_care']
-                 + d['garden'] + d['invitation'] + d['memory'])
+                 + d['garden'] + d['invitation'] + d['memory'] + d.get('preference', 0.0))   # v5 term
         assert total == pytest.approx(d['final'], abs=2e-3)
         assert d['net'] == pytest.approx(d['final'] - d['core'], abs=2e-4)
         assert d['gated'] == pytest.approx(d['garden'] + d['invitation'] + d['memory'], abs=2e-3)
@@ -229,7 +229,7 @@ def test_old_rule_saves_replay_exactly_as_the_old_code_did(case):
 
 
 def test_new_pets_use_the_latest_rules_and_unknown_versions_are_refused():
-    assert RULES == 4 and Session().archive()['version'] == 4
+    assert RULES >= 4 and Session().archive()['version'] == RULES
     with pytest.raises(ValueError):
         Session.restore({'version': RULES + 1, 'seed': 42, 'commands': []})
     assert set(re.findall(r"rulesOld:", APP)) and 'rules-note' in HTML
@@ -370,7 +370,7 @@ def translatable(text):
 
 def test_every_diary_text_and_error_has_spanish():
     texts = set(NEIGHBOR_TEXT.values())
-    for rules in (1, 2, 3, 4):
+    for rules in range(1, RULES + 1):
         for seed in (1, 42, 901):
             s = pet(seed, ('garden', 'book', 'music'), rules=rules)
             s.apply({'kind': 'name', 'value': 'Brote'})

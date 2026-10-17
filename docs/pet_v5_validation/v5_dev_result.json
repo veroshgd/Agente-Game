@@ -1,0 +1,794 @@
+{
+ "seeds": {
+  "1": {
+   "lived_growth": {
+    "control": {
+     "read": 0,
+     "garden": 0,
+     "visit": 0,
+     "explore": 210,
+     "sleep": 177,
+     "eat": 53,
+     "gather_material": 25,
+     "build": 8
+    },
+    "reading": {
+     "read": 62,
+     "garden": 0,
+     "visit": 0,
+     "explore": 167,
+     "sleep": 161,
+     "eat": 53,
+     "gather_material": 28,
+     "build": 9
+    },
+    "garden": {
+     "read": 0,
+     "garden": 222,
+     "visit": 0,
+     "explore": 0,
+     "sleep": 177,
+     "eat": 53,
+     "gather_material": 21,
+     "build": 7
+    },
+    "social": {
+     "read": 0,
+     "garden": 190,
+     "visit": 32,
+     "explore": 0,
+     "sleep": 177,
+     "eat": 53,
+     "gather_material": 21,
+     "build": 7
+    }
+   },
+   "prefs_after_growth": {
+    "control": {
+     "read": 0.0,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "reading": {
+     "read": 0.105,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "garden": {
+     "read": 0.0,
+     "garden": 0.42,
+     "social": 0.0
+    },
+    "social": {
+     "read": 0.0,
+     "garden": 0.335,
+     "social": 0.264
+    }
+   },
+   "read_gap_pp": [
+    0.4,
+    12.5,
+    5.0,
+    9.2,
+    -5.0,
+    7.1
+   ],
+   "read_gap_mean": 4.86,
+   "read_effect": true,
+   "social_gap": [
+    0.396,
+    0.281,
+    0.29,
+    0.256,
+    0.292,
+    0.328
+   ],
+   "social_gap_mean": 0.307,
+   "social_effect": true,
+   "ablation_run_read_gap_mean": -2.29,
+   "ablation_run_social_gap_mean": -0.0,
+   "probe_read_gap": {
+    "full": 0.032,
+    "no_pref": 0.016,
+    "no_memory": 0.032,
+    "birth_traits": 0.048,
+    "no_knowledge": 0.032
+   },
+   "probe_social_gap": {
+    "full": 0.413,
+    "no_pref": 0.026,
+    "no_memory": 0.361,
+    "birth_traits": 0.347,
+    "no_knowledge": 0.376
+   },
+   "plastic": true,
+   "plastic_detail": {
+    "prefs_start": {
+     "read": 0.105,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "prefs_end": {
+     "read": 0.101,
+     "garden": 0.348,
+     "social": 0.459
+    },
+    "read_first": 0.067,
+    "read_last": 0.1,
+    "visit_first": 0.05,
+    "visit_last": 0.067
+   },
+   "health": true,
+   "health_fail": [],
+   "confounds": {
+    "control": {
+     "mean_hunger": 39.8,
+     "mean_energy": 48.4,
+     "mean_home": 41.4,
+     "invited_hours": 1.7,
+     "free_hours": 60.7
+    },
+    "reading": {
+     "mean_hunger": 42.5,
+     "mean_energy": 43.8,
+     "mean_home": 44.8,
+     "invited_hours": 1.5,
+     "free_hours": 66.8
+    },
+    "garden": {
+     "mean_hunger": 43.1,
+     "mean_energy": 42.9,
+     "mean_home": 40.9,
+     "invited_hours": 1.5,
+     "free_hours": 81.0
+    },
+    "social": {
+     "mean_hunger": 40.7,
+     "mean_energy": 44.9,
+     "mean_home": 39.6,
+     "invited_hours": 1.7,
+     "free_hours": 36.5
+    }
+   }
+  },
+  "42": {
+   "lived_growth": {
+    "control": {
+     "read": 0,
+     "garden": 0,
+     "visit": 0,
+     "explore": 3,
+     "sleep": 343,
+     "eat": 70,
+     "gather_material": 24,
+     "build": 8
+    },
+    "reading": {
+     "read": 77,
+     "garden": 0,
+     "visit": 0,
+     "explore": 137,
+     "sleep": 165,
+     "eat": 54,
+     "gather_material": 21,
+     "build": 7
+    },
+    "garden": {
+     "read": 0,
+     "garden": 224,
+     "visit": 0,
+     "explore": 0,
+     "sleep": 178,
+     "eat": 52,
+     "gather_material": 20,
+     "build": 6
+    },
+    "social": {
+     "read": 0,
+     "garden": 186,
+     "visit": 31,
+     "explore": 0,
+     "sleep": 184,
+     "eat": 53,
+     "gather_material": 20,
+     "build": 6
+    }
+   },
+   "prefs_after_growth": {
+    "control": {
+     "read": 0.0,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "reading": {
+     "read": 0.187,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "garden": {
+     "read": 0.0,
+     "garden": 0.423,
+     "social": 0.0
+    },
+    "social": {
+     "read": 0.0,
+     "garden": 0.353,
+     "social": 0.279
+    }
+   },
+   "read_gap_pp": [
+    15.4,
+    6.2,
+    11.7,
+    5.8,
+    0.0,
+    0.0
+   ],
+   "read_gap_mean": 6.53,
+   "read_effect": true,
+   "social_gap": [
+    0.213,
+    0.256,
+    0.068,
+    0.153,
+    0.104,
+    0.252
+   ],
+   "social_gap_mean": 0.174,
+   "social_effect": true,
+   "ablation_run_read_gap_mean": -0.07,
+   "ablation_run_social_gap_mean": 0.008,
+   "probe_read_gap": {
+    "full": 0.127,
+    "no_pref": 0.127,
+    "no_memory": 0.127,
+    "birth_traits": 0.095,
+    "no_knowledge": 0.095
+   },
+   "probe_social_gap": {
+    "full": 0.279,
+    "no_pref": 0.042,
+    "no_memory": 0.278,
+    "birth_traits": 0.244,
+    "no_knowledge": 0.244
+   },
+   "plastic": true,
+   "plastic_detail": {
+    "prefs_start": {
+     "read": 0.187,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "prefs_end": {
+     "read": 0.073,
+     "garden": 0.391,
+     "social": 0.456
+    },
+    "read_first": 0.133,
+    "read_last": 0.021,
+    "visit_first": 0.046,
+    "visit_last": 0.071
+   },
+   "health": true,
+   "health_fail": [],
+   "confounds": {
+    "control": {
+     "mean_hunger": 36.6,
+     "mean_energy": 57.4,
+     "mean_home": 48.2,
+     "invited_hours": 1.7,
+     "free_hours": 67.0
+    },
+    "reading": {
+     "mean_hunger": 38.8,
+     "mean_energy": 54.0,
+     "mean_home": 44.7,
+     "invited_hours": 1.7,
+     "free_hours": 72.5
+    },
+    "garden": {
+     "mean_hunger": 39.7,
+     "mean_energy": 52.1,
+     "mean_home": 45.4,
+     "invited_hours": 1.5,
+     "free_hours": 56.3
+    },
+    "social": {
+     "mean_hunger": 38.8,
+     "mean_energy": 53.5,
+     "mean_home": 42.4,
+     "invited_hours": 1.8,
+     "free_hours": 38.8
+    }
+   }
+  },
+  "901": {
+   "lived_growth": {
+    "control": {
+     "read": 0,
+     "garden": 0,
+     "visit": 0,
+     "explore": 201,
+     "sleep": 188,
+     "eat": 56,
+     "gather_material": 21,
+     "build": 7
+    },
+    "reading": {
+     "read": 86,
+     "garden": 0,
+     "visit": 0,
+     "explore": 142,
+     "sleep": 161,
+     "eat": 54,
+     "gather_material": 21,
+     "build": 7
+    },
+    "garden": {
+     "read": 0,
+     "garden": 220,
+     "visit": 0,
+     "explore": 0,
+     "sleep": 182,
+     "eat": 54,
+     "gather_material": 18,
+     "build": 6
+    },
+    "social": {
+     "read": 0,
+     "garden": 179,
+     "visit": 30,
+     "explore": 0,
+     "sleep": 184,
+     "eat": 54,
+     "gather_material": 18,
+     "build": 6
+    }
+   },
+   "prefs_after_growth": {
+    "control": {
+     "read": 0.0,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "reading": {
+     "read": 0.202,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "garden": {
+     "read": 0.0,
+     "garden": 0.419,
+     "social": 0.0
+    },
+    "social": {
+     "read": 0.0,
+     "garden": 0.344,
+     "social": 0.273
+    }
+   },
+   "read_gap_pp": [
+    13.8,
+    15.4,
+    5.4,
+    0.0,
+    0.0,
+    6.7
+   ],
+   "read_gap_mean": 6.88,
+   "read_effect": true,
+   "social_gap": [
+    0.448,
+    0.328,
+    0.006,
+    0.259,
+    -0.089,
+    0.042
+   ],
+   "social_gap_mean": 0.166,
+   "social_effect": true,
+   "ablation_run_read_gap_mean": -0.14,
+   "ablation_run_social_gap_mean": -0.041,
+   "probe_read_gap": {
+    "full": 0.175,
+    "no_pref": 0.111,
+    "no_memory": 0.206,
+    "birth_traits": 0.127,
+    "no_knowledge": 0.079
+   },
+   "probe_social_gap": {
+    "full": 0.363,
+    "no_pref": 0.044,
+    "no_memory": 0.32,
+    "birth_traits": 0.283,
+    "no_knowledge": 0.315
+   },
+   "plastic": true,
+   "plastic_detail": {
+    "prefs_start": {
+     "read": 0.202,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "prefs_end": {
+     "read": 0.026,
+     "garden": 0.414,
+     "social": 0.466
+    },
+    "read_first": 0.062,
+    "read_last": 0.0,
+    "visit_first": 0.062,
+    "visit_last": 0.075
+   },
+   "health": true,
+   "health_fail": [],
+   "confounds": {
+    "control": {
+     "mean_hunger": 40.9,
+     "mean_energy": 47.0,
+     "mean_home": 42.6,
+     "invited_hours": 1.5,
+     "free_hours": 61.0
+    },
+    "reading": {
+     "mean_hunger": 40.7,
+     "mean_energy": 49.5,
+     "mean_home": 43.9,
+     "invited_hours": 1.7,
+     "free_hours": 58.3
+    },
+    "garden": {
+     "mean_hunger": 40.9,
+     "mean_energy": 48.1,
+     "mean_home": 44.4,
+     "invited_hours": 1.7,
+     "free_hours": 52.3
+    },
+    "social": {
+     "mean_hunger": 41.8,
+     "mean_energy": 45.7,
+     "mean_home": 42.1,
+     "invited_hours": 1.8,
+     "free_hours": 35.8
+    }
+   }
+  },
+  "7": {
+   "lived_growth": {
+    "control": {
+     "read": 0,
+     "garden": 0,
+     "visit": 0,
+     "explore": 217,
+     "sleep": 184,
+     "eat": 54,
+     "gather_material": 16,
+     "build": 5
+    },
+    "reading": {
+     "read": 68,
+     "garden": 0,
+     "visit": 0,
+     "explore": 144,
+     "sleep": 161,
+     "eat": 54,
+     "gather_material": 27,
+     "build": 9
+    },
+    "garden": {
+     "read": 0,
+     "garden": 229,
+     "visit": 0,
+     "explore": 0,
+     "sleep": 178,
+     "eat": 53,
+     "gather_material": 15,
+     "build": 5
+    },
+    "social": {
+     "read": 0,
+     "garden": 200,
+     "visit": 31,
+     "explore": 0,
+     "sleep": 177,
+     "eat": 52,
+     "gather_material": 15,
+     "build": 5
+    }
+   },
+   "prefs_after_growth": {
+    "control": {
+     "read": 0.0,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "reading": {
+     "read": 0.153,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "garden": {
+     "read": 0.0,
+     "garden": 0.431,
+     "social": 0.0
+    },
+    "social": {
+     "read": 0.0,
+     "garden": 0.342,
+     "social": 0.241
+    }
+   },
+   "read_gap_pp": [
+    13.8,
+    9.6,
+    22.1,
+    5.4,
+    7.9,
+    17.1
+   ],
+   "read_gap_mean": 12.64,
+   "read_effect": true,
+   "social_gap": [
+    0.17,
+    -0.001,
+    0.09,
+    0.059,
+    0.095,
+    0.084
+   ],
+   "social_gap_mean": 0.083,
+   "social_effect": true,
+   "ablation_run_read_gap_mean": -0.35,
+   "ablation_run_social_gap_mean": 0.025,
+   "probe_read_gap": {
+    "full": 0.079,
+    "no_pref": 0.095,
+    "no_memory": 0.079,
+    "birth_traits": 0.111,
+    "no_knowledge": 0.063
+   },
+   "probe_social_gap": {
+    "full": 0.214,
+    "no_pref": 0.033,
+    "no_memory": 0.196,
+    "birth_traits": 0.187,
+    "no_knowledge": 0.181
+   },
+   "plastic": true,
+   "plastic_detail": {
+    "prefs_start": {
+     "read": 0.153,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "prefs_end": {
+     "read": 0.098,
+     "garden": 0.388,
+     "social": 0.491
+    },
+    "read_first": 0.1,
+    "read_last": 0.054,
+    "visit_first": 0.046,
+    "visit_last": 0.075
+   },
+   "health": true,
+   "health_fail": [],
+   "confounds": {
+    "control": {
+     "mean_hunger": 41.7,
+     "mean_energy": 45.0,
+     "mean_home": 46.2,
+     "invited_hours": 3.0,
+     "free_hours": 59.0
+    },
+    "reading": {
+     "mean_hunger": 39.8,
+     "mean_energy": 51.5,
+     "mean_home": 47.2,
+     "invited_hours": 2.7,
+     "free_hours": 57.8
+    },
+    "garden": {
+     "mean_hunger": 40.7,
+     "mean_energy": 48.3,
+     "mean_home": 42.3,
+     "invited_hours": 1.5,
+     "free_hours": 45.0
+    },
+    "social": {
+     "mean_hunger": 39.7,
+     "mean_energy": 50.9,
+     "mean_home": 42.3,
+     "invited_hours": 2.0,
+     "free_hours": 37.7
+    }
+   }
+  },
+  "123": {
+   "lived_growth": {
+    "control": {
+     "read": 0,
+     "garden": 0,
+     "visit": 0,
+     "explore": 211,
+     "sleep": 182,
+     "eat": 55,
+     "gather_material": 21,
+     "build": 7
+    },
+    "reading": {
+     "read": 39,
+     "garden": 0,
+     "visit": 0,
+     "explore": 171,
+     "sleep": 169,
+     "eat": 54,
+     "gather_material": 24,
+     "build": 8
+    },
+    "garden": {
+     "read": 0,
+     "garden": 221,
+     "visit": 0,
+     "explore": 0,
+     "sleep": 178,
+     "eat": 53,
+     "gather_material": 21,
+     "build": 7
+    },
+    "social": {
+     "read": 0,
+     "garden": 194,
+     "visit": 31,
+     "explore": 0,
+     "sleep": 178,
+     "eat": 53,
+     "gather_material": 18,
+     "build": 6
+    }
+   },
+   "prefs_after_growth": {
+    "control": {
+     "read": 0.0,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "reading": {
+     "read": 0.078,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "garden": {
+     "read": 0.0,
+     "garden": 0.439,
+     "social": 0.0
+    },
+    "social": {
+     "read": 0.0,
+     "garden": 0.374,
+     "social": 0.276
+    }
+   },
+   "read_gap_pp": [
+    10.4,
+    15.8,
+    8.8,
+    2.9,
+    7.5,
+    13.3
+   ],
+   "read_gap_mean": 9.79,
+   "read_effect": true,
+   "social_gap": [
+    0.044,
+    0.221,
+    0.242,
+    0.108,
+    0.222,
+    -0.251
+   ],
+   "social_gap_mean": 0.098,
+   "social_effect": true,
+   "ablation_run_read_gap_mean": 0.56,
+   "ablation_run_social_gap_mean": -0.014,
+   "probe_read_gap": {
+    "full": 0.032,
+    "no_pref": 0.048,
+    "no_memory": 0.032,
+    "birth_traits": 0.016,
+    "no_knowledge": 0.016
+   },
+   "probe_social_gap": {
+    "full": 0.214,
+    "no_pref": 0.031,
+    "no_memory": 0.224,
+    "birth_traits": 0.187,
+    "no_knowledge": 0.197
+   },
+   "plastic": false,
+   "plastic_detail": {
+    "prefs_start": {
+     "read": 0.078,
+     "garden": 0.0,
+     "social": 0.0
+    },
+    "prefs_end": {
+     "read": 0.038,
+     "garden": 0.396,
+     "social": 0.415
+    },
+    "read_first": 0.0,
+    "read_last": 0.0,
+    "visit_first": 0.067,
+    "visit_last": 0.067
+   },
+   "health": true,
+   "health_fail": [],
+   "confounds": {
+    "control": {
+     "mean_hunger": 41.8,
+     "mean_energy": 43.0,
+     "mean_home": 42.1,
+     "invited_hours": 1.8,
+     "free_hours": 64.3
+    },
+    "reading": {
+     "mean_hunger": 39.9,
+     "mean_energy": 49.2,
+     "mean_home": 42.6,
+     "invited_hours": 1.5,
+     "free_hours": 65.2
+    },
+    "garden": {
+     "mean_hunger": 39.8,
+     "mean_energy": 48.6,
+     "mean_home": 40.6,
+     "invited_hours": 1.8,
+     "free_hours": 41.3
+    },
+    "social": {
+     "mean_hunger": 39.8,
+     "mean_energy": 48.5,
+     "mean_home": 41.2,
+     "invited_hours": 1.5,
+     "free_hours": 32.3
+    }
+   }
+  }
+ },
+ "summary": {
+  "n_seeds": 5,
+  "read_effect_seeds": 5,
+  "social_effect_seeds": 5,
+  "read_gap_mean_pp": 8.14,
+  "read_gap_mean_pp_without_pref": -0.46,
+  "social_gap_mean": 0.166,
+  "social_gap_mean_without_pref": -0.004,
+  "probe_read_gap": {
+   "full": 0.089,
+   "no_pref": 0.079,
+   "no_memory": 0.095,
+   "birth_traits": 0.079,
+   "no_knowledge": 0.057
+  },
+  "probe_social_gap": {
+   "full": 0.297,
+   "no_pref": 0.035,
+   "no_memory": 0.276,
+   "birth_traits": 0.25,
+   "no_knowledge": 0.263
+  },
+  "probe_shrink_read": 0.11,
+  "probe_shrink_social": 0.88,
+  "plastic_seeds": 4,
+  "healthy_seeds": 5
+ },
+ "verdict": {
+  "read_persistent": true,
+  "social_persistent": true,
+  "ablation_read": false,
+  "ablation_social": true,
+  "plastic": true,
+  "healthy": true
+ }
+}

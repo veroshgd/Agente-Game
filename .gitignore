@@ -9,3 +9,6 @@ __pycache__/
 # replay harness scratch output (tools/replay_paper_results.py)
 replay_out/
 *.replay-backup
+
+# pet/validate_v5.py default output (raw runs are large; summaries live in docs/pet_v5_validation/)
+pet_validation_out/

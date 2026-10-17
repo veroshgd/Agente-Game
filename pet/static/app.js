@@ -21,6 +21,8 @@ const ES={
   '重要经历':'Momentos importantes','全部活动':'Toda la actividad','Life Engine · 从研究走向可玩的第一步':'Life Engine · primer paso de la investigación a algo jugable',
   '成长阶段与社交规则为原型设计，尚待用户验证。厨房自动补给，无需频繁投喂。':'Las etapas de crecimiento y las reglas sociales son de prototipo y aún no se han validado con usuarios. La cocina se reabastece sola; no hace falta alimentarla a menudo.',
   '导出存档':'Exportar partida','恢复存档':'Restaurar partida',
+  '慢慢喜欢上的事':'Lo que ha llegado a gustarle',
+  '只由真正做过、过得愉快的经历慢慢形成，不做就会慢慢淡去。它让这件事更有吸引力，但吃饭、休息和修小屋仍然优先。':'Se forma despacio solo con lo que de verdad hizo y disfrutó, y se va apagando si deja de hacerlo. Hace la actividad más atractiva, pero comer, descansar y arreglar la casa siguen yendo primero.',
   // Engine state (pet/engine.py)
   '幼年':'Pequeña','成长中':'Creciendo','成年':'Adulta','还没一起玩过':'Aún no han jugado juntas','开始熟悉':'Empiezan a conocerse','熟悉的伙伴':'Compañeras de confianza',
   '吃点东西':'Comer algo','休息':'Descansar','收集食物':'Recolectar comida','收集材料':'Recolectar materiales','整理小屋':'Arreglar la casita','四处探索':'Explorar los alrededores',
@@ -33,6 +35,7 @@ const ES={
   '出门照料了花园。之前的共同经历增加了出门的吸引力。':'Salió a cuidar el jardín. Las experiencias compartidas le dieron más ganas de salir.',
   '出门照料了花园。今天还没有发生新的共同活动。':'Salió a cuidar el jardín. Hoy todavía no ha habido actividades compartidas.',
   '想去找米粒，可她今天不在家，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy no estaba en casa, así que cuidó el jardín sola.',
+  '有一阵子没见米粒了，主动去找她，一起种下一株花。':'Hacía un tiempo que no veía a Mili; fue a buscarla por su cuenta y plantaron una flor juntas.',
   '想去找米粒，可她今天外出了，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy había salido, así que cuidó el jardín sola.',
   '想去找米粒，可她今天的接待次数已经满了，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy ya no recibía más visitas, así que cuidó el jardín sola.',
   '想去找米粒，可现在不是她的接待时间（08:00-20:00），就自己照料了花园。':'Quiso ir a ver a Mili, pero ahora no es su horario de visitas (08:00-20:00), así que cuidó el jardín sola.',
@@ -84,10 +87,14 @@ const UI={
     parts:{core:'原有',garden:'花园',invitation:'邀请',memory:'共同记忆',boredom:'重复的无聊',eat_urgency:'饿了要吃',home_care:'小屋需要照料',gate:'饱腹/精力门控',raw:'门控前'},
     scoreLine:(items,net,final)=>`打分：${items} → 净变化 ${net}，最终 ${final}`,
     memoryUsed:ids=>`参与打分的共同经历：${ids}。`,memoryDecisive:a=>`没有这一项，这次会改为“${a}”。`,memoryNotDecisive:'它参与了打分，但没有改变这次选择。',
-    rulesOld:(r,l)=>`这个角色按规则 v${r} 生活（最新为 v${l}）。为了不改写它已经发生的过去，旧角色会一直沿用创建时的规则。想体验新规则，请另开一个存档：python run_pet.py --save pet/data/new.json（原角色不受影响）。`,
+    rulesBadge:r=>`规则 v${r}`,
+    rulesOld:(r,l)=>`这个角色按规则 v${r} 生活（最新为 v${l}）。为了不改写它已经发生的过去，旧角色会一直沿用创建时的规则。想体验新规则，请另开一个存档：双击 start_pet_v5.bat，或 python run_pet.py --save pet/data/v5-demo.json（原角色不受影响）。`,
     limitNote:why=>`已达到原型的${why==='commands'?'操作次数':'10000 游戏小时'}上限：时间不再前进。角色、手记和导出存档仍可正常使用。`,
     awaySkipped:(n,why)=>`有 ${n} 小时没有补算：已达到原型的${why==='commands'?'操作次数':'游戏时间'}上限。`,
     neighborRules:'米粒有自己的生活：有些日子会外出，每天最多主动接待两次。你的邀请卡她总会留出时间（仍在 08:00-20:00）。',
+    prefNames:{read:'读书',garden:'独自照料花园',social:'米粒在家时，去找她而不是独处'},prefCount:n=>`${n} 次经历`,
+    prefUsed:(name,n)=>`长期偏好“${name}”参与了打分（来自 ${n} 次经历的累积，不是某一件事）`,prefDecisive:a=>`即时检查：保持当前目标和其他状态不变，只去掉这一份偏好，这次会改为“${a}”。`,prefNotDecisive:'即时检查：只去掉这一份偏好（其他不变），仍会选择同一类行动，可能由另一份偏好接替。',
+    prefScope:'这只检查行动大类，没有检查会去园艺还是拜访。',prefLife:'这不代表“如果它从没有过这段经历”。',
     empty:'这段时间还没有新的重要经历。切换“全部活动”看看日常吧。',history:(all,n)=>`显示最近 90 条中的${all?'全部活动':'重要经历'}；共 ${n} 条。导出存档可保留完整进度。`,
     play:'▶ 看它自己生活',pause:'Ⅱ 暂停观察',namePrompt:'给小家伙取个名字（1-20 个字符）',importConfirm:'恢复这个存档？当前进度会自动备份为 pet.before-import.json。',
     conn:'连接中断，请检查启动窗口是否还开着，再刷新页面。',title:'Life Engine · 小小生活',switchTo:'Español',html:'zh-CN',
@@ -101,10 +108,14 @@ const UI={
     parts:{core:'base',garden:'Jardín',invitation:'Invitación',memory:'Recuerdos compartidos',boredom:'Aburrimiento por repetir',eat_urgency:'Hambre',home_care:'La casa necesita cuidados',gate:'filtro de saciedad/energía',raw:'antes del filtro'},
     scoreLine:(items,net,final)=>`Puntuación: ${items} → cambio neto ${net}, total ${final}`,
     memoryUsed:ids=>`Recuerdos compartidos que contaron al decidir: ${ids}.`,memoryDecisive:a=>`Sin ellos, esta vez habría elegido “${a}”.`,memoryNotDecisive:'Contaron en la puntuación, pero no cambiaron la elección.',
-    rulesOld:(r,l)=>`Esta criatura vive con las reglas v${r} (las más recientes son v${l}). Para no reescribir su pasado, una criatura antigua conserva siempre las reglas con las que nació. Para probar las nuevas, abre otra partida: python run_pet.py --save pet/data/nueva.json (la criatura original no cambia).`,
+    rulesBadge:r=>`Reglas v${r}`,
+    rulesOld:(r,l)=>`Esta criatura vive con las reglas v${r} (las más recientes son v${l}). Para no reescribir su pasado, una criatura antigua conserva siempre las reglas con las que nació. Para probar las nuevas, abre otra partida: doble clic en start_pet_v5.bat, o python run_pet.py --save pet/data/v5-demo.json (la criatura original no cambia).`,
     limitNote:why=>`Se alcanzó el límite de ${why==='commands'?'acciones':'10000 horas de juego'} del prototipo: el tiempo ya no avanza. Puedes seguir viendo a la criatura, leer su diario y exportar la partida.`,
     awaySkipped:(n,why)=>`${n} ${n===1?'hora no se recuperó':'horas no se recuperaron'}: se alcanzó el límite de ${why==='commands'?'acciones':'tiempo de juego'} del prototipo.`,
     neighborRules:'Mili tiene su propia vida: algunos días sale y recibe como mucho dos visitas espontáneas al día. Para tu invitación siempre hace un hueco (dentro de 08:00-20:00).',
+    prefNames:{read:'Leer',garden:'Cuidar el jardín a solas',social:'Si Mili está libre, ir a verla en vez de estar sola'},prefCount:n=>`${n} ${n===1?'experiencia':'experiencias'}`,
+    prefUsed:(name,n)=>`El gusto por «${name}» contó en la puntuación (formado a lo largo de ${n} experiencias, no por un solo hecho)`,prefDecisive:a=>`Comprobación inmediata: quitando solo este gusto, con el objetivo actual y todo lo demás igual, esta vez habría elegido «${a}».`,prefNotDecisive:'Comprobación inmediata: quitando solo este gusto (lo demás igual), habría elegido el mismo tipo de acción; otro gusto puede tomar el relevo.',
+    prefScope:'Solo se comprueba el tipo de acción, no si iría al jardín o a ver a Mili.',prefLife:'No equivale a «si nunca hubiera vivido esas experiencias».',
     empty:'Aún no hay momentos importantes en este periodo. Cambia a “Toda la actividad” para ver el día a día.',history:(all,n)=>`Mostrando ${all?'toda la actividad':'los momentos importantes'} de los últimos 90 registros; ${n} en total. Exporta la partida para conservar todo el progreso.`,
     play:'▶ Verla vivir',pause:'Ⅱ Pausar',namePrompt:'Ponle un nombre a la criaturita (1-20 caracteres)',importConfirm:'¿Restaurar esta partida? El progreso actual se guardará como copia en pet.before-import.json.',
     conn:'Se perdió la conexión. Comprueba que la ventana del servidor sigue abierta y recarga la página.',title:'Life Engine · Una pequeña vida',switchTo:'中文',html:'es',
@@ -150,10 +161,17 @@ function decisionNotes(e){
   if(d.eat_urgency)items.push(`${p.eat_urgency} ${signed(d.eat_urgency)}`);
   if(d.home_care)items.push(`${p.home_care} ${signed(d.home_care)}`);
   if(d.boredom)items.push(`${p.boredom} ${signed(-d.boredom)}`);
+  if(d.preference)items.push(`${t().prefNames[d.pref_key]} ${signed(d.preference)}`);
   if(!items.length)return [];
   const notes=[t().scoreLine([`${p.core} ${d.core.toFixed(1)}`,...items].join(' · '),signed(d.net),d.final.toFixed(1))];
   if(e.cause_ids&&e.cause_ids.length&&d.memory){
     notes.push(t().memoryUsed(ids(e.cause_ids))+' '+(d.memory_decisive?t().memoryDecisive(tr(ACTION_ZH[d.runner_up_action]||d.runner_up_action)):t().memoryNotDecisive));
+  }
+  if(d.preference){
+    const cf=d.pref_counterfactual,end=lang==='zh'?'。':'. ';
+    let note=t().prefUsed(t().prefNames[d.pref_key],d.pref_experiences)+end;
+    if(cf)note+=(d.pref_decisive?t().prefDecisive(tr(ACTION_ZH[cf.choice_without]||cf.choice_without)):t().prefNotDecisive)+(e.core_action==='explore'?' '+t().prefScope:'')+' '+t().prefLife;
+    notes.push(note);
   }
   return notes;
 }
@@ -161,6 +179,7 @@ function render(s){
   state=s;text('pet-name',s.name);text('stage',tr(s.stage));text('clock',t().clock(s.day,s.hour));
   for(const key of ['satiety','energy','home']){if(s[key]===undefined)continue;$(key).value=s[key];text(key+'-value',s[key]);}
   $('house').classList.toggle('worn',s.home<20);
+  $('rules-badge').hidden=s.rules===undefined;if(s.rules!==undefined)text('rules-badge',t().rulesBadge(s.rules));
   const old=s.rules!==undefined&&s.rules<s.latest_rules;$('rules-note').hidden=!old;if(old)text('rules-note',t().rulesOld(s.rules,s.latest_rules));
   const lim=s.limits||{};const blocked=lim.can_advance===false;$('limit-note').hidden=!blocked;
   if(blocked){stop();text('limit-note',t().limitNote(lim.commands_left===0?'commands':'ticks'));}
@@ -178,6 +197,15 @@ function render(s){
     const number=document.createElement('span');const delta=(value-s.birth_traits[key]).toFixed(1);number.textContent=`${value} · ${delta>=0?'+':''}${delta}`;
     label.append(title,number);const track=document.createElement('div');track.className='track';const bar=document.createElement('span');bar.style.width=value+'%';track.append(bar);row.append(label,track);traits.append(row);
   }
+  $('prefs-box').hidden=!s.preferences;
+  if(s.preferences){const box=$('prefs');box.replaceChildren();
+    for(const [key,p] of Object.entries(s.preferences)){
+      const row=document.createElement('div');row.className='trait';
+      const label=document.createElement('div');label.className='trait-label';
+      const name=document.createElement('span');name.textContent=t().prefNames[key];
+      const n=document.createElement('span');n.textContent=t().prefCount(p.experiences);
+      label.append(name,n);const track=document.createElement('div');track.className='track';
+      const bar=document.createElement('span');bar.style.width=Math.round(Math.min(1,p.value)*100)+'%';track.append(bar);row.append(label,track);box.append(row);}}
   text('relationship',tr(s.relationship));text('shared',t().shared(s.shared_count));
   $('neighbor-rules').hidden=!(s.rules>=3);text('neighbor-rules',t().neighborRules);
   text('memory-note',s.shared_count?t().memNote(s.memory_bonus,ids(s.memory_ids)):t().memEmpty);

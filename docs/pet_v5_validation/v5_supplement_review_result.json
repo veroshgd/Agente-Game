@@ -1,0 +1,1310 @@
+{
+ "criteria": {
+  "social_visits_per_day_gap": 0.14285714285714285,
+  "windows_positive": 4,
+  "invite_social_pref_gap": 0.1,
+  "withdrawal_spont_gap": 0.14285714285714285,
+  "seed_share": 0.7
+ },
+ "summary": {
+  "n_seeds": 10,
+  "visits_per_day_gap_mean": 0.17,
+  "visits_per_week_gap_mean": 1.19,
+  "spontaneous_gap_mean": 0.17,
+  "invited_gap_mean": 0.0,
+  "fixed_opp_gap_mean": 0.021,
+  "legacy_ratio_gap_mean": 0.121,
+  "missing_fixed_opp_windows": 0,
+  "never_met": [
+   [
+    2008,
+    "reading"
+   ]
+  ],
+  "shared_invitation_declined": [
+   [
+    2008,
+    "reading"
+   ]
+  ],
+  "social_new_criterion_seeds": 3,
+  "plasticity": {
+   "delta_A_mean": {
+    "read": -0.075,
+    "garden": 0.332,
+    "social": 0.158
+   },
+   "delta_B_mean": {
+    "read": -0.084,
+    "garden": 0.328,
+    "social": 0.314
+   },
+   "delta_B_minus_A_mean": {
+    "read": -0.009,
+    "garden": -0.004,
+    "social": 0.155
+   },
+   "old_rule_A": 9,
+   "old_rule_B": 9,
+   "spont_phase_mean": {
+    "A": 0.807,
+    "B": 0.52
+   },
+   "spont_withdrawal_mean": {
+    "A": 1.073,
+    "B": 1.247
+   },
+   "withdrawal_social_pref_gap_mean": 0.128,
+   "invite_effect_seeds": 9,
+   "withdrawal_effect_seeds": 4
+  }
+ },
+ "verdict": {
+  "social_actual_visits": false,
+  "invitations_change_social_liking": true,
+  "effect_survives_withdrawal": false
+ },
+ "seeds": {
+  "2001": {
+   "visits_per_day_gap": [
+    0.1,
+    -0.1,
+    0.1,
+    0.0,
+    0.0,
+    -0.1
+   ],
+   "visits_per_day_gap_mean": 0.0,
+   "spontaneous_gap_mean": 0.0,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.01,
+    -0.014,
+    0.014,
+    0.0,
+    0.0,
+    -0.009
+   ],
+   "legacy_ratio_gap": [
+    0.231,
+    -0.132,
+    0.085,
+    0.032,
+    0.052,
+    -0.143
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.602,
+    "50": 0.31,
+    "80": 0.1
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 490,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": false,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.205,
+     "garden": 0.268,
+     "social": 0.175
+    },
+    "delta_B": {
+     "read": -0.354,
+     "garden": 0.376,
+     "social": 0.323
+    },
+    "delta_B_minus_A": {
+     "read": -0.149,
+     "garden": 0.108,
+     "social": 0.148
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 29.0,
+    "spont_phase": {
+     "A": 0.767,
+     "B": 0.6
+    },
+    "spont_withdrawal": {
+     "A": 1.3,
+     "B": 1.267
+    },
+    "withdrawal_windows_spont_gap": [
+     -0.1,
+     0.1,
+     -0.1
+    ],
+    "withdrawal_social_pref_gap": 0.08,
+    "read_share": {
+     "A": [
+      0.204,
+      0.138,
+      0.25,
+      0.092,
+      0.225,
+      0.075
+     ],
+     "B": [
+      0.158,
+      0.004,
+      0.0,
+      0.096,
+      0.05,
+      0.138
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": true
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": false
+  },
+  "2002": {
+   "visits_per_day_gap": [
+    0.8,
+    0.4,
+    0.4,
+    0.1,
+    0.2,
+    0.2
+   ],
+   "visits_per_day_gap_mean": 0.35,
+   "spontaneous_gap_mean": 0.35,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.111,
+    0.048,
+    0.067,
+    0.017,
+    0.021,
+    0.028
+   ],
+   "legacy_ratio_gap": [
+    0.342,
+    0.15,
+    0.173,
+    0.263,
+    0.143,
+    0.201
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.603,
+    "50": 0.397,
+    "80": 0.284
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 498,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 491,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": true,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.027,
+     "garden": 0.361,
+     "social": 0.169
+    },
+    "delta_B": {
+     "read": -0.009,
+     "garden": 0.322,
+     "social": 0.299
+    },
+    "delta_B_minus_A": {
+     "read": 0.018,
+     "garden": -0.038,
+     "social": 0.131
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 26.0,
+    "spont_phase": {
+     "A": 0.667,
+     "B": 0.367
+    },
+    "spont_withdrawal": {
+     "A": 0.9,
+     "B": 1.1
+    },
+    "withdrawal_windows_spont_gap": [
+     0.0,
+     0.2,
+     0.4
+    ],
+    "withdrawal_social_pref_gap": 0.106,
+    "read_share": {
+     "A": [
+      0.146,
+      0.142,
+      0.05,
+      0.179,
+      0.121,
+      0.092
+     ],
+     "B": [
+      0.188,
+      0.117,
+      0.092,
+      0.058,
+      0.113,
+      0.0
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": true
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": true
+  },
+  "2003": {
+   "visits_per_day_gap": [
+    0.1,
+    0.1,
+    0.1,
+    0.0,
+    0.3,
+    -0.2
+   ],
+   "visits_per_day_gap_mean": 0.067,
+   "spontaneous_gap_mean": 0.067,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.01,
+    0.014,
+    0.014,
+    0.0,
+    0.031,
+    -0.024
+   ],
+   "legacy_ratio_gap": [
+    0.155,
+    0.173,
+    0.204,
+    0.251,
+    0.309,
+    -0.045
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.584,
+    "50": 0.207,
+    "80": 0.086
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 490,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 491,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": false,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.033,
+     "garden": 0.314,
+     "social": 0.162
+    },
+    "delta_B": {
+     "read": -0.071,
+     "garden": 0.323,
+     "social": 0.291
+    },
+    "delta_B_minus_A": {
+     "read": -0.038,
+     "garden": 0.009,
+     "social": 0.129
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 29.0,
+    "spont_phase": {
+     "A": 0.833,
+     "B": 0.533
+    },
+    "spont_withdrawal": {
+     "A": 1.333,
+     "B": 1.367
+    },
+    "withdrawal_windows_spont_gap": [
+     0.1,
+     0.0,
+     0.0
+    ],
+    "withdrawal_social_pref_gap": 0.045,
+    "read_share": {
+     "A": [
+      0.075,
+      0.133,
+      0.092,
+      0.117,
+      0.054,
+      0.079
+     ],
+     "B": [
+      0.113,
+      0.0,
+      0.054,
+      0.054,
+      0.092,
+      0.075
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": true
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": false
+  },
+  "2004": {
+   "visits_per_day_gap": [
+    1.2,
+    0.5,
+    -0.1,
+    0.2,
+    0.0,
+    -0.2
+   ],
+   "visits_per_day_gap_mean": 0.267,
+   "spontaneous_gap_mean": 0.267,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.125,
+    0.06,
+    -0.009,
+    0.033,
+    0.0,
+    -0.024
+   ],
+   "legacy_ratio_gap": [
+    0.262,
+    0.273,
+    0.081,
+    0.124,
+    0.089,
+    -0.048
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.562,
+    "50": 0.134,
+    "80": 0.08
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": false,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.028,
+     "garden": 0.303,
+     "social": 0.194
+    },
+    "delta_B": {
+     "read": -0.023,
+     "garden": 0.299,
+     "social": 0.336
+    },
+    "delta_B_minus_A": {
+     "read": 0.005,
+     "garden": -0.004,
+     "social": 0.142
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 29.0,
+    "spont_phase": {
+     "A": 1.067,
+     "B": 0.633
+    },
+    "spont_withdrawal": {
+     "A": 1.133,
+     "B": 1.033
+    },
+    "withdrawal_windows_spont_gap": [
+     -0.2,
+     -0.3,
+     0.2
+    ],
+    "withdrawal_social_pref_gap": 0.141,
+    "read_share": {
+     "A": [
+      0.067,
+      0.125,
+      0.117,
+      0.037,
+      0.083,
+      0.0
+     ],
+     "B": [
+      0.062,
+      0.133,
+      0.117,
+      0.183,
+      0.146,
+      0.138
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": true
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": false
+  },
+  "2005": {
+   "visits_per_day_gap": [
+    0.5,
+    0.0,
+    0.2,
+    0.0,
+    0.1,
+    0.0
+   ],
+   "visits_per_day_gap_mean": 0.133,
+   "spontaneous_gap_mean": 0.133,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.069,
+    0.0,
+    0.028,
+    0.0,
+    0.012,
+    0.0
+   ],
+   "legacy_ratio_gap": [
+    0.159,
+    -0.053,
+    0.287,
+    -0.078,
+    0.055,
+    -0.019
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.609,
+    "50": 0.28,
+    "80": 0.061
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 498,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 490,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": false,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.164,
+     "garden": 0.366,
+     "social": 0.2
+    },
+    "delta_B": {
+     "read": -0.145,
+     "garden": 0.404,
+     "social": 0.335
+    },
+    "delta_B_minus_A": {
+     "read": 0.019,
+     "garden": 0.038,
+     "social": 0.134
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 29.0,
+    "spont_phase": {
+     "A": 0.933,
+     "B": 0.5
+    },
+    "spont_withdrawal": {
+     "A": 1.433,
+     "B": 1.367
+    },
+    "withdrawal_windows_spont_gap": [
+     0.0,
+     -0.1,
+     -0.1
+    ],
+    "withdrawal_social_pref_gap": 0.067,
+    "read_share": {
+     "A": [
+      0.062,
+      0.054,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "B": [
+      0.138,
+      0.054,
+      0.0,
+      0.087,
+      0.175,
+      0.0
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": true
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": false
+  },
+  "2006": {
+   "visits_per_day_gap": [
+    0.6,
+    0.6,
+    0.3,
+    0.2,
+    -0.2,
+    0.4
+   ],
+   "visits_per_day_gap_mean": 0.317,
+   "spontaneous_gap_mean": 0.317,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.071,
+    0.062,
+    0.05,
+    0.021,
+    -0.024,
+    0.056
+   ],
+   "legacy_ratio_gap": [
+    0.246,
+    0.496,
+    0.208,
+    0.119,
+    -0.128,
+    0.3
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.61,
+    "50": 0.33,
+    "80": 0.164
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 490,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": true,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.163,
+     "garden": 0.385,
+     "social": 0.182
+    },
+    "delta_B": {
+     "read": -0.093,
+     "garden": 0.354,
+     "social": 0.263
+    },
+    "delta_B_minus_A": {
+     "read": 0.069,
+     "garden": -0.031,
+     "social": 0.082
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 28.0,
+    "spont_phase": {
+     "A": 1.033,
+     "B": 0.4
+    },
+    "spont_withdrawal": {
+     "A": 1.3,
+     "B": 1.333
+    },
+    "withdrawal_windows_spont_gap": [
+     0.2,
+     -0.1,
+     0.0
+    ],
+    "withdrawal_social_pref_gap": 0.03,
+    "read_share": {
+     "A": [
+      0.075,
+      0.0,
+      0.0,
+      0.062,
+      0.0,
+      0.0
+     ],
+     "B": [
+      0.133,
+      0.05,
+      0.096,
+      0.138,
+      0.067,
+      0.05
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": true
+    }
+   },
+   "invite_effect": false,
+   "withdrawal_effect": false
+  },
+  "2007": {
+   "visits_per_day_gap": [
+    0.2,
+    -0.1,
+    0.1,
+    0.0,
+    0.0,
+    0.2
+   ],
+   "visits_per_day_gap_mean": 0.067,
+   "spontaneous_gap_mean": 0.067,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.024,
+    -0.012,
+    0.012,
+    0.0,
+    0.0,
+    0.024
+   ],
+   "legacy_ratio_gap": [
+    0.103,
+    -0.024,
+    0.349,
+    0.072,
+    0.026,
+    0.121
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.617,
+    "50": 0.203,
+    "80": 0.296
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 490,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": false,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.017,
+     "garden": 0.326,
+     "social": 0.137
+    },
+    "delta_B": {
+     "read": 0.027,
+     "garden": 0.26,
+     "social": 0.35
+    },
+    "delta_B_minus_A": {
+     "read": 0.044,
+     "garden": -0.066,
+     "social": 0.213
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 28.0,
+    "spont_phase": {
+     "A": 0.867,
+     "B": 0.6
+    },
+    "spont_withdrawal": {
+     "A": 0.8,
+     "B": 1.133
+    },
+    "withdrawal_windows_spont_gap": [
+     0.6,
+     0.2,
+     0.2
+    ],
+    "withdrawal_social_pref_gap": 0.209,
+    "read_share": {
+     "A": [
+      0.0,
+      0.054,
+      0.133,
+      0.142,
+      0.096,
+      0.0
+     ],
+     "B": [
+      0.058,
+      0.037,
+      0.217,
+      0.183,
+      0.129,
+      0.0
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": false
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": true
+  },
+  "2008": {
+   "visits_per_day_gap": [
+    0.2,
+    0.1,
+    0.1,
+    0.1,
+    -0.1,
+    0.0
+   ],
+   "visits_per_day_gap_mean": 0.067,
+   "spontaneous_gap_mean": 0.067,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.028,
+    0.012,
+    0.014,
+    0.017,
+    -0.009,
+    0.0
+   ],
+   "legacy_ratio_gap": [
+    0.043,
+    0.111,
+    0.266,
+    0.037,
+    -0.044,
+    -0.017
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.559,
+    "50": 0.251,
+    "80": 0.167
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": false,
+     "first_visit_after_day20": null,
+     "never_met_by_end": true
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 491,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": false,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.061,
+     "garden": 0.339,
+     "social": 0.0
+    },
+    "delta_B": {
+     "read": -0.04,
+     "garden": 0.307,
+     "social": 0.327
+    },
+    "delta_B_minus_A": {
+     "read": 0.021,
+     "garden": -0.032,
+     "social": 0.327
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 28.0,
+    "spont_phase": {
+     "A": 0.0,
+     "B": 0.433
+    },
+    "spont_withdrawal": {
+     "A": 0.0,
+     "B": 1.133
+    },
+    "withdrawal_windows_spont_gap": [
+     0.8,
+     1.4,
+     1.2
+    ],
+    "withdrawal_social_pref_gap": 0.434,
+    "read_share": {
+     "A": [
+      0.142,
+      0.138,
+      0.142,
+      0.062,
+      0.087,
+      0.125
+     ],
+     "B": [
+      0.208,
+      0.058,
+      0.146,
+      0.125,
+      0.138,
+      0.054
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": true
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": true
+  },
+  "2009": {
+   "visits_per_day_gap": [
+    0.4,
+    0.4,
+    0.0,
+    -0.2,
+    0.5,
+    0.3
+   ],
+   "visits_per_day_gap_mean": 0.233,
+   "spontaneous_gap_mean": 0.233,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.067,
+    0.048,
+    0.0,
+    -0.028,
+    0.052,
+    0.036
+   ],
+   "legacy_ratio_gap": [
+    0.211,
+    0.118,
+    0.019,
+    -0.131,
+    0.137,
+    0.232
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.56,
+    "50": 0.262,
+    "80": 0.204
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": true,
+   "plasticity": {
+    "delta_A": {
+     "read": -0.1,
+     "garden": 0.362,
+     "social": 0.205
+    },
+    "delta_B": {
+     "read": -0.061,
+     "garden": 0.313,
+     "social": 0.306
+    },
+    "delta_B_minus_A": {
+     "read": 0.039,
+     "garden": -0.05,
+     "social": 0.101
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 30.0,
+    "spont_phase": {
+     "A": 0.933,
+     "B": 0.533
+    },
+    "spont_withdrawal": {
+     "A": 1.333,
+     "B": 1.3
+    },
+    "withdrawal_windows_spont_gap": [
+     0.2,
+     -0.1,
+     -0.2
+    ],
+    "withdrawal_social_pref_gap": 0.045,
+    "read_share": {
+     "A": [
+      0.054,
+      0.117,
+      0.0,
+      0.071,
+      0.133,
+      0.0
+     ],
+     "B": [
+      0.096,
+      0.083,
+      0.087,
+      0.062,
+      0.05,
+      0.054
+     ]
+    },
+    "old_rule": {
+     "A": true,
+     "B": true
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": false
+  },
+  "2010": {
+   "visits_per_day_gap": [
+    0.6,
+    0.3,
+    0.3,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "visits_per_day_gap_mean": 0.2,
+   "spontaneous_gap_mean": 0.2,
+   "invited_gap_mean": 0.0,
+   "fixed_opp_gap": [
+    0.062,
+    0.031,
+    0.028,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "legacy_ratio_gap": [
+    0.256,
+    0.181,
+    0.168,
+    0.061,
+    0.063,
+    0.066
+   ],
+   "missing_windows": {
+    "control": 0,
+    "reading": 0,
+    "garden": 0,
+    "social": 0
+   },
+   "probe_visit_gap": {
+    "20": 0.609,
+    "50": 0.314,
+    "80": 0.174
+   },
+   "met": {
+    "control": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "reading": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "garden": {
+     "met_during_growth": false,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 489,
+     "never_met_by_end": false
+    },
+    "social": {
+     "met_during_growth": true,
+     "accepted_shared_invitation": true,
+     "first_visit_after_day20": 488,
+     "never_met_by_end": false
+    }
+   },
+   "social_new_criterion": false,
+   "plasticity": {
+    "delta_A": {
+     "read": 0.048,
+     "garden": 0.299,
+     "social": 0.159
+    },
+    "delta_B": {
+     "read": -0.075,
+     "garden": 0.322,
+     "social": 0.305
+    },
+    "delta_B_minus_A": {
+     "read": -0.123,
+     "garden": 0.024,
+     "social": 0.146
+    },
+    "invitations_offered_B": 29,
+    "invited_visits_B_phase": 30.0,
+    "spont_phase": {
+     "A": 0.967,
+     "B": 0.6
+    },
+    "spont_withdrawal": {
+     "A": 1.2,
+     "B": 1.433
+    },
+    "withdrawal_windows_spont_gap": [
+     0.3,
+     0.3,
+     0.1
+    ],
+    "withdrawal_social_pref_gap": 0.124,
+    "read_share": {
+     "A": [
+      0.062,
+      0.163,
+      0.171,
+      0.129,
+      0.058,
+      0.167
+     ],
+     "B": [
+      0.0,
+      0.0,
+      0.087,
+      0.104,
+      0.058,
+      0.05
+     ]
+    },
+    "old_rule": {
+     "A": false,
+     "B": true
+    }
+   },
+   "invite_effect": true,
+   "withdrawal_effect": true
+  }
+ },
+ "sample": "review / exploratory sample (already analysed)"
+}
