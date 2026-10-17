@@ -9,7 +9,7 @@ import secrets
 import tempfile
 import time
 import webbrowser
-from .engine import LimitReached, Session
+from .engine import RULES, LimitReached, Session
 
 STATIC = Path(__file__).parent / 'static'
 # Real time keeps passing while the page or server is closed. Longer absences
@@ -76,7 +76,7 @@ def catch_up(session, hours):
             'highlights': [{'id':e['id'],'title':e['title'],'text':e['text']} for e in new if e['kind'] != 'action'][-5:],
             'traits': {t: round(v - before[t], 1) for t, v in session.agent.traits.items()}}
 
-def create_server(path, port=8765, speed=1.0):
+def create_server(path, port=8765, speed=1.0, new_rules=None):
     path = Path(path)
     # Fail visibly on corruption; never silently reset or overwrite an old pet.
     if path.exists():
@@ -85,7 +85,9 @@ def create_server(path, port=8765, speed=1.0):
         data, last_seen = split_clock(json.loads(path.read_text(encoding='utf-8')))
         session = Session.restore(data)
     else:
-        session, last_seen = Session(), time.time()
+        # A new save may be pinned to an older rule version (e.g. the v5 demo launcher);
+        # an existing save always replays under the version written in it.
+        session, last_seen = Session(rules=new_rules or RULES), time.time()
         save_atomic(path, session, last_seen)
     token = secrets.token_urlsafe(32)
     class Handler(BaseHTTPRequestHandler):
@@ -187,11 +189,13 @@ def main():
     parser.add_argument('--save',type=Path,default=Path(__file__).parent/'data'/'pet.json')
     parser.add_argument('--no-browser',action='store_true')
     parser.add_argument('--speed',type=float,default=1.0,help='game hours per real hour while away (default 1)')
+    parser.add_argument('--new-rules',type=int,choices=range(1,RULES+1),default=None,metavar='N',
+                        help=f'rule version for a NEW save only (default: latest, {RULES}); existing saves keep theirs')
     args = parser.parse_args()
     if not args.speed > 0:
         parser.exit(1, '--speed must be > 0\n')
     try:
-        server = create_server(args.save,args.port,args.speed)
+        server = create_server(args.save,args.port,args.speed,args.new_rules)
     except (OSError,ValueError) as exc:
         parser.exit(1, f'Cannot start / 无法启动: {exc}\nOriginal save is untouched. Try another --port or --save path.\n')
     url = f'http://127.0.0.1:{server.server_port}'

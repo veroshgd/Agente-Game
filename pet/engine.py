@@ -32,6 +32,10 @@ MAX_COMMANDS = 12000
 # activity more attractive (needs still come first). A pet that has met the neighbor can
 # also seek her out again after old memories have faded (v4: 2/8 audited seeds stopped
 # visiting for good once the 7-day memories expired).
+# A v6 candidate (4 h rest after each shared activity instead of 2 visits a day) passed its
+# own pre-set criteria on 2026-10-17 but broke the v4 safe-home standard (seed 42, garden:
+# lowest home 2.9 < 3), so it was NOT adopted; see PET_VALIDATION.md. It stays available as
+# an experiment switch (PetAgent.visit_cap / visit_rest_hours).
 RULES = 5
 TRAIT_HOME_PULL = 0.004      # per hour, fraction of the gap back to the trait's anchor
 EAT_URGENCY_FROM = 55        # hunger where eating starts to outrank leisure
@@ -68,13 +72,15 @@ VISIT_MEMORY = 1 / 40        # v5: recent shared memories in the visit chance (v
 PREF_GOAL = 1.0              # goal priority added per unit of liking (learn / see_the_world)
 # Why the neighbor could not meet. Invitations skip 'away' and 'full', never 'off_hours'.
 NEIGHBOR_FREE, NEIGHBOR_OFF_HOURS, NEIGHBOR_AWAY, NEIGHBOR_FULL = 'free', 'off_hours', 'away', 'full'
+NEIGHBOR_REST = 'rest'       # resting after a shared activity (only when a rest interval is set)
 LABELS = {'eat': '吃点东西', 'sleep': '休息', 'gather_food': '收集食物',
           'gather_material': '收集材料', 'build': '整理小屋', 'explore': '四处探索',
           'read': '读书', 'garden': '照料花园', 'visit': '和米粒一起种花'}
 # v4 diary: the real reason a wished-for visit did not happen.
 NEIGHBOR_TEXT = {NEIGHBOR_AWAY: '想去找米粒，可她今天外出了，就自己照料了花园。',
                  NEIGHBOR_FULL: '想去找米粒，可她今天的接待次数已经满了，就自己照料了花园。',
-                 NEIGHBOR_OFF_HOURS: '想去找米粒，可现在不是她的接待时间（08:00-20:00），就自己照料了花园。'}
+                 NEIGHBOR_OFF_HOURS: '想去找米粒，可现在不是她的接待时间（08:00-20:00），就自己照料了花园。',
+                 NEIGHBOR_REST: '想去找米粒，可她刚一起种过花，想先歇一会儿，就自己照料了花园。'}
 
 class LimitReached(ValueError):
     """The prototype's tick or command budget is used up. The pet stays viewable/exportable."""
@@ -97,6 +103,12 @@ class PetAgent(core.Agent):
         self.prefs = {k: 0.0 for k in ('read', 'garden', 'social')}
         self.pref_evidence = {k: {'count': 0, 'recent_ids': []} for k in self.prefs}
         self.pref_off = False        # validation only: removes the preference term from decisions
+        # The neighbor's visiting rule. Defaults are the v3-v5 rule; experiments change them on
+        # copies (and a future rule version could set them). Invitations skip both limits.
+        self.visit_cap = MILI_VISITS_PER_DAY     # unprompted visits per day (None = no daily cap)
+        self.visit_rest_hours = 0                # hours she rests after a shared activity
+        self.freeze_prefs = False                # validation only: preferences keep acting, stop learning
+        self.diagnostics = False                 # validation only: add 'social_diag' to events
 
     def influence(self):
         # A real event id carries each contribution. Time weakens its influence.
@@ -119,8 +131,10 @@ class PetAgent(core.Agent):
             return NEIGHBOR_FREE
         if random.Random(self.seed * 100003 + day).random() < MILI_AWAY_CHANCE:
             return NEIGHBOR_AWAY
-        if sum(1 for m in self.shared if m['tick'] // 24 == day) >= MILI_VISITS_PER_DAY:
+        if self.visit_cap is not None and sum(1 for m in self.shared if m['tick'] // 24 == day) >= self.visit_cap:
             return NEIGHBOR_FULL
+        if self.visit_rest_hours and self.shared and day * 24 + hour - self.shared[-1]['tick'] < self.visit_rest_hours:
+            return NEIGHBOR_REST
         return NEIGHBOR_FREE
 
     def mili_free(self, day, hour):
@@ -200,7 +214,8 @@ class PetAgent(core.Agent):
     def social_experience(self, visited, event_id, enjoyment):
         """v5: one real chance to meet the neighbor: company (visited) or solitude."""
         v = self.prefs['social']
-        self.prefs['social'] = v + SOCIAL_RATE * ((enjoyment if visited else 0.0) - v)
+        if not self.freeze_prefs:
+            self.prefs['social'] = v + SOCIAL_RATE * ((enjoyment if visited else 0.0) - v)
         ev = self.pref_evidence['social']
         ev['count'] += 1
         if visited:
@@ -212,6 +227,8 @@ class PetAgent(core.Agent):
         """v5: an activity that really happened moves its preference a bounded step toward
         how much it was enjoyed. Repeating it while bored, hungry or tired teaches less."""
         for k in PREF_OF.values():
+            if self.freeze_prefs:
+                break
             v = self.prefs[k]
             self.prefs[k] = v + PREF_RATE * ((enjoyment if k == key else 0.0) - v)
         if key:
@@ -322,6 +339,8 @@ class PetAgent(core.Agent):
         neighbor = None
         visit_record = None
         chance_to_meet = False
+        drawn = wants = None
+        diag = self.social_diag(day, hour, invited) if self.diagnostics else None
         # Enjoyment of this hour, from the state it was chosen in (v5 preference learning).
         dull = self.recent.count(action) / BOREDOM_WINDOW
         enjoyment = self.need_gate() * (1 - PREF_DULL * dull)
@@ -333,7 +352,9 @@ class PetAgent(core.Agent):
             if self.rules >= 5:
                 # Having met her once is enough to look for her again; no fixed schedule.
                 chance, chance_pref = self.visit_chance(bonus)
+                drawn = not invited and bool(self.shared)        # a real draw happens below
                 wants_visit = invited or (bool(self.shared) and self.rng.random() < chance)
+                wants = bool(wants_visit) if (drawn or invited) else None
                 visit_record = {'chance': round(chance, 4), 'pref': round(chance_pref, 4),
                                 'memory': round(bonus * VISIT_MEMORY, 4), 'base': VISIT_BASE}
             else:
@@ -366,6 +387,21 @@ class PetAgent(core.Agent):
             self.last['enjoyment'] = round(enjoyment, 4)
             self.last['visit_chance'] = visit_record
             self.last['chance_to_meet'] = chance_to_meet
+        if diag is not None:
+            diag.update(chose_explore=action == 'explore', drew=bool(drawn), wanted=wants,
+                        chance=visit_record, outcome=outcome)
+            self.last['social_diag'] = diag
+
+    def social_diag(self, day, hour, invited):
+        """Validation-only record of the neighbor situation this hour. It draws no random
+        number (her schedule has its own generator) and claims a wish to visit only when a
+        real draw happened in act(); 'blocked' is her rule for an unprompted visit."""
+        uninvited = self.neighbor_status(day, hour)
+        return {'met': bool(self.shared), 'in_hours': 8 <= hour < 20,
+                'away_today': random.Random(self.seed * 100003 + day).random() < MILI_AWAY_CHANCE,
+                'visits_today': sum(1 for m in self.shared if m['tick'] // 24 == day),
+                'blocked': uninvited if uninvited in (NEIGHBOR_FULL, NEIGHBOR_REST) else None,
+                'available_uninvited': uninvited == NEIGHBOR_FREE, 'invited': invited}
 
     def settle(self):
         """Homeostasis: the safe home removes the storms and scarcity that balanced

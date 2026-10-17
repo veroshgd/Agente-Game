@@ -36,6 +36,7 @@ const ES={
   '出门照料了花园。今天还没有发生新的共同活动。':'Salió a cuidar el jardín. Hoy todavía no ha habido actividades compartidas.',
   '想去找米粒，可她今天不在家，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy no estaba en casa, así que cuidó el jardín sola.',
   '有一阵子没见米粒了，主动去找她，一起种下一株花。':'Hacía un tiempo que no veía a Mili; fue a buscarla por su cuenta y plantaron una flor juntas.',
+  '想去找米粒，可她刚一起种过花，想先歇一会儿，就自己照料了花园。':'Quiso ir a ver a Mili, pero acababan de plantar juntas y ella quería descansar un rato, así que cuidó el jardín sola.',
   '想去找米粒，可她今天外出了，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy había salido, así que cuidó el jardín sola.',
   '想去找米粒，可她今天的接待次数已经满了，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy ya no recibía más visitas, así que cuidó el jardín sola.',
   '想去找米粒，可现在不是她的接待时间（08:00-20:00），就自己照料了花园。':'Quiso ir a ver a Mili, pero ahora no es su horario de visitas (08:00-20:00), así que cuidó el jardín sola.',
