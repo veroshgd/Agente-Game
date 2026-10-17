@@ -152,3 +152,32 @@ def test_http_save_restart_and_access_checks(tmp_path):
         assert exc.value.code==404
     finally:
         server.shutdown();server.server_close();thread.join()
+
+def test_v3_neighbor_has_her_own_schedule_but_keeps_invitations():
+    # Audit 2026-10-17: under rules v2 a pet visited Mili ~5 times a day, every day.
+    s=Session(42,rules=3);s.apply({'kind':'object','value':'garden'})
+    s.apply({'kind':'invite','value':None});run(s,30)
+    per_day={}
+    for e in s.events:
+        if e.get('action')=='visit':per_day.setdefault(e['tick']//24,[]).append(e)
+    assert per_day and all(sum(not v['invited'] for v in vs)<=2 for vs in per_day.values())
+    assert len(per_day)<30
+    assert any(e.get('missed_neighbor') for e in s.events)
+    assert all(not s.agent.mili_free(d,h) for d in range(30) for h in (0,7,20,23))
+
+def test_leisure_gets_boring_but_needs_and_chores_do_not():
+    # Long-term home upkeep is checked hour by hour in tests/test_pet_v4.py.
+    s=garden();s.apply({'kind':'invite','value':None});run(s,3)
+    a=copy.deepcopy(s.agent);a.recent=[]
+    fresh=a.score('explore',3)
+    a.recent=['explore']*24
+    assert a.score('explore',3)<fresh and a.boredom('eat')==0
+    assert a.boredom('gather_material')==a.boredom('build')==0
+
+def test_v2_saves_keep_v2_rules():
+    old=Session(42,rules=2);old.apply({'kind':'object','value':'garden'})
+    old.apply({'kind':'invite','value':None});run(old,20)
+    again=Session.restore(json.loads(json.dumps(old.archive())))
+    assert again.rules==2 and again.view()==old.view()
+    assert all('missed_neighbor' not in e for e in again.events)
+    assert again.view()['events']!=Session.restore({**old.archive(),'version':3}).view()['events']

@@ -9,7 +9,7 @@ import secrets
 import tempfile
 import time
 import webbrowser
-from .engine import MAX_TICKS, Session
+from .engine import LimitReached, Session
 
 STATIC = Path(__file__).parent / 'static'
 # Real time keeps passing while the page or server is closed. Longer absences
@@ -50,22 +50,29 @@ def hours_owed(last_seen, now, speed):
     return hours, last_seen + hours * step
 
 def catch_up(session, hours):
-    """Advance through the normal command log so replayed saves stay identical."""
+    """Advance owed time through normal commands, so replayed saves stay identical.
+
+    Runs inside the caller's transaction. When the prototype's tick or command budget
+    cannot cover all owed hours, the largest steps that still fit are applied (fewest
+    commands) and the rest is reported as skipped: the pet stops at the limit, and the
+    request never half-applies and then fails."""
+    if hours <= 0:
+        return None
     start_tick, first_event = session.tick, len(session.events)
     before = dict(session.agent.traits)
-    left = min(hours, MAX_TICKS - session.tick)
+    left = hours
     for step in (24, 6, 1):
-        while left >= step:
+        while left >= step and session.limits()['commands_left'] > 0 and session.limits()['ticks_left'] >= step:
             session.apply({'kind':'advance','value':step})
             left -= step
-    if session.tick == start_tick:
-        return None
     counts = {}
     new = session.events[first_event:]
     for e in new:
         if e['kind'] == 'action':
             counts[e['title']] = counts.get(e['title'], 0) + 1
-    return {'hours': session.tick - start_tick, 'counts': counts,
+    limits = session.limits()
+    reason = None if not left else ('commands' if limits['commands_left'] == 0 else 'ticks')
+    return {'hours': session.tick - start_tick, 'skipped_hours': left, 'limit': reason, 'counts': counts,
             'highlights': [{'id':e['id'],'title':e['title'],'text':e['text']} for e in new if e['kind'] != 'action'][-5:],
             'traits': {t: round(v - before[t], 1) for t, v in session.agent.traits.items()}}
 
@@ -116,8 +123,11 @@ def create_server(path, port=8765, speed=1.0):
             self.server.session, self.server.last_seen = candidate, last_seen
             return away
 
-        def answer(self, away):
-            self.reply(200, {'state':self.server.session.view(), 'token':token, 'away':away})
+        def answer(self, away, status=200, error=None):
+            data = {'state':self.server.session.view(), 'token':token, 'away':away}
+            if error:
+                data.update(error=error, limit=True)
+            self.reply(status, data)
 
         def do_GET(self):
             if not self.trusted():
@@ -125,6 +135,10 @@ def create_server(path, port=8765, speed=1.0):
             if self.path == '/api/state':
                 try:
                     return self.answer(self.commit())
+                except LimitReached as exc:
+                    # catch_up stops at the limits, so this is only a safety net; the
+                    # committed pet is untouched and still viewable/exportable.
+                    return self.answer(None, 409, str(exc))
                 except OSError:
                     return self.reply(500, {'error':'存档写入失败，操作未提交。请检查目录权限或磁盘空间。'})
             if self.path == '/api/export':
@@ -157,6 +171,8 @@ def create_server(path, port=8765, speed=1.0):
                 else:
                     away = self.commit(data)
                 self.answer(away)
+            except LimitReached as exc:
+                self.answer(None, 409, str(exc))
             except (ValueError, TypeError, KeyError) as exc:
                 self.reply(400, {'error':str(exc)})
             except OSError:

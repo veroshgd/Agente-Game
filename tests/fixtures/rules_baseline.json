@@ -1,0 +1,3647 @@
+[
+{
+"archive": {
+"version": 1,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "ed565669de298f4cccdd5606ff697e55097c0389b1eb2ee2e5fdc0e15cefa71f",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 1,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "5f44da2a211c54f57ff3ff7a30deedac7aed8bac36f02734f3e6fdcc9d9913b7",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 1,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "50dae99fde2b7a35dc8b2b9cb923ac72d0d5202ede73a0f433224c5d0ecd23ea",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 1,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "95bba61296a6f827526a6c67bbb701c0f715bdc1c6e36f8d29a9c79d5bbaf808",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 1,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "273a72aa2aa8a0565ff39f01ae4ff9c044092d3adefb2639a4c9120156243aa0",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 1,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "d898556f4503fd8bd43ff29036d9e4a447b2c4524d17eebfac87e94a796ec564",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 1,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "22aa0cb330eb769d2bf196c90cade563193c0d3d3b91bc332f49144631a8ad35",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 1,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "7659f2635d65f00ed48f8da763852fee41838e7c2d2dae93112bbc40d0c344f3",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 1,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "d1e1128148fa86974637f89b88eca2239d2f536429c81d629d66eaee8bf200f4",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 2,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "eb9abc5feb9a06dcccca7f7ed33509e3e9ab4cab02ca3c31347b6bc49a5e001d",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 2,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "5c507ded7b2c26ffb829303b24392b4b9ec96764b38e626ff31717ca96a54757",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 2,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "53cdf415a60cfee22e4f0029a17b0e303c04cc11f1fc653779181403502c620b",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 2,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "a23e485aa5eb633a7c1076f163c2fc0b76c4fdac923feb698211c5cacc24c9a8",
+"tick": 503,
+"shelter": 19.45
+},
+{
+"archive": {
+"version": 2,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "6e3615ec1607d24e975cded02d3cb91a29816b24ff11c1889fa1a20c32217181",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 2,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "30d8151740c053dc2e21fd0fc42246922de4805b5f81600e2f24cbef93e4201a",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 2,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "88cde9a40482f1732437be660121d84f5e5da6244ca08a2224f1bf07f4cb292c",
+"tick": 503,
+"shelter": 2.05
+},
+{
+"archive": {
+"version": 2,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "a42ea74a71067579ead4569009bfe7dc59ab99c0662c0c7feb80c33ec02f1d92",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 2,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "b79c1600c47a7b3dde24591181c8c23f81844ecd494a374c0e5cfb39656d497c",
+"tick": 503,
+"shelter": 0.0
+},
+{
+"archive": {
+"version": 3,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "b98a3ef30d7773c2c17e0cbedfc5c78adfbda607c95aa0408704f46294a68fe5",
+"tick": 503,
+"shelter": 37.55
+},
+{
+"archive": {
+"version": 3,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "215291af6874c37708a07c7622359f339c79301fbe1c4daf88965612821061ad",
+"tick": 503,
+"shelter": 35.95
+},
+{
+"archive": {
+"version": 3,
+"seed": 1,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "8ad67f649b26540030c07e0b3a5a0416ae660f33a2c59a1554920fc22feb9ec8",
+"tick": 503,
+"shelter": 18.05
+},
+{
+"archive": {
+"version": 3,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "ee72c6100a0c149e2df17ee47548baa2a727f93f0bf4808d9f3b5a00de105b76",
+"tick": 503,
+"shelter": 76.8
+},
+{
+"archive": {
+"version": 3,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "97114dc7bf59abb97d6058c38981f103502e828e3a0fe71e901f8d61ae97199f",
+"tick": 503,
+"shelter": 10.0
+},
+{
+"archive": {
+"version": 3,
+"seed": 42,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "fffcbd8366bcd387fe0aa6796781a678967b8bb4582ac88c467ecdcb8dbc8dc0",
+"tick": 503,
+"shelter": 15.7
+},
+{
+"archive": {
+"version": 3,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "7c1dbcb43e8ef48faf8c255101f47f5e5112bf5d8e86812f82c44b8fa00b51af",
+"tick": 503,
+"shelter": 14.5
+},
+{
+"archive": {
+"version": 3,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "03c72425f184022f5d6126c44171bd62a61f80c860b2d9f06ebaaea349f82cf3",
+"tick": 503,
+"shelter": 35.95
+},
+{
+"archive": {
+"version": 3,
+"seed": 901,
+"commands": [
+{
+"kind": "name",
+"value": "Prueba"
+},
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"digest": "bc95090412b425c2adb5afd83cf103380e7aa274abd870584ffee8058f881820",
+"tick": 503,
+"shelter": 14.85
+}
+]

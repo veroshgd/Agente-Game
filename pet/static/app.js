@@ -9,7 +9,7 @@ const ES={
   '小小生活，慢慢长大':'Una pequeña vida, creciendo despacio','本地可玩原型 · 01':'Prototipo local jugable · 01',
   '一起，把日子过成回忆。':'Juntos, convirtamos los días en recuerdos.','给它一个机会，看看它会怎样选择。':'Dale una oportunidad y mira qué elige.',
   '正在登陆月球…':'Aterrizando en la luna…','取个名字 ↗':'Ponerle nombre ↗','月球小屋和月面花园':'Casita lunar y jardín lunar','月面花园':'Jardín lunar',
-  '饱腹':'Saciedad','精力':'Energía','此刻的小心思':'LO QUE PIENSA AHORA','过 1 小时':'Avanzar 1 hora','过 6 小时':'Avanzar 6 horas','过一天':'Avanzar un día',
+  '饱腹':'Saciedad','精力':'Energía','小屋':'Casa','此刻的小心思':'LO QUE PIENSA AHORA','过 1 小时':'Avanzar 1 hora','过 6 小时':'Avanzar 6 horas','过一天':'Avanzar un día',
   '即使关闭页面，现实每过 1 小时，它也过 1 个游戏小时（离开时最多补算 48 小时）。播放时每 3 秒再快进 1 小时。每次操作自动保存。':'Aunque cierres la página, por cada hora real pasa 1 hora de juego (al volver se recuperan como máximo 48 h). En reproducción, además, cada 3 segundos avanza 1 hora. Cada acción se guarda automáticamente.',
   '给生活一点小变化':'Pequeños cambios en su vida','你改变环境，它决定如何生活。':'Tú cambias el entorno; la criatura decide cómo vivir.',
   '✿ 开辟花园':'✿ Crear un jardín','让探索多一个去处':'Un nuevo lugar que explorar','▤ 放一本书':'▤ Dejar un libro','它可以选择读书':'Puede elegir leer',
@@ -32,6 +32,10 @@ const ES={
   '想起之前一起种花的经历，主动去找米粒，种下一株花。':'Recordó las flores que plantaron juntas, fue a buscar a Mili por iniciativa propia y plantaron otra.',
   '出门照料了花园。之前的共同经历增加了出门的吸引力。':'Salió a cuidar el jardín. Las experiencias compartidas le dieron más ganas de salir.',
   '出门照料了花园。今天还没有发生新的共同活动。':'Salió a cuidar el jardín. Hoy todavía no ha habido actividades compartidas.',
+  '想去找米粒，可她今天不在家，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy no estaba en casa, así que cuidó el jardín sola.',
+  '想去找米粒，可她今天外出了，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy había salido, así que cuidó el jardín sola.',
+  '想去找米粒，可她今天的接待次数已经满了，就自己照料了花园。':'Quiso ir a ver a Mili, pero hoy ya no recibía más visitas, así que cuidó el jardín sola.',
+  '想去找米粒，可现在不是她的接待时间（08:00-20:00），就自己照料了花园。':'Quiso ir a ver a Mili, pero ahora no es su horario de visitas (08:00-20:00), así que cuidó el jardín sola.',
   '你好，小世界':'¡Hola, pequeño mundo!','小家伙诞生了。先取个名字，再一起认识这个家。':'Ha nacido una criaturita. Primero ponle un nombre; después, a conocer juntos este hogar.',
   '厨房补充了食物':'La cocina repuso comida','小屋会自动补充食物，饿了它会自己决定去吃。':'La casita repone la comida sola; cuando tenga hambre, decidirá por su cuenta ir a comer.',
   '小屋提供了应急照料':'La casita dio cuidados de emergencia','原型的安全照料降低了饥饿，避免生存惩罚。':'Los cuidados de seguridad del prototipo redujeron el hambre para evitar penalizaciones de supervivencia.',
@@ -42,6 +46,9 @@ const ES={
   '读到了一些以前不知道的事':'Leyó cosas que no sabía','一场暴雨掀翻了屋顶':'Una tormenta arrancó el tejado','熬过了一段吃不饱的日子':'Sobrevivió a una temporada de hambre','有人给了我食物':'Alguien me dio comida',
   // Errors from pet/engine.py and pet/server.py
   '指令格式错误':'Formato de comando incorrecto','指令无效或本次原型的记录上限已到':'Comando no válido o se alcanzó el límite de registros del prototipo',
+  '指令无效':'Comando no válido','时间步长无效':'Paso de tiempo no válido',
+  '已达到本原型的操作上限。角色仍可查看，也可以导出存档。':'Se alcanzó el límite de acciones del prototipo. Puedes seguir viendo a la criatura y exportar la partida.',
+  '剩余游戏时间不足以前进这么久（演示上限 10000 小时）。角色仍可查看，也可以导出存档。':'No queda tiempo de juego suficiente para avanzar tanto (límite de 10000 horas). Puedes seguir viendo a la criatura y exportar la partida.',
   '时间步长无效或已达到 10000 小时演示上限，请导出存档':'Paso de tiempo no válido o se alcanzó el límite de 10000 horas; exporta la partida',
   '名字请输入 1-20 个可见字符':'El nombre debe tener entre 1 y 20 caracteres visibles','未知物品':'Objeto desconocido','家里已经有这个了':'Eso ya está en casa',
   '先布置花园，再邀请邻居':'Primero crea el jardín y luego invita a la vecina','邀请还在等待回应':'La invitación aún espera respuesta','未知指令':'Comando desconocido',
@@ -73,21 +80,35 @@ const UI={
     shared:n=>`共同种花 ${n} 次`,memNote:(b,ids)=>`近期共同经历为探索提供最多 ${b} 分的加成，实际加成还取决于饱腹和精力。来源：${ids||'暂时没有近期经历'}。`,
     memEmpty:'还没有共同回忆。邀请卡本身不会增加亲密关系。',invitePending:'邀请已送达，正在等它决定。可以继续观察或让时间往前走。',
     inviteReady:'米粒白天有空。邀请只提供机会，不会强迫角色出门。',inviteFirst:'先开辟花园，再给米粒留一张邀请卡。',
-    entryTime:(d,h,id)=>`第 ${d} 天 ${hh(h)} · #${id}`,cause:(ids,b)=>`决策前参考：${ids} · 探索得分增加 ${b}`,change:'这次行动留下的变化：',
+    entryTime:(d,h,id)=>`第 ${d} 天 ${hh(h)} · #${id}`,change:'这次行动留下的变化：',
+    parts:{core:'原有',garden:'花园',invitation:'邀请',memory:'共同记忆',boredom:'重复的无聊',eat_urgency:'饿了要吃',home_care:'小屋需要照料',gate:'饱腹/精力门控',raw:'门控前'},
+    scoreLine:(items,net,final)=>`打分：${items} → 净变化 ${net}，最终 ${final}`,
+    memoryUsed:ids=>`参与打分的共同经历：${ids}。`,memoryDecisive:a=>`没有这一项，这次会改为“${a}”。`,memoryNotDecisive:'它参与了打分，但没有改变这次选择。',
+    rulesOld:(r,l)=>`这个角色按规则 v${r} 生活（最新为 v${l}）。为了不改写它已经发生的过去，旧角色会一直沿用创建时的规则。想体验新规则，请另开一个存档：python run_pet.py --save pet/data/new.json（原角色不受影响）。`,
+    limitNote:why=>`已达到原型的${why==='commands'?'操作次数':'10000 游戏小时'}上限：时间不再前进。角色、手记和导出存档仍可正常使用。`,
+    awaySkipped:(n,why)=>`有 ${n} 小时没有补算：已达到原型的${why==='commands'?'操作次数':'游戏时间'}上限。`,
+    neighborRules:'米粒有自己的生活：有些日子会外出，每天最多主动接待两次。你的邀请卡她总会留出时间（仍在 08:00-20:00）。',
     empty:'这段时间还没有新的重要经历。切换“全部活动”看看日常吧。',history:(all,n)=>`显示最近 90 条中的${all?'全部活动':'重要经历'}；共 ${n} 条。导出存档可保留完整进度。`,
     play:'▶ 看它自己生活',pause:'Ⅱ 暂停观察',namePrompt:'给小家伙取个名字（1-20 个字符）',importConfirm:'恢复这个存档？当前进度会自动备份为 pet.before-import.json。',
     conn:'连接中断，请检查启动窗口是否还开着，再刷新页面。',title:'Life Engine · 小小生活',switchTo:'Español',html:'zh-CN',
-    awayTitle:h=>`你不在的 ${h} 小时里`,awayText:list=>`它自己过着日子：${list}。`,awayNone:'这段时间它过得很平静。',awayChange:'这段时间的变化：'},
+    awayTitle:h=>h?`你不在的 ${h} 小时里`:'你不在的时候',awayText:list=>`它自己过着日子：${list}。`,awayNone:'这段时间它过得很平静。',awayChange:'这段时间的变化：'},
   es:{clock:(d,h)=>`Día ${d} · ${hh(h)}\nCada pequeño cambio tiene su origen`,first:'Acaba de llegar al mundo',hint:'Ponle un nombre, prepara algunos objetos y deja que el tiempo pase despacio.',
     goal:s=>`Objetivo de estos días: ${GOALS[s.goal.type]||s.goal.label}`,noGoal:'Poco a poco se va acostumbrando a su hogar.',traits:{caution:'Cautela',curiosity:'Curiosidad',industry:'Diligencia'},sep:', ',
     shared:n=>`Flores plantadas juntas: ${n}`,memNote:(b,ids)=>`Las experiencias compartidas recientes dan hasta ${b} puntos extra a explorar; el efecto real depende de la saciedad y la energía. Origen: ${ids||'ninguna experiencia reciente'}.`,
     memEmpty:'Aún no hay recuerdos compartidos. La invitación por sí sola no aumenta la amistad.',invitePending:'Invitación entregada; esperando a que decida. Puedes seguir observando o dejar pasar el tiempo.',
     inviteReady:'Mili está libre de día. La invitación solo da la oportunidad; no obliga a salir.',inviteFirst:'Primero crea el jardín y luego déjale una invitación a Mili.',
-    entryTime:(d,h,id)=>`Día ${d} ${hh(h)} · #${id}`,cause:(ids,b)=>`Tenido en cuenta al decidir: ${ids} · puntuación de explorar +${b}`,change:'Cambios que dejó esta acción: ',
+    entryTime:(d,h,id)=>`Día ${d} ${hh(h)} · #${id}`,change:'Cambios que dejó esta acción: ',
+    parts:{core:'base',garden:'Jardín',invitation:'Invitación',memory:'Recuerdos compartidos',boredom:'Aburrimiento por repetir',eat_urgency:'Hambre',home_care:'La casa necesita cuidados',gate:'filtro de saciedad/energía',raw:'antes del filtro'},
+    scoreLine:(items,net,final)=>`Puntuación: ${items} → cambio neto ${net}, total ${final}`,
+    memoryUsed:ids=>`Recuerdos compartidos que contaron al decidir: ${ids}.`,memoryDecisive:a=>`Sin ellos, esta vez habría elegido “${a}”.`,memoryNotDecisive:'Contaron en la puntuación, pero no cambiaron la elección.',
+    rulesOld:(r,l)=>`Esta criatura vive con las reglas v${r} (las más recientes son v${l}). Para no reescribir su pasado, una criatura antigua conserva siempre las reglas con las que nació. Para probar las nuevas, abre otra partida: python run_pet.py --save pet/data/nueva.json (la criatura original no cambia).`,
+    limitNote:why=>`Se alcanzó el límite de ${why==='commands'?'acciones':'10000 horas de juego'} del prototipo: el tiempo ya no avanza. Puedes seguir viendo a la criatura, leer su diario y exportar la partida.`,
+    awaySkipped:(n,why)=>`${n} ${n===1?'hora no se recuperó':'horas no se recuperaron'}: se alcanzó el límite de ${why==='commands'?'acciones':'tiempo de juego'} del prototipo.`,
+    neighborRules:'Mili tiene su propia vida: algunos días sale y recibe como mucho dos visitas espontáneas al día. Para tu invitación siempre hace un hueco (dentro de 08:00-20:00).',
     empty:'Aún no hay momentos importantes en este periodo. Cambia a “Toda la actividad” para ver el día a día.',history:(all,n)=>`Mostrando ${all?'toda la actividad':'los momentos importantes'} de los últimos 90 registros; ${n} en total. Exporta la partida para conservar todo el progreso.`,
     play:'▶ Verla vivir',pause:'Ⅱ Pausar',namePrompt:'Ponle un nombre a la criaturita (1-20 caracteres)',importConfirm:'¿Restaurar esta partida? El progreso actual se guardará como copia en pet.before-import.json.',
     conn:'Se perdió la conexión. Comprueba que la ventana del servidor sigue abierta y recarga la página.',title:'Life Engine · Una pequeña vida',switchTo:'中文',html:'es',
-    awayTitle:h=>`Mientras no estabas (${h} ${h===1?'hora':'horas'})`,awayText:list=>`Siguió con su vida: ${list}.`,awayNone:'Fue un rato tranquilo.',awayChange:'Cambios en este tiempo: '}
+    awayTitle:h=>h?`Mientras no estabas (${h} ${h===1?'hora':'horas'})`:'Mientras no estabas',awayText:list=>`Siguió con su vida: ${list}.`,awayNone:'Fue un rato tranquilo.',awayChange:'Cambios en este tiempo: '}
 };
 const t=()=>UI[lang];
 const text=(id,value)=>{$(id).textContent=value;};
@@ -106,9 +127,10 @@ function renderAway(){
   if(!away)return;
   text('away-title',t().awayTitle(away.hours));
   const counts=Object.entries(away.counts).sort((a,b)=>b[1]-a[1]).map(([title,n])=>`${tr(title)} ×${n}`);
-  text('away-text',counts.length?t().awayText(counts.join(t().sep)):t().awayNone);
+  // Nothing ran (the prototype limit stopped time): say only that, not "a quiet while".
+  text('away-text',counts.length?t().awayText(counts.join(t().sep)):(away.hours?t().awayNone:''));
   const labels=t().traits;const changes=Object.entries(away.traits).filter(([,n])=>Math.abs(n)>=.1).map(([k,n])=>`${labels[k]} ${n>=0?'+':''}${n.toFixed(1)}`);
-  text('away-traits',changes.length?t().awayChange+changes.join(' · '):'');
+  text('away-traits',(changes.length?t().awayChange+changes.join(' · '):'')+(away.skipped_hours?(changes.length?' ':'')+t().awaySkipped(away.skipped_hours,away.limit):''));
   const list=$('away-list');list.replaceChildren();
   for(const e of away.highlights){
     const div=document.createElement('div');div.className='entry';
@@ -117,9 +139,31 @@ function renderAway(){
   }
 }
 const ids=list=>list.map(id=>'#'+id).join(t().sep);
+// Signed numbers with a real minus sign: never "+-0.6".
+const signed=x=>(x<0?'−':'+')+Math.abs(x).toFixed(1);
+const ACTION_ZH={eat:'吃点东西',sleep:'休息',gather_food:'收集食物',gather_material:'收集材料',build:'整理小屋',explore:'四处探索',read:'读书'};
+function decisionNotes(e){
+  const d=e.decision;if(!d)return [];
+  const p=t().parts,items=[];
+  for(const key of ['garden','invitation','memory'])if(d[key])items.push(`${p[key]} ${signed(d[key])}`);
+  if(d.garden||d.invitation||d.memory_raw)items.push(`${p.gate} ×${d.gate.toFixed(2)}`+(d.memory_raw&&d.gate<1?` (${p.memory} ${p.raw} ${signed(d.memory_raw)})`:''));
+  if(d.eat_urgency)items.push(`${p.eat_urgency} ${signed(d.eat_urgency)}`);
+  if(d.home_care)items.push(`${p.home_care} ${signed(d.home_care)}`);
+  if(d.boredom)items.push(`${p.boredom} ${signed(-d.boredom)}`);
+  if(!items.length)return [];
+  const notes=[t().scoreLine([`${p.core} ${d.core.toFixed(1)}`,...items].join(' · '),signed(d.net),d.final.toFixed(1))];
+  if(e.cause_ids&&e.cause_ids.length&&d.memory){
+    notes.push(t().memoryUsed(ids(e.cause_ids))+' '+(d.memory_decisive?t().memoryDecisive(tr(ACTION_ZH[d.runner_up_action]||d.runner_up_action)):t().memoryNotDecisive));
+  }
+  return notes;
+}
 function render(s){
   state=s;text('pet-name',s.name);text('stage',tr(s.stage));text('clock',t().clock(s.day,s.hour));
-  for(const key of ['satiety','energy']){$(key).value=s[key];text(key+'-value',s[key]);}
+  for(const key of ['satiety','energy','home']){if(s[key]===undefined)continue;$(key).value=s[key];text(key+'-value',s[key]);}
+  $('house').classList.toggle('worn',s.home<20);
+  const old=s.rules!==undefined&&s.rules<s.latest_rules;$('rules-note').hidden=!old;if(old)text('rules-note',t().rulesOld(s.rules,s.latest_rules));
+  const lim=s.limits||{};const blocked=lim.can_advance===false;$('limit-note').hidden=!blocked;
+  if(blocked){stop();text('limit-note',t().limitNote(lim.commands_left===0?'commands':'ticks'));}
   text('activity',s.last?tr(s.last.title):t().first);text('thought',s.last?tr(s.last.text):t().hint);
   text('goal',s.goal?t().goal(s):t().noGoal);
   $('creature').className='creature '+(s.last?s.last.action:'');
@@ -135,9 +179,12 @@ function render(s){
     label.append(title,number);const track=document.createElement('div');track.className='track';const bar=document.createElement('span');bar.style.width=value+'%';track.append(bar);row.append(label,track);traits.append(row);
   }
   text('relationship',tr(s.relationship));text('shared',t().shared(s.shared_count));
+  $('neighbor-rules').hidden=!(s.rules>=3);text('neighbor-rules',t().neighborRules);
   text('memory-note',s.shared_count?t().memNote(s.memory_bonus,ids(s.memory_ids)):t().memEmpty);
-  for(const button of document.querySelectorAll('[data-object]'))button.disabled=s.objects.includes(button.dataset.object)||busy;
-  $('invite').disabled=!s.objects.includes('garden')||s.invitation_pending||busy;
+  for(const button of document.querySelectorAll('[data-object]'))button.disabled=s.objects.includes(button.dataset.object)||busy||lim.can_act===false;
+  $('invite').disabled=!s.objects.includes('garden')||s.invitation_pending||busy||lim.can_act===false;
+  for(const button of document.querySelectorAll('[data-hours]'))button.disabled=busy||blocked||Number(button.dataset.hours)>lim.ticks_left;
+  $('play').disabled=busy||blocked;$('rename').disabled=busy||lim.can_act===false;
   text('invite-status',s.invitation_pending?t().invitePending:(s.objects.includes('garden')?t().inviteReady:t().inviteFirst));
   renderTimeline();
 }
@@ -151,7 +198,7 @@ function renderTimeline(){
     const time=document.createElement('time');time.textContent=t().entryTime(Math.floor(e.tick/24)+1,e.tick%24,e.id);
     const title=document.createElement('strong');title.textContent=tr(e.title);
     const body=document.createElement('p');body.textContent=tr(e.text);div.append(time,title,body);
-    if(e.cause_ids&&e.cause_ids.length){const cause=document.createElement('small');cause.textContent=t().cause(ids(e.cause_ids),e.score_bonus);div.append(cause);}
+    for(const note of decisionNotes(e)){const small=document.createElement('small');small.className='decision';small.textContent=note;div.append(small);}
     if(e.before&&e.after){const labels=t().traits;const changes=Object.keys(labels).map(k=>[labels[k],e.after[k]-e.before[k]]).filter(pair=>Math.abs(pair[1])>=.05);if(changes.length){const change=document.createElement('p');change.textContent=t().change+changes.map(([label,n])=>`${label} ${n>=0?'+':''}${n.toFixed(1)}`).join(' · ');div.append(change);}}
     list.append(div);
   }
@@ -163,7 +210,8 @@ async function request(path,body){
   document.querySelectorAll('button').forEach(b=>b.disabled=true);
   try{
     const response=await fetch(path,body===undefined?{}:{method:'POST',headers:{'Content-Type':'application/json','X-Pet-Token':token},body:JSON.stringify(body)});
-    const result=await response.json();if(!response.ok)throw new Error(result.error||'请求失败');
+    const result=await response.json();
+    if(!response.ok){if(result.state){state=result.state;token=result.token||token;}throw new Error(result.error||'请求失败');}
     token=result.token;state=result.state;
     if(result.away&&returning){away=result.away;renderAway();}
     returning=false;
@@ -183,7 +231,7 @@ $('import-button').addEventListener('click',()=>{stop();$('import-file').click()
 $('import-file').addEventListener('change',async()=>{const file=$('import-file').files[0];if(!file)return;try{if(file.size>2000000)throw new Error('存档过大');const data=JSON.parse(await file.text());if(confirm(t().importConfirm))await request('/api/import',data);}catch(e){error(tr(e.message));}finally{$('import-file').value='';}});
 $('away-close').addEventListener('click',()=>{away=null;renderAway();});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){stop();returning=true;}else request('/api/state');});
-setInterval(()=>{if(playing&&!busy&&!document.hidden)command('advance',1);},3000);
+setInterval(()=>{if(playing&&!busy&&!document.hidden&&state&&state.limits.can_advance)command('advance',1);},3000);
 // Real time also passes with the page open: ask the server to catch up every minute.
 setInterval(()=>{if(!playing&&!busy&&!document.hidden)request('/api/state');},60000);
 applyLang();
