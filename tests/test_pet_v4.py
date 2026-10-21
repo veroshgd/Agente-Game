@@ -100,7 +100,7 @@ def test_home_need_is_silent_when_the_home_is_fine():
 def test_neighbor_reasons_are_distinct_and_match_the_diary():
     seen = Counter()
     for seed in (1, 42, 901):
-        s = pet(seed)
+        s = pet(seed, rules=5)          # the daily cap ('full') is the v4-v5 rule
         hours(s, 30 * 24)
         for e in s.events:
             if e.get('action') != 'garden' or not e.get('neighbor'):
@@ -118,7 +118,7 @@ def test_neighbor_reasons_are_distinct_and_match_the_diary():
 
 
 def test_invitation_skips_away_and_full_but_not_off_hours():
-    a = pet(42).agent
+    a = pet(42, rules=5).agent          # the daily cap ('full') is the v4-v5 rule
     away_day = next(d for d in range(100) if random.Random(42 * 100003 + d).random() < engine.MILI_AWAY_CHANCE)
     home_day = next(d for d in range(100) if random.Random(42 * 100003 + d).random() >= engine.MILI_AWAY_CHANCE)
     assert a.neighbor_status(away_day, 10) == 'away'

@@ -1,6 +1,7 @@
 """Social diagnostics and neighbor-rule switches (validation tooling for v5).
 
 Defaults must reproduce v5 exactly; diagnostics and probes must not change any pet.
+These are v5 tools, so pets here are pinned to rules 5.
 """
 import copy
 import json
@@ -20,7 +21,7 @@ BASELINE_V5 = json.loads((ROOT / 'tests' / 'fixtures' / 'rules_baseline_v5.json'
 
 
 def pet(seed=42, items=('garden',), invite=True):
-    s = Session(seed)
+    s = Session(seed, 5)
     for item in items:
         s.apply({'kind': 'object', 'value': item})
     if invite:
@@ -107,8 +108,8 @@ def test_probe_copies_leave_the_real_pet_untouched():
 
 
 def test_defaults_are_the_v5_rule():
-    a = Session().agent
-    assert (a.visit_cap, a.visit_rest_hours, a.freeze_prefs, a.diagnostics) == (2, 0, False, False)
+    a = Session(rules=5).agent
+    assert (a.visit_cap, a.visit_rest_hours, a.freeze_prefs, a.diagnostics, a.home_interrupt) == (2, 0, False, False, False)
 
 
 def test_new_rules_option_only_affects_a_new_save(tmp_path):

@@ -1,0 +1,3590 @@
+[
+{
+"scenario": "garden_invite",
+"archive": {
+"version": 5,
+"seed": 1,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "8fdc2178b3e3def96773d8f5db460b36bc2d7d1822a370d9ee6834a87308b2cd",
+"explanation": "6b19ef1944ea1bfdb0cb93bf203dbdacaa90acec2003099e12cccb905fc71299"
+},
+{
+"scenario": "all_invite",
+"archive": {
+"version": 5,
+"seed": 1,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "c6f36649dc184bbd742fa6521b32f500ea9d7eb9de45c04de3a000e22b74226e",
+"explanation": "b80a1365c389b7d5e6405f3e244651840d37c0727803bff0711a62f7de75a11c"
+},
+{
+"scenario": "garden_invite",
+"archive": {
+"version": 5,
+"seed": 42,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "83f50090e64a7263b5ffbacfaf0b4f29598c780e7a5037a30ed36f3730e9aaac",
+"explanation": "a1cfd5db914e98c7522a6dbf4800d16e798ef0029f82597143bee8bbd97c8c26"
+},
+{
+"scenario": "all_invite",
+"archive": {
+"version": 5,
+"seed": 42,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "d50872c97b6f955122f08b6d0c0b7663f86c37ff8311d356477e33cbbfa8d107",
+"explanation": "5bdd422a278304cbd59ae5ad8bc5dc5fa3ec1a10a196d779b813b2250f8221df"
+},
+{
+"scenario": "garden_invite",
+"archive": {
+"version": 5,
+"seed": 901,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "9fc8a7d24285b5b17d5f5e7c6ed66d9a59a61484e4a31921b024b1c7f6fcdbd9",
+"explanation": "a418ae7718ea281d2e44679a4caf9c0f5e140e8beef394cc0e05d8f631c6a75c"
+},
+{
+"scenario": "all_invite",
+"archive": {
+"version": 5,
+"seed": 901,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "f6ae9b7138dae70d7a59abf0f9424d32dbbb7e924441e863cbca3f855393ea0a",
+"explanation": "74903eeaf6fed24391dc127597ca74c274b3e09261e7f7d85594637fe77829a9"
+},
+{
+"scenario": "garden_invite",
+"archive": {
+"version": 5,
+"seed": 7,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "1d7cd67239453e072f6be758fec94df4aef09dacc993dc9c479c8d6e1bfde630",
+"explanation": "8dadcc6b40309162cb3192ab51426ef2283e2c7aa790f12bb54be2bf1faa7865"
+},
+{
+"scenario": "all_invite",
+"archive": {
+"version": 5,
+"seed": 7,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "b474cce73acd33db1a9877c18c6a156a2e2f0524e508a296d3696b83a2dd3b38",
+"explanation": "a258b30f4b264a0b4af34e54238c475f75d13bc8f13608e26602f865e6729233"
+},
+{
+"scenario": "garden_invite",
+"archive": {
+"version": 5,
+"seed": 123,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "7def68d71089b3bcf879855a40233672248cfc6407acf7a8bfca91662c9eca8f",
+"explanation": "8702a0eaa1a8225998c9882690f3ac010a864cde0e5e0e05920dee30b26c9e9d"
+},
+{
+"scenario": "all_invite",
+"archive": {
+"version": 5,
+"seed": 123,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "42e06344e4a60434e59a16a068acb4a6a5d30bc55a3592c55cc46d72def11669",
+"explanation": "964ff56e1ba8c729733173310f713084f4c2f8a29326d0a1b709dcbc6da1042e"
+},
+{
+"scenario": "garden_invite",
+"archive": {
+"version": 5,
+"seed": 2024,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "4a368b535efd06678ab9b004e793b2a3632b5232b41ff369d724549e9de1ef5d",
+"explanation": "4cdae572334d6627535080f09d607329b8a361e64382bafc8a4a820ca8323434"
+},
+{
+"scenario": "all_invite",
+"archive": {
+"version": 5,
+"seed": 2024,
+"commands": [
+{
+"kind": "object",
+"value": "garden"
+},
+{
+"kind": "object",
+"value": "book"
+},
+{
+"kind": "object",
+"value": "music"
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 1
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 6
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "invite",
+"value": null
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+},
+{
+"kind": "advance",
+"value": 24
+}
+]
+},
+"behavior": "afb331e15dce572419919afbf35d1382ce8d77b0e4243ccbe973fcb0564a9edb",
+"explanation": "5e9518bfa20df75a9ec82a46528ca65736750c3fc586b396ebb3d99cfcaef32b"
+}
+]

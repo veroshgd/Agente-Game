@@ -102,7 +102,7 @@ def set_scheme(s, scheme):
 
 
 def new_pet(seed, scheme='cap2'):
-    s = Session(seed)
+    s = Session(seed, 5)   # v5 experiment: rules pinned explicitly (2026-10-21)
     set_scheme(s, scheme)
     s.agent.diagnostics = True
     return s

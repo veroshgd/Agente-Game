@@ -92,7 +92,7 @@ const UI={
     rulesOld:(r,l)=>`这个角色按规则 v${r} 生活（最新为 v${l}）。为了不改写它已经发生的过去，旧角色会一直沿用创建时的规则。想体验新规则，请另开一个存档：双击 start_pet_v5.bat，或 python run_pet.py --save pet/data/v5-demo.json（原角色不受影响）。`,
     limitNote:why=>`已达到原型的${why==='commands'?'操作次数':'10000 游戏小时'}上限：时间不再前进。角色、手记和导出存档仍可正常使用。`,
     awaySkipped:(n,why)=>`有 ${n} 小时没有补算：已达到原型的${why==='commands'?'操作次数':'游戏时间'}上限。`,
-    neighborRules:'米粒有自己的生活：有些日子会外出，每天最多主动接待两次。你的邀请卡她总会留出时间（仍在 08:00-20:00）。',
+    neighborRules:r=>r>=6?'米粒有自己的生活：有些日子会外出，每次一起种花后要歇 4 小时。你的邀请卡她总会留出时间（仍在 08:00-20:00）。':'米粒有自己的生活：有些日子会外出，每天最多主动接待两次。你的邀请卡她总会留出时间（仍在 08:00-20:00）。',
     prefNames:{read:'读书',garden:'独自照料花园',social:'米粒在家时，去找她而不是独处'},prefCount:n=>`${n} 次经历`,
     prefUsed:(name,n)=>`长期偏好“${name}”参与了打分（来自 ${n} 次经历的累积，不是某一件事）`,prefDecisive:a=>`即时检查：保持当前目标和其他状态不变，只去掉这一份偏好，这次会改为“${a}”。`,prefNotDecisive:'即时检查：只去掉这一份偏好（其他不变），仍会选择同一类行动，可能由另一份偏好接替。',
     prefScope:'这只检查行动大类，没有检查会去园艺还是拜访。',prefLife:'这不代表“如果它从没有过这段经历”。',
@@ -113,7 +113,7 @@ const UI={
     rulesOld:(r,l)=>`Esta criatura vive con las reglas v${r} (las más recientes son v${l}). Para no reescribir su pasado, una criatura antigua conserva siempre las reglas con las que nació. Para probar las nuevas, abre otra partida: doble clic en start_pet_v5.bat, o python run_pet.py --save pet/data/v5-demo.json (la criatura original no cambia).`,
     limitNote:why=>`Se alcanzó el límite de ${why==='commands'?'acciones':'10000 horas de juego'} del prototipo: el tiempo ya no avanza. Puedes seguir viendo a la criatura, leer su diario y exportar la partida.`,
     awaySkipped:(n,why)=>`${n} ${n===1?'hora no se recuperó':'horas no se recuperaron'}: se alcanzó el límite de ${why==='commands'?'acciones':'tiempo de juego'} del prototipo.`,
-    neighborRules:'Mili tiene su propia vida: algunos días sale y recibe como mucho dos visitas espontáneas al día. Para tu invitación siempre hace un hueco (dentro de 08:00-20:00).',
+    neighborRules:r=>r>=6?'Mili tiene su propia vida: algunos días sale, y después de cada rato juntas descansa 4 horas. Para tu invitación siempre hace un hueco (dentro de 08:00-20:00).':'Mili tiene su propia vida: algunos días sale y recibe como mucho dos visitas espontáneas al día. Para tu invitación siempre hace un hueco (dentro de 08:00-20:00).',
     prefNames:{read:'Leer',garden:'Cuidar el jardín a solas',social:'Si Mili está libre, ir a verla en vez de estar sola'},prefCount:n=>`${n} ${n===1?'experiencia':'experiencias'}`,
     prefUsed:(name,n)=>`El gusto por «${name}» contó en la puntuación (formado a lo largo de ${n} experiencias, no por un solo hecho)`,prefDecisive:a=>`Comprobación inmediata: quitando solo este gusto, con el objetivo actual y todo lo demás igual, esta vez habría elegido «${a}».`,prefNotDecisive:'Comprobación inmediata: quitando solo este gusto (lo demás igual), habría elegido el mismo tipo de acción; otro gusto puede tomar el relevo.',
     prefScope:'Solo se comprueba el tipo de acción, no si iría al jardín o a ver a Mili.',prefLife:'No equivale a «si nunca hubiera vivido esas experiencias».',
@@ -208,7 +208,7 @@ function render(s){
       label.append(name,n);const track=document.createElement('div');track.className='track';
       const bar=document.createElement('span');bar.style.width=Math.round(Math.min(1,p.value)*100)+'%';track.append(bar);row.append(label,track);box.append(row);}}
   text('relationship',tr(s.relationship));text('shared',t().shared(s.shared_count));
-  $('neighbor-rules').hidden=!(s.rules>=3);text('neighbor-rules',t().neighborRules);
+  $('neighbor-rules').hidden=!(s.rules>=3);text('neighbor-rules',t().neighborRules(s.rules));
   text('memory-note',s.shared_count?t().memNote(s.memory_bonus,ids(s.memory_ids)):t().memEmpty);
   for(const button of document.querySelectorAll('[data-object]'))button.disabled=s.objects.includes(button.dataset.object)||busy||lim.can_act===false;
   $('invite').disabled=!s.objects.includes('garden')||s.invitation_pending||busy||lim.can_act===false;

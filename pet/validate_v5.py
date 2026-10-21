@@ -62,7 +62,7 @@ def mili_away(seed, day):
 def grow(seed, route, pref_off=False):
     """Days 0-GROW under one route. Opportunities only: objects and invitation cards."""
     spec = ROUTES[route]
-    s = Session(seed)
+    s = Session(seed, 5)   # v5 experiment: rules pinned explicitly (2026-10-21)
     s.agent.pref_off = pref_off
     for obj in spec['objects']:
         s.apply({'kind': 'object', 'value': obj})

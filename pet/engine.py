@@ -32,11 +32,18 @@ MAX_COMMANDS = 12000
 # activity more attractive (needs still come first). A pet that has met the neighbor can
 # also seek her out again after old memories have faded (v4: 2/8 audited seeds stopped
 # visiting for good once the 7-day memories expired).
-# A v6 candidate (4 h rest after each shared activity instead of 2 visits a day) passed its
-# own pre-set criteria on 2026-10-17 but broke the v4 safe-home standard (seed 42, garden:
-# lowest home 2.9 < 3), so it was NOT adopted; see PET_VALIDATION.md. It stays available as
-# an experiment switch (PetAgent.visit_cap / visit_rest_hours).
+# Candidate 6 (NOT adopted; Session(seed, 6) exists for experiments, saves cannot use it):
+# the neighbor rests 4 h after each shared activity instead of 2 unprompted visits a day, and
+# a run-down home may end a leisure plan early. The rest rule alone broke the v4 safe-home
+# standard (seed 42, garden: lowest home 2.9 < 3): every low point was a core goal lock (a
+# leisure plan kept for GOAL_MIN_DAYS while the home lost ~17 points), not a weak need.
+# 2026-10-21 (pet/validate_v6.py, PET_VALIDATION.md): a first version cutting plans at any home
+# need passed on 5001-5010 but nearly erased reading; the revised one (only below
+# HOME_INTERRUPT_BELOW) passed home and social on fresh seeds 6001-6010 but missed the pre-set
+# reading criterion R1 (reading-route gap 0.6 pp vs required 0.72 = 80% of v5's 0.9 pp).
 RULES = 5
+V6_REST_HOURS = 4            # neighbor's rest after each shared activity (v6; v3-v5: 2 a day instead)
+HOME_INTERRUPT_BELOW = 15    # v6: home level under which a leisure plan may be ended early (dev: 10 too late, 20 cost more reading)
 TRAIT_HOME_PULL = 0.004      # per hour, fraction of the gap back to the trait's anchor
 EAT_URGENCY_FROM = 55        # hunger where eating starts to outrank leisure
 EAT_URGENCY = 6.0            # extra eat score per hunger point above that
@@ -70,6 +77,7 @@ VISIT_MEMORY = 1 / 40        # v5: recent shared memories in the visit chance (v
                              # one recent visit pulled every pet into the same visit-every-day loop,
                              # so short-term memory, not liking, decided who seeks her company.
 PREF_GOAL = 1.0              # goal priority added per unit of liking (learn / see_the_world)
+LEISURE_GOALS = ('learn', 'see_the_world')   # = core DISCRETIONARY_GOALS
 # Why the neighbor could not meet. Invitations skip 'away' and 'full', never 'off_hours'.
 NEIGHBOR_FREE, NEIGHBOR_OFF_HOURS, NEIGHBOR_AWAY, NEIGHBOR_FULL = 'free', 'off_hours', 'away', 'full'
 NEIGHBOR_REST = 'rest'       # resting after a shared activity (only when a rest interval is set)
@@ -103,10 +111,12 @@ class PetAgent(core.Agent):
         self.prefs = {k: 0.0 for k in ('read', 'garden', 'social')}
         self.pref_evidence = {k: {'count': 0, 'recent_ids': []} for k in self.prefs}
         self.pref_off = False        # validation only: removes the preference term from decisions
-        # The neighbor's visiting rule. Defaults are the v3-v5 rule; experiments change them on
-        # copies (and a future rule version could set them). Invitations skip both limits.
-        self.visit_cap = MILI_VISITS_PER_DAY     # unprompted visits per day (None = no daily cap)
-        self.visit_rest_hours = 0                # hours she rests after a shared activity
+        # The neighbor's visiting rule, set by the rule version; experiments change it on copies.
+        # Invitations skip both limits.
+        v6 = rules >= 6
+        self.visit_cap = None if v6 else MILI_VISITS_PER_DAY   # unprompted visits per day (None = no daily cap)
+        self.visit_rest_hours = V6_REST_HOURS if v6 else 0     # hours she rests after a shared activity
+        self.home_interrupt = v6                 # a run-down home may end a leisure plan early
         self.freeze_prefs = False                # validation only: preferences keep acting, stop learning
         self.diagnostics = False                 # validation only: add 'social_diag' to events
 
@@ -170,6 +180,16 @@ class PetAgent(core.Agent):
 
     def update_goal(self, day):
         before = self.goal
+        if (self.home_interrupt and self.shelter < HOME_INTERRUPT_BELOW
+                and self.goal is not None and self.goal['type'] in LEISURE_GOALS):
+            # A leisure plan is kept for GOAL_MIN_DAYS; meanwhile the home lost ~17 points and fell
+            # from 20 to 3 (seed 3007). Like hunger, a run-down home may end it early, but only when
+            # improve_home clearly outranks it (the core's own switch margin). Pure: no random draw.
+            # Only when the home is really low: cutting plans at any level of need also cut nearly
+            # every multi-day 'learn' plan (reading route - control gap 2.9 -> 0.9 pp on dev seeds).
+            pri = {g: p for g, p, _ in self.propose_goals(day)}
+            if pri.get('improve_home', -math.inf) >= pri.get(self.goal['type'], 0.0) + core.GOAL_SWITCH_MARGIN:
+                self._close_goal(day, 'switched')
         super().update_goal(day)
         if self.rules >= 5 and self.goal is not None and self.goal is not before:
             # Trace on the goal itself how much long-term liking went into choosing it.

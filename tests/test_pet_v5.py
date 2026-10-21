@@ -36,8 +36,9 @@ def hours(s, n):
 
 
 # ---------------------------------------------------------------- versions and replay
-def test_new_pets_are_v5():
+def test_v5_pets_can_still_be_created():
     assert RULES == 5 and Session().archive()['version'] == 5
+    assert Session(rules=5).archive()['version'] == 5
 
 
 @pytest.mark.parametrize('case', BASELINE_V4, ids=lambda c: f"v4-seed{c['archive']['seed']}-{c['scenario']}")
@@ -346,12 +347,12 @@ def test_v5_launcher_starts_a_separate_pet_and_keeps_it(tmp_path):
     assert 'run_pet.py --save pet/data/v5-demo.json' in bat
     from pet.server import create_server
     path = tmp_path / 'v5-demo.json'
-    server = create_server(path, 0)                       # first start creates a v5 pet
+    server = create_server(path, 0, new_rules=5)          # first start creates a v5 pet (as the .bat does)
     try:
-        assert server.session.rules == RULES == 5 and json.loads(path.read_text(encoding='utf-8'))['version'] == 5
+        assert server.session.rules == 5 and json.loads(path.read_text(encoding='utf-8'))['version'] == 5
     finally:
         server.server_close()
-    again = create_server(path, 0)                        # later starts continue the same save
+    again = create_server(path, 0, new_rules=5)           # later starts continue the same save
     try:
         assert again.session.rules == 5 and again.session.seed == server.session.seed
     finally:
