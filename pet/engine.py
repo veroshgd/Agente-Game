@@ -41,9 +41,15 @@ MAX_COMMANDS = 12000
 # need passed on 5001-5010 but nearly erased reading; the revised one (only below
 # HOME_INTERRUPT_BELOW) passed home and social on fresh seeds 6001-6010 but missed the pre-set
 # reading criterion R1 (reading-route gap 0.6 pp vs required 0.72 = 80% of v5's 0.9 pp).
+# Experiment 'pause' (2026-10-23, pet/validate_pause.py; NOT a rule version, no save can use it):
+# the same home interrupt stashes the leisure plan instead of ending it, and re-weighs it once
+# the emergency is over. Switched on per pet with PetAgent.goal_pause; v1-v6 never read it.
 RULES = 5
 V6_REST_HOURS = 4            # neighbor's rest after each shared activity (v6; v3-v5: 2 a day instead)
 HOME_INTERRUPT_BELOW = 15    # v6: home level under which a leisure plan may be ended early (dev: 10 too late, 20 cost more reading)
+PAUSE_RESUME_AT = 30         # pause: home level that ends the emergency (2x the trigger: no flip-flop near 15)
+PAUSE_MAX_DAYS = 4           # pause: a plan not resumed within this many days is dropped (= core GOAL_STALL_DAYS)
+PAUSE_MAX_RESUMES = 2        # pause: a plan already resumed this often is ended at its next interrupt (as in v6)
 TRAIT_HOME_PULL = 0.004      # per hour, fraction of the gap back to the trait's anchor
 EAT_URGENCY_FROM = 55        # hunger where eating starts to outrank leisure
 EAT_URGENCY = 6.0            # extra eat score per hunger point above that
@@ -77,6 +83,54 @@ VISIT_MEMORY = 1 / 40        # v5: recent shared memories in the visit chance (v
                              # one recent visit pulled every pet into the same visit-every-day loop,
                              # so short-term memory, not liking, decided who seeks her company.
 PREF_GOAL = 1.0              # goal priority added per unit of liking (learn / see_the_world)
+# Experiment 'evaluation' (2026-10-24, pet/validate_eval.py; NOT a rule version). An activity
+# evaluation Q for read and garden, learnt only from hours that activity was really lived:
+#   r      = comfort while doing it (need gate before the hour: hunger and energy, in [0, 1]).
+#            It reads no Q, no route, no identity, and is the same formula for both activities.
+#            The environment has no activity-specific outcome (read and garden differ only by
+#            fixed energy costs and garden's food finds), so this evaluates experienced STATE,
+#            not richer results. Freshness (repetition) is left out on purpose: it is a function
+#            of recent frequency and would make Q a second frequency code.
+#   Q[a]  <- Q[a] + alpha (r - Q[a]),  alpha = max(1 / (n[a] + 1), EVAL_ALPHA_MIN)
+#   n[a]   experienced hours, kept with EVAL_KEEP a day (never lived: n = 0, distinct from
+#          disliked: Q below the baseline with n > 0). Q is never pulled back; only its weight fades.
+#   R      baseline: mean comfort of all leisure hours (EVAL_BASE_RATE per leisure hour).
+#   E[a]   = n / (n + EVAL_N0) * (Q[a] - R): how much better than leisure in general it felt,
+#          weighted by confidence. Bounded in [-1, 1]; 0 when never lived.
+# It enters ONE decision entry, the activity score (not goal formation), as
+#   EVAL_WEIGHT * E[a] * need gate * (1 - home need)    (needs and the home come first).
+EVAL_KEYS = ('read', 'garden')
+EVAL_WEIGHT = 60.0           # = PREF_WEIGHT: same bound as the v5 liking at 1 (fixed by rule, not tuned)
+EVAL_ALPHA_MIN = 0.05        # learning-rate floor: ~20 recent experiences dominate (plasticity)
+EVAL_BASE_RATE = 0.02        # baseline update per leisure hour (~5 days of leisure)
+EVAL_N0 = 10.0               # experiences for half confidence
+EVAL_KEEP = 0.98             # daily keep of n (half-life ~34 days without the activity: no permanent lock)
+# Experiment 'reading outcome' (2026-10-23, round 3, pet/validate_read.py; NOT a rule version).
+# One real result of reading: comprehension. Each lived reading hour understands
+#   gain = book clarity x focus,   focus = need gate before the hour (hunger / energy), in [0, 1]
+# and adds it to book_progress (a recorded result). Clarity is a property of the book the player
+# offers (world.p['book_clarity'], READ_CLARITY_DEFAULT if unset): the same rule for every pet; it
+# never depends on the pet's history, route or counts (reading more does not raise the gain).
+# Reading value V learns only from those results: V <- V + alpha (gain - V), alpha as EVAL_*,
+# n experiences kept EVAL_KEEP a day. Its term in the READ score only:
+#   READ_VALUE_WEIGHT * n/(n + EVAL_N0) * (V - READ_VALUE_REF) * need gate * (1 - home need).
+# Recent habit (read_habit: pure frequency per leisure hour) is recorded and never decides.
+READ_CLARITY_DEFAULT = 0.6   # the standard book
+READ_VALUE_REF = 0.5         # neutral result (middle of the gain scale): above it reading has paid off
+READ_VALUE_WEIGHT = 60.0     # = PREF_WEIGHT (same bound as the v5 liking; fixed by rule, not tuned)
+# Experiment 'reading interest' (2026-10-23, round 4, pet/validate_interest.py; NOT a rule version).
+# Two things kept apart: the short-term result evaluation S (= read_V above: what reading has given
+# lately, ~20 results) and a long-term interest I. I starts neutral (READ_VALUE_REF) and learns only
+# from S, once a day (consolidation), and only as far as S is CLEAR evidence:
+#   w = n/(n + EVAL_N0) * |S - REF| / REF                 (0 = no or neutral results, 1 = confident and extreme)
+#   I <- I + INTEREST_RATE * w * (S - I)                  (days with at least one reading result)
+#   I <- REF + (I - REF) * EVAL_KEEP                      (days without reading: fades, no permanent lock)
+# So ordinary, neutral reading does not rewrite what earlier clear results taught, while clearly
+# different results do (a lower learning rate would slow both). Nothing is set by route or count.
+# Decision: the SAME single read-score term and bound as the round-3 value, with S replaced by the
+# mean of the two (no second bonus): READ_VALUE_WEIGHT * (conf * (S - REF) + (I - REF)) / 2 * gates.
+INTEREST_RATE = 1 / 7        # one week of fully clear results consolidates ~63% (fixed by rule, not tuned)
+READ_LOWRATE_ALPHA_MIN = 0.01   # control 'just a lower learning rate': the single value with a 5x lower floor
 LEISURE_GOALS = ('learn', 'see_the_world')   # = core DISCRETIONARY_GOALS
 # Why the neighbor could not meet. Invitations skip 'away' and 'full', never 'off_hours'.
 NEIGHBOR_FREE, NEIGHBOR_OFF_HOURS, NEIGHBOR_AWAY, NEIGHBOR_FULL = 'free', 'off_hours', 'away', 'full'
@@ -117,8 +171,40 @@ class PetAgent(core.Agent):
         self.visit_cap = None if v6 else MILI_VISITS_PER_DAY   # unprompted visits per day (None = no daily cap)
         self.visit_rest_hours = V6_REST_HOURS if v6 else 0     # hours she rests after a shared activity
         self.home_interrupt = v6                 # a run-down home may end a leisure plan early
+        self.goal_pause = False                  # experiment 'pause': the interrupt stashes the plan instead
+        self.interrupt_open_only = False         # diagnostic arm: end only plans the core would not close today
+        self.ordered_goals = False               # experiment base 'ordered': done / stalled / switched in order
+        self.home_emergency_unmute = False       # experiment base: no improve_home satiation below HOME_INTERRUPT_BELOW
+        self.emergency_no_margin = False         # experiment base2: below HOME_INTERRUPT_BELOW the trigger needs no switch margin
+        # Experiment 'reading outcome' (see READ_*). Off for every rule version.
+        self.reading_outcome = False
+        self.read_value_in_decision = True       # ablation: False = world and learning as usual, never in a choice
+        self.read_value_flat = False             # ablation: the same term on read AND explore (no activity information)
+        self.read_value_learning = True
+        self.read_V, self.read_n, self.read_habit, self.book_progress = 0.0, 0.0, 0.0, 0.0
+        self.read_evidence = {'count': 0, 'recent_ids': []}
+        # Experiment 'reading interest' (see INTEREST_*). Off for every rule version.
+        self.read_interest = False               # learn the long-term interest I
+        self.read_interest_in_decision = True    # ablation: False = I learnt, the term stays the round-3 one
+        self.read_alpha_min = EVAL_ALPHA_MIN     # control: READ_LOWRATE_ALPHA_MIN = single value, lower rate
+        self.read_I, self.read_today = READ_VALUE_REF, 0
+        # Experiment 'evaluation' (see EVAL_*). Off for every rule version.
+        self.evaluation = False                  # learn and record Q
+        self.eval_in_decision = True             # ablation: False = learns, never used in choices
+        self.eval_learning = True                # ablation: False = keeps acting, stops learning
+        self.eval_flat = False                   # ablation: same mean term for both (no activity information)
+        self.Q = {k: 0.0 for k in EVAL_KEYS}
+        self.eval_n = {k: 0.0 for k in EVAL_KEYS}
+        self.eval_evidence = {k: {'count': 0, 'recent_ids': []} for k in EVAL_KEYS}
+        self.eval_base = None
+        # Diagnostics only, never read by decisions: pure recent frequency (habit) and Q with the
+        # freshness-weighted signal, to test whether Q is just another frequency code.
+        self.habit = {k: 0.0 for k in EVAL_KEYS}
+        self.Q_fresh = {k: 0.0 for k in EVAL_KEYS}
+        self.paused_goal = None                  # at most one stashed plan (no task stack)
+        self.plan_log = []                       # interrupts, pauses, resumes, drops; decisions never read it
         self.freeze_prefs = False                # validation only: preferences keep acting, stop learning
-        self.diagnostics = False                 # validation only: add 'social_diag' to events
+        self.diagnostics = False                 # validation only: add 'social_diag' to events, log would-be interrupts
 
     def influence(self):
         # A real event id carries each contribution. Time weakens its influence.
@@ -167,6 +253,12 @@ class PetAgent(core.Agent):
         need = self.home_need()
         out = [(g, pri + HOME_GOAL * need if g == 'improve_home' else pri, src)
                for g, pri, src in out]
+        if self.home_emergency_unmute and self.shelter < HOME_INTERRUPT_BELOW:
+            # Experiment base: in a home emergency the refractory after a finished or 'stalled'
+            # repair no longer mutes improve_home. Under decay (8.4 a day) a repair finished at 80,
+            # or 'stalled' because no level beat the old best, was muted 6 days while the home
+            # fell to 0-3 (dev 6008, 6009, 6006). Pure: no random draw.
+            out = [(g, pri + self._satiation(g, day) if g == 'improve_home' else pri, src) for g, pri, src in out]
         if self.rules < 5 or self.pref_off:
             return out
         # v5: what it has come to like also shapes what it sets out to do for a few days.
@@ -179,8 +271,11 @@ class PetAgent(core.Agent):
         return [(g, pri + self.goal_pref_boost.get(g, 0.0), src) for g, pri, src in out]
 
     def update_goal(self, day):
+        if self.ordered_goals:
+            return self._update_goal_ordered(day)
         before = self.goal
-        if (self.home_interrupt and self.shelter < HOME_INTERRUPT_BELOW
+        paused_before = self.paused_goal
+        if ((self.home_interrupt or self.diagnostics) and self.shelter < HOME_INTERRUPT_BELOW
                 and self.goal is not None and self.goal['type'] in LEISURE_GOALS):
             # A leisure plan is kept for GOAL_MIN_DAYS; meanwhile the home lost ~17 points and fell
             # from 20 to 3 (seed 3007). Like hunger, a run-down home may end it early, but only when
@@ -189,11 +284,158 @@ class PetAgent(core.Agent):
             # every multi-day 'learn' plan (reading route - control gap 2.9 -> 0.9 pp on dev seeds).
             pri = {g: p for g, p, _ in self.propose_goals(day)}
             if pri.get('improve_home', -math.inf) >= pri.get(self.goal['type'], 0.0) + core.GOAL_SWITCH_MARGIN:
-                self._close_goal(day, 'switched')
+                closing = self._core_closes(self.goal, day)
+                if not self.home_interrupt:
+                    # Diagnostics only (v5 rule): the trigger held but the plan goes on.
+                    self._plan_log(day, 'trigger_kept', self.goal, pri=pri, core_closes=closing)
+                elif (self.goal_pause or self.interrupt_open_only) and closing:
+                    # v6 ends such a plan as 'switched' (kept as recorded), which skips the core's
+                    # 'done' memory and satiation. A pause must not hide a finished or failed plan:
+                    # the core closes it this morning as usual.
+                    self._plan_log(day, 'not_interrupted', self.goal, pri=pri, reason=closing)
+                elif self.goal_pause and self.goal.get('resumes', 0) < PAUSE_MAX_RESUMES:
+                    self._pause_goal(day, pri)
+                else:
+                    self._plan_log(day, 'ended', self.goal, pri=pri, core_closes=closing,
+                                   reason='resume_limit' if self.goal_pause else 'interrupt')
+                    self._close_goal(day, 'switched')
         super().update_goal(day)
+        if self.paused_goal is not None and self.paused_goal is paused_before:
+            self._review_paused(day)
         if self.rules >= 5 and self.goal is not None and self.goal is not before:
             # Trace on the goal itself how much long-term liking went into choosing it.
             self.goal['pref_boost'] = round(getattr(self, 'goal_pref_boost', {}).get(self.goal['type'], 0.0), 4)
+
+    # ---- experiment base 'ordered' (2026-10-24): goal endings in the right order
+    def _update_goal_ordered(self, day):
+        """The core's morning goal update (sim.Agent.update_goal) with its endings in order:
+        1. a finished plan ends 'done' (memory + satiation), a really stalled one 'stalled';
+        2. only an open leisure plan may then end 'switched' under the v6 home trigger;
+        3. candidates are re-proposed AFTER any ending, so satiation and the new state count.
+        Every goal ends once. The core instead picked the next goal from the priorities of
+        before the ending (a finished plan could be re-picked the same morning), and v6 ended
+        finished plans as 'switched', skipping 'done' and its 6-day satiation. No random draw."""
+        before = self.goal
+        g = self.goal
+        if g is not None:
+            prog = self.goal_progress(g)
+            if prog > g.get('best_progress', -1.0) + 1e-9:
+                g['best_progress'] = prog
+                g['last_gain_day'] = day
+            g['progress'] = prog
+            if prog >= 1.0:
+                self._plan_log(day, 'closed', g, reason='done')
+                self._close_goal(day, 'done')
+            elif day - g.get('last_gain_day', day) >= core.GOAL_STALL_DAYS:
+                self._plan_log(day, 'closed', g, reason='stalled')
+                self._close_goal(day, 'stalled')
+        cands = self.propose_goals(day)
+        pri = {t: p for t, p, _ in cands}
+        g = self.goal
+        if (g is not None and self.home_interrupt and self.shelter < HOME_INTERRUPT_BELOW
+                and g['type'] in LEISURE_GOALS
+                and pri.get('improve_home', -math.inf) >= pri.get(g['type'], 0.0)
+                + (0.0 if self.emergency_no_margin else core.GOAL_SWITCH_MARGIN)):
+            # base2: in the emergency the repair only has to be ahead. The switch margin is
+            # hysteresis between comparable plans; with the home at 12-15 a new leisure plan ahead
+            # of it by less than 0.25 kept the repair waiting (eval arm, dev 6006: 12.0 -> 3.6).
+            self._plan_log(day, 'ended', g, pri=pri, reason='interrupt')
+            self._close_goal(day, 'switched')
+            cands = self.propose_goals(day)
+        if cands:
+            cands.sort(key=lambda x: -x[1])
+            best_type, best_pri, best_src = cands[0]
+            g = self.goal
+            if g is None:
+                self.goal = self._new_goal(best_type, best_pri, best_src, day)
+            elif day - g['created_day'] < core.GOAL_MIN_DAYS:
+                pass                                   # still in the core's minimum stay
+            elif best_type != g['type']:
+                cur = next((p for t, p, _ in cands if t == g['type']), 0.0)
+                if best_pri >= cur + core.GOAL_SWITCH_MARGIN:
+                    self._close_goal(day, 'switched')
+                    self.goal = self._new_goal(best_type, best_pri, best_src, day)
+            else:
+                g['priority'] = best_pri
+        if self.rules >= 5 and self.goal is not None and self.goal is not before:
+            self.goal['pref_boost'] = round(getattr(self, 'goal_pref_boost', {}).get(self.goal['type'], 0.0), 4)
+
+    # ---- experiment 'pause': stash the interrupted plan, re-weigh it after the repair
+    def _plan_log(self, day, event, goal, **extra):
+        """Validation trace. Appends only: no decision reads it and it draws no random number."""
+        self.plan_log.append({'day': day, 'tick': self.now, 'event': event,
+                              'plan_id': goal.get('plan_id') if goal else None,
+                              'type': goal['type'] if goal else None, 'home': self.shelter,
+                              'progress': self.goal_progress(goal) if goal else None, **extra})
+
+    def _core_closes(self, goal, day):
+        """'done' / 'stalled' if the core's update_goal would close this plan this morning
+        (same tests, read-only), else None."""
+        prog = self.goal_progress(goal)
+        if prog >= 1.0:
+            return 'done'
+        gained = prog > goal.get('best_progress', -1.0) + 1e-9
+        if not gained and day - goal.get('last_gain_day', day) >= core.GOAL_STALL_DAYS:
+            return 'stalled'
+        return None
+
+    def _pause_goal(self, day, pri):
+        """Stash the current leisure plan: no outcome, satiation, memory or reward is written,
+        so nothing reads as done, failed or learnt. Its count progress is frozen while paused."""
+        g = self.goal
+        g.setdefault('plan_id', f"{g['type']}@{g['created_day']}")   # one goal is created per day at most
+        if self.paused_goal is not None:                                # at most one stashed plan
+            self._plan_log(day, 'dropped', self.paused_goal['goal'], reason='superseded')
+        act = self.GOAL_COUNT_TARGET[g['type']][0]
+        self.paused_goal = {'goal': g, 'day': day, 'tick': self.now, 'reason': 'home_low',
+                            'home': self.shelter, 'progress': self.goal_progress(g),
+                            'count_at_pause': self.action_log[act]}
+        self._plan_log(day, 'paused', g, reason='home_low', pri=pri)
+        self.goal = None
+
+    def _review_paused(self, day):
+        """Each morning after the pause day: resume, keep waiting, or drop the stashed plan.
+        Fresh priorities only; the plan's old score is never reused. Body needs come first."""
+        P = self.paused_goal
+        g = P['goal']
+        if day - P['day'] > PAUSE_MAX_DAYS:
+            return self._drop_paused(day, 'expired')
+        pri = {t: p for t, p, _ in self.propose_goals(day)}
+        if g['type'] not in pri:                     # e.g. the book is gone: the plan cannot go on
+            return self._drop_paused(day, 'invalid')
+        if self.shelter < PAUSE_RESUME_AT:
+            return self._plan_log(day, 'waiting', g, reason='home', pri=pri)
+        best = max(pri, key=lambda t: (pri[t], t))
+        if best != g['type']:
+            if best in LEISURE_GOALS:                # another leisure plan is now worth more
+                return self._drop_paused(day, 'replaced', by=best, pri=pri)
+            # A need (home, food, body) still outranks it: wait, it may come back later.
+            return self._plan_log(day, 'waiting', g, reason=best, pri=pri)
+        if pri[best] <= 0:                           # no slack at all: body first
+            return self._plan_log(day, 'waiting', g, reason='no_slack', pri=pri)
+        # Resume. The repair goal the core kept (hysteresis) ends as an ordinary switch; a
+        # same-type plan the core formed this very morning is replaced by the stashed one.
+        if self.goal is not None:
+            replaced = self.goal['type']
+            if not (replaced == g['type'] and self.goal['created_day'] == day):
+                self._close_goal(day, 'switched')
+            self.goal = None
+        shift = day - P['day']
+        act = self.GOAL_COUNT_TARGET[g['type']][0]
+        g['start'] += self.action_log[act] - P['count_at_pause']   # progress = what the plan did
+        g['created_day'] += shift                                  # age counts active days only
+        if 'last_gain_day' in g:
+            g['last_gain_day'] += shift                            # so no false 'stalled' on return
+        g['priority'] = pri[best]
+        g['resumes'] = g.get('resumes', 0) + 1
+        g['paused_days'] = g.get('paused_days', 0) + shift
+        self.paused_goal = None
+        self.goal = g
+        self._plan_log(day, 'resumed', g, pri=pri, paused_days=shift)
+
+    def _drop_paused(self, day, why, **extra):
+        self._plan_log(day, 'dropped', self.paused_goal['goal'], reason=why, **extra)
+        self.paused_goal = None
 
     def need_gate(self):
         # Needs still gate discretionary activity (same formula as the garden pull).
@@ -256,6 +498,118 @@ class PetAgent(core.Agent):
             ev['count'] += 1
             ev['recent_ids'] = (ev['recent_ids'] + [event_id])[-3:]
 
+    # ---- experiment 'evaluation'
+    def eval_term(self, key):
+        """E[key] = confidence * (Q - baseline), in [-1, 1]; 0 if never lived or no baseline."""
+        n = self.eval_n[key]
+        if self.eval_base is None or n <= 0:
+            return 0.0
+        return n / (n + EVAL_N0) * (self.Q[key] - self.eval_base)
+
+    def evaluation_part(self, action):
+        if not (self.evaluation and self.eval_in_decision):
+            return 0.0, None
+        if action == 'read':
+            key = 'read'
+        elif action == 'explore' and self.world.has('garden'):
+            key = 'garden'
+        else:
+            return 0.0, None
+        e = (sum(self.eval_term(k) for k in EVAL_KEYS) / len(EVAL_KEYS)) if self.eval_flat else self.eval_term(key)
+        return EVAL_WEIGHT * e * self.need_gate() * (1 - self.home_need()), key
+
+    def evaluate_experience(self, outcome, event_id, comfort, enjoyment):
+        """One lived leisure hour. Only the activity really done gets evidence; doing one is
+        never a negative experience of the other."""
+        if not self.eval_learning:
+            return
+        self.eval_base = comfort if self.eval_base is None else self.eval_base + EVAL_BASE_RATE * (comfort - self.eval_base)
+        for k in EVAL_KEYS:
+            self.habit[k] += PREF_RATE * ((1.0 if k == outcome else 0.0) - self.habit[k])
+        if outcome in EVAL_KEYS:
+            n = self.eval_n[outcome]
+            alpha = max(1.0 / (n + 1.0), EVAL_ALPHA_MIN)
+            self.Q[outcome] += alpha * (comfort - self.Q[outcome])
+            self.Q_fresh[outcome] += alpha * (enjoyment - self.Q_fresh[outcome])
+            self.eval_n[outcome] = n + 1.0
+            ev = self.eval_evidence[outcome]
+            ev['count'] += 1
+            ev['recent_ids'] = (ev['recent_ids'] + [event_id])[-3:]
+
+    def daily(self, day):
+        super().daily(day)
+        if self.evaluation and self.eval_learning:
+            for k in EVAL_KEYS:
+                self.eval_n[k] *= EVAL_KEEP
+        if self.reading_outcome and self.read_value_learning:
+            if self.read_interest:
+                self.consolidate_interest()
+            self.read_n *= EVAL_KEEP
+
+    # ---- experiment 'reading outcome'
+    def read_clarity(self):
+        return self.world.p.get('book_clarity', READ_CLARITY_DEFAULT)
+
+    def read_value_term(self):
+        n = self.read_n
+        short = 0.0 if n <= 0 else n / (n + EVAL_N0) * (self.read_V - READ_VALUE_REF)
+        if self.read_interest and self.read_interest_in_decision:
+            return (short + self.read_I - READ_VALUE_REF) / 2       # same bound [-0.5, 0.5]
+        return short
+
+    def interest_weight(self):
+        """How clear the short-term evaluation is as evidence: confidence x distance from neutral."""
+        n = self.read_n
+        return 0.0 if n <= 0 else n / (n + EVAL_N0) * abs(self.read_V - READ_VALUE_REF) / READ_VALUE_REF
+
+    def consolidate_interest(self):
+        """Once a day, before the day's confidence decay. Pure: no random draw."""
+        if self.read_today:
+            self.read_I += INTEREST_RATE * self.interest_weight() * (self.read_V - self.read_I)
+        else:
+            self.read_I = READ_VALUE_REF + (self.read_I - READ_VALUE_REF) * EVAL_KEEP
+        self.read_today = 0
+
+    def read_value_part(self, action):
+        if not (self.reading_outcome and self.read_value_in_decision):
+            return 0.0, None
+        if action == 'read' or (self.read_value_flat and action == 'explore'):
+            return READ_VALUE_WEIGHT * self.read_value_term() * self.need_gate() * (1 - self.home_need()), action
+        return 0.0, None
+
+    def read_experience(self, outcome, event_id, result):
+        """One lived leisure hour: habit (diagnostic) always; value and progress only from a real reading result."""
+        if not self.read_value_learning:
+            return
+        self.read_habit += PREF_RATE * ((1.0 if outcome == 'read' else 0.0) - self.read_habit)
+        if result is None:
+            return
+        self.book_progress += result['gain']
+        alpha = max(1.0 / (self.read_n + 1.0), self.read_alpha_min)
+        self.read_V += alpha * (result['gain'] - self.read_V)
+        self.read_n += 1.0
+        self.read_today += 1
+        ev = self.read_evidence
+        ev['count'] += 1
+        ev['recent_ids'] = (ev['recent_ids'] + [event_id])[-3:]
+
+    def choice_without_read_value(self, day):
+        saved = self.read_value_in_decision
+        self.read_value_in_decision = False
+        try:
+            return self.choose(day)
+        finally:
+            self.read_value_in_decision = saved
+
+    def choice_without_evaluation(self, day):
+        """Counterfactual: the whole legal choice re-made with the evaluation term off."""
+        saved = self.eval_in_decision
+        self.eval_in_decision = False
+        try:
+            return self.choose(day)
+        finally:
+            self.eval_in_decision = saved
+
     def score_parts(self, action, day):
         """Every product contribution to one action's score, from the current state.
         final = core - boredom + eat_urgency + home_care + gated, with
@@ -288,6 +642,12 @@ class PetAgent(core.Agent):
         if self.rules >= 5:
             p['preference'], p['pref_key'] = self.preference_part(action, day)
             p['final'] += p['preference']
+        if self.evaluation:
+            p['evaluation'], p['eval_key'] = self.evaluation_part(action)
+            p['final'] += p['evaluation']
+        if self.reading_outcome:
+            p['read_value'], p['read_value_on'] = self.read_value_part(action)
+            p['final'] += p['read_value']
         return p
 
     def score(self, action, day):
@@ -308,6 +668,8 @@ class PetAgent(core.Agent):
                 'eat_urgency': r(p['eat_urgency']), 'home_care': r(p['home_care']),
                 'net': r(p['final'] - p['core']), 'final': r(p['final']),
                 **(self.explain_preference(action, day, p) if self.rules >= 5 else {}),
+                **(self.explain_evaluation(action, day, p) if self.evaluation else {}),
+                **(self.explain_read_value(action, day, p) if self.reading_outcome else {}),
                 'runner_up': None if runner_up is None else r(runner_up),
                 'runner_up_action': rival,
                 # Taking the memory term away would have let another action win.
@@ -347,6 +709,33 @@ class PetAgent(core.Agent):
                                              'scope': 'category'}
         return record
 
+    def explain_evaluation(self, action, day, p):
+        key = p.get('eval_key')
+        rec = {'evaluation': round(p.get('evaluation', 0.0), 4), 'eval_key': key, 'eval_decisive': False,
+               'eval_choice_without': None}
+        if key:
+            ev = self.eval_evidence[key]
+            rec.update(eval_Q=round(self.Q[key], 4), eval_n=round(self.eval_n[key], 2),
+                       eval_base=None if self.eval_base is None else round(self.eval_base, 4),
+                       eval_experiences=ev['count'], eval_recent_ids=list(ev['recent_ids']))
+        if p.get('evaluation'):
+            without = self.choice_without_evaluation(day)
+            rec['eval_decisive'] = without != action
+            rec['eval_choice_without'] = without
+        return rec
+
+    def explain_read_value(self, action, day, p):
+        rec = {'read_value': round(p.get('read_value', 0.0), 4), 'read_V': round(self.read_V, 4),
+               **({'read_I': round(self.read_I, 4)} if self.read_interest else {}),
+               'read_n': round(self.read_n, 2), 'read_experiences': self.read_evidence['count'],
+               'read_recent_ids': list(self.read_evidence['recent_ids']), 'read_value_decisive': False,
+               'read_value_choice_without': None}
+        if p.get('read_value'):
+            without = self.choice_without_read_value(day)
+            rec['read_value_decisive'] = without != action
+            rec['read_value_choice_without'] = without
+        return rec
+
     def act(self, action, day, hour=0):
         before = dict(self.traits)
         # Capture prior causes BEFORE executing or creating the new memory.
@@ -364,6 +753,7 @@ class PetAgent(core.Agent):
         # Enjoyment of this hour, from the state it was chosen in (v5 preference learning).
         dull = self.recent.count(action) / BOREDOM_WINDOW
         enjoyment = self.need_gate() * (1 - PREF_DULL * dull)
+        comfort = self.need_gate()                 # experiment 'evaluation': state while doing it
         if action == 'explore' and self.world.has('garden'):
             # Scheduling is deterministic: this system neighbor is home 8-19h,
             # and from v3 on she keeps a card you left for her even on busy days.
@@ -407,6 +797,11 @@ class PetAgent(core.Agent):
             self.last['enjoyment'] = round(enjoyment, 4)
             self.last['visit_chance'] = visit_record
             self.last['chance_to_meet'] = chance_to_meet
+        if self.evaluation:
+            self.last['comfort'] = comfort
+        if self.reading_outcome:
+            self.last['read_outcome'] = ({'gain': self.read_clarity() * comfort, 'clarity': self.read_clarity(),
+                                          'focus': comfort} if action == 'read' else None)
         if diag is not None:
             diag.update(chose_explore=action == 'explore', drew=bool(drawn), wanted=wants,
                         chance=visit_record, outcome=outcome)
@@ -489,6 +884,10 @@ class Session:
         e = self.event('action', LABELS[action], text, **move)
         if self.rules >= 5 and move['core_action'] in LEISURE:
             a.experience(PREF_OF.get(action), e['id'], move['enjoyment'])
+        if a.evaluation and move['core_action'] in LEISURE:
+            a.evaluate_experience(action, e['id'], move['comfort'], move['enjoyment'])
+        if a.reading_outcome and move['core_action'] in LEISURE:
+            a.read_experience(action, e['id'], move['read_outcome'])
         if self.rules >= 5 and move['chance_to_meet']:
             a.social_experience(action == 'visit', e['id'], move['enjoyment'])
         if action in ('garden', 'visit'):

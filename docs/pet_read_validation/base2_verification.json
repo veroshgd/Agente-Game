@@ -1,0 +1,630 @@
+{
+ "dev": {
+  "base": {
+   "safety": {
+    "runs": 252,
+    "unique_trajectories": 252,
+    "pass": 252,
+    "phase_pass": 243,
+    "all_pass": false,
+    "min_home": 3.8499999999997647,
+    "zero_hours": 0,
+    "max_below20": 0.060227272727272727,
+    "max_phase_below20": 0.09444444444444444,
+    "upkeep_range": [
+     0.05555555555555555,
+     0.06510416666666667
+    ],
+    "min_leisure": 0.3463541666666667,
+    "min_condition": 100.0,
+    "min_kinds_last_week": 6,
+    "failing": [
+     {
+      "life": "base|pair|3006|rep2|A",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base|route|3009|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base|route|6002|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base|pair|6006|rep0|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base|pair|6007|rep0|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "intervention": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base|pair|6007|rep1|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "intervention": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base|pair|6007|rep2|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "intervention": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base|route|6008|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base|route|6010|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     }
+    ]
+   },
+   "phase_fails": 9,
+   "social_seeds_at_1_7": 18,
+   "pair_B_minus_A": {
+    "n": 20,
+    "missing": 0,
+    "mean": 0.3877777777777778,
+    "median": 0.3666666666666667,
+    "positive": 20,
+    "negative": 0,
+    "ci95": [
+     0.2955555555555555,
+     0.48277777777777775
+    ],
+    "per_seed": [
+     0.04444444444444443,
+     0.3666666666666667,
+     0.7333333333333334,
+     0.15555555555555553,
+     0.2888888888888888,
+     0.2666666666666666,
+     0.19999999999999996,
+     0.5222222222222223,
+     0.011111111111111072,
+     0.5,
+     0.7111111111111109,
+     0.6777777777777777,
+     0.6666666666666666,
+     0.5555555555555556,
+     0.3444444444444445,
+     0.20000000000000004,
+     0.5333333333333333,
+     0.18888888888888888,
+     0.42222222222222233,
+     0.36666666666666664
+    ]
+   },
+   "entropy": 2.1418999500845866
+  },
+  "base2": {
+   "safety": {
+    "runs": 252,
+    "unique_trajectories": 252,
+    "pass": 252,
+    "phase_pass": 242,
+    "all_pass": false,
+    "min_home": 5.74999999999886,
+    "zero_hours": 0,
+    "max_below20": 0.060227272727272727,
+    "max_phase_below20": 0.09444444444444444,
+    "upkeep_range": [
+     0.05555555555555555,
+     0.06510416666666667
+    ],
+    "min_leisure": 0.3463541666666667,
+    "min_condition": 100.0,
+    "min_kinds_last_week": 6,
+    "failing": [
+     {
+      "life": "base2|pair|3006|rep2|A",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base2|route|3009|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base2|route|6002|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base2|pair|6005|rep1|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base2|pair|6006|rep0|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base2|pair|6007|rep0|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "intervention": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base2|pair|6007|rep1|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "intervention": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base2|pair|6007|rep2|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "intervention": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base2|route|6008|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base2|route|6010|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     }
+    ]
+   },
+   "phase_fails": 10,
+   "social_seeds_at_1_7": 18,
+   "pair_B_minus_A": {
+    "n": 20,
+    "missing": 0,
+    "mean": 0.3861111111111111,
+    "median": 0.3666666666666667,
+    "positive": 20,
+    "negative": 0,
+    "ci95": [
+     0.29388888888888887,
+     0.48166666666666663
+    ],
+    "per_seed": [
+     0.04444444444444443,
+     0.3666666666666667,
+     0.7333333333333334,
+     0.15555555555555553,
+     0.2888888888888888,
+     0.2666666666666666,
+     0.19999999999999996,
+     0.5222222222222223,
+     0.011111111111111072,
+     0.5,
+     0.7111111111111109,
+     0.6777777777777777,
+     0.6666666666666666,
+     0.5555555555555556,
+     0.31111111111111117,
+     0.20000000000000004,
+     0.5333333333333333,
+     0.18888888888888888,
+     0.42222222222222233,
+     0.36666666666666664
+    ]
+   },
+   "entropy": 2.1418999500845866
+  },
+  "verdict": {
+   "all_unique_whole_lives": true,
+   "phase_fails_not_above_base": false
+  }
+ },
+ "review_7021_7040": {
+  "base": {
+   "safety": {
+    "runs": 252,
+    "unique_trajectories": 252,
+    "pass": 252,
+    "phase_pass": 244,
+    "all_pass": false,
+    "min_home": 4.999999999998437,
+    "zero_hours": 0,
+    "max_below20": 0.058333333333333334,
+    "max_phase_below20": 0.10138888888888889,
+    "upkeep_range": [
+     0.05555555555555555,
+     0.06666666666666667
+    ],
+    "min_leisure": 0.3333333333333333,
+    "min_condition": 100.0,
+    "min_kinds_last_week": 5,
+    "failing": [
+     {
+      "life": "base|route|7021|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base|route|7022|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base|route|7033|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base|pair|7034|rep0|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base|route|7035|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base|route|7036|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base|pair|7039|rep0|A",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base|pair|7040|rep2|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     }
+    ]
+   },
+   "phase_fails": 8,
+   "social_seeds_at_1_7": 13,
+   "pair_B_minus_A": {
+    "n": 20,
+    "missing": 0,
+    "mean": 0.24388888888888888,
+    "median": 0.17777777777777776,
+    "positive": 19,
+    "negative": 1,
+    "ci95": [
+     0.16833333333333333,
+     0.3227777777777777
+    ],
+    "per_seed": [
+     0.14444444444444446,
+     0.09999999999999994,
+     0.1333333333333333,
+     0.18888888888888888,
+     0.411111111111111,
+     0.08888888888888886,
+     0.44444444444444436,
+     0.11111111111111109,
+     0.14444444444444446,
+     0.011111111111111146,
+     0.48888888888888893,
+     0.48888888888888893,
+     0.43333333333333335,
+     0.19999999999999996,
+     0.08888888888888886,
+     0.16666666666666666,
+     0.2888888888888888,
+     0.6,
+     -0.011111111111111072,
+     0.35555555555555546
+    ]
+   },
+   "entropy": 2.1156586406581503
+  },
+  "base2": {
+   "safety": {
+    "runs": 252,
+    "unique_trajectories": 252,
+    "pass": 252,
+    "phase_pass": 244,
+    "all_pass": false,
+    "min_home": 5.74999999999886,
+    "zero_hours": 0,
+    "max_below20": 0.058333333333333334,
+    "max_phase_below20": 0.10138888888888889,
+    "upkeep_range": [
+     0.05555555555555555,
+     0.06666666666666667
+    ],
+    "min_leisure": 0.3333333333333333,
+    "min_condition": 100.0,
+    "min_kinds_last_week": 5,
+    "failing": [
+     {
+      "life": "base2|route|7021|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base2|route|7022|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base2|route|7033|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base2|pair|7034|rep0|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base2|route|7035|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base2|route|7036|control",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "growth": [
+        "leisure"
+       ]
+      }
+     },
+     {
+      "life": "base2|pair|7039|rep0|A",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     },
+     {
+      "life": "base2|pair|7040|rep2|B",
+      "also": [],
+      "fails": [],
+      "phase_fails": {
+       "withdrawal": [
+        "below20"
+       ]
+      }
+     }
+    ]
+   },
+   "phase_fails": 8,
+   "social_seeds_at_1_7": 13,
+   "pair_B_minus_A": {
+    "n": 20,
+    "missing": 0,
+    "mean": 0.24388888888888888,
+    "median": 0.17777777777777776,
+    "positive": 19,
+    "negative": 1,
+    "ci95": [
+     0.16833333333333333,
+     0.3227777777777777
+    ],
+    "per_seed": [
+     0.14444444444444446,
+     0.09999999999999994,
+     0.1333333333333333,
+     0.18888888888888888,
+     0.411111111111111,
+     0.08888888888888886,
+     0.44444444444444436,
+     0.11111111111111109,
+     0.14444444444444446,
+     0.011111111111111146,
+     0.48888888888888893,
+     0.48888888888888893,
+     0.43333333333333335,
+     0.19999999999999996,
+     0.08888888888888886,
+     0.16666666666666666,
+     0.2888888888888888,
+     0.6,
+     -0.011111111111111072,
+     0.35555555555555546
+    ]
+   },
+   "entropy": 2.1156586406581503
+  },
+  "verdict": {
+   "all_unique_whole_lives": true,
+   "phase_fails_not_above_base": true
+  }
+ },
+ "config_id": "eae7a999a82e",
+ "criteria": {
+  "all_unique_whole_lives": true,
+  "phase_fails_not_above": "base"
+ },
+ "compat": {
+  "by_version": {
+   "v1-v3": {
+    "cases": 27,
+    "identical": 27
+   },
+   "v4": {
+    "cases": 20,
+    "identical": 20
+   },
+   "v5": {
+    "cases": 12,
+    "identical": 12
+   },
+   "v5_long": {
+    "cases": 12,
+    "identical": 12
+   },
+   "v6": {
+    "cases": 24,
+    "identical": 24
+   }
+  },
+  "pass": true
+ }
+}

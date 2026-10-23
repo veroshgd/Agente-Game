@@ -1,0 +1,1436 @@
+{
+ "sample": "dev",
+ "seeds": [
+  3001,
+  3002,
+  3003,
+  3004,
+  3005,
+  3006,
+  3007,
+  3008,
+  3009,
+  3010
+ ],
+ "reading_seeds": [
+  3001,
+  3002,
+  3003,
+  3004,
+  3005,
+  3006,
+  3007,
+  3008,
+  3009,
+  3010,
+  1,
+  42,
+  901,
+  7,
+  123
+ ],
+ "criteria": {
+  "H_min_home": 3.0,
+  "H_never_zero": true,
+  "H_max_below20_share": 0.08,
+  "H_max_upkeep_share": 0.15,
+  "H_min_leisure_share": 0.3,
+  "H_min_condition": 99.0,
+  "H_min_kinds_last_week": 3,
+  "H_phase_min_days": 10,
+  "S": "pet.validate_v5_social.CRITERIA, verdict for rest4 (unrounded)",
+  "R1_min_gap_ratio_vs_v5": 0.8,
+  "R2_max_read_drop_pp": 2.0,
+  "R3_max_entropy_drop_bits": 0.1
+ },
+ "social_criteria": {
+  "E1_withdrawal_learning_gap_per_day": 0.14285714285714285,
+  "E1_min_positive_seeds": 7,
+  "E1_ci_lower_above": 0.0,
+  "E2_full_life_route_gap_per_day": 0.14285714285714285,
+  "E2_windows_positive": 4,
+  "E2_min_seeds": 7,
+  "E3_full_life_pair_gap_per_day": 0.14285714285714285,
+  "E3_min_positive_seeds": 7,
+  "B1_min_condition": 99,
+  "B1_home_never_zero": true,
+  "B1_max_non_sleep_share": 0.6,
+  "B1_max_visit_share": 0.12,
+  "B1_min_eat_share": 0.09,
+  "B1_min_upkeep_share": 0.04,
+  "B1_entropy_drop_vs_cap2_max": 0.1,
+  "B2_max_rapid_repeat_share": 0.35
+ },
+ "final": {
+  "H_rest4_every_unique_whole_life": true,
+  "S_rest4": true,
+  "R": true,
+  "compat_v1_v6": true,
+  "adopt_v6": true,
+  "warning_phase_share_fails": {
+   "v5": 11,
+   "cap2": 15,
+   "rest4": 18,
+   "other": 33
+  }
+ },
+ "home": {
+  "v5": {
+   "runs": 60,
+   "unique_trajectories": 60,
+   "pass": 54,
+   "phase_pass": 49,
+   "all_pass": false,
+   "min_home": 0.0,
+   "zero_hours": 6,
+   "max_below20": 0.06822916666666666,
+   "max_phase_below20": 0.09097222222222222,
+   "upkeep_range": [
+    0.058333333333333334,
+    0.0671875
+   ],
+   "min_leisure": 0.3453125,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 6,
+   "failing": [
+    {
+     "life": "v5|v5_route|3003|control",
+     "also": [],
+     "fails": [
+      "min_home",
+      "zero"
+     ],
+     "phase_fails": {
+      "common": [
+       "min_home",
+       "zero",
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|3007|garden",
+     "also": [],
+     "fails": [
+      "min_home"
+     ],
+     "phase_fails": {
+      "common": [
+       "min_home"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|3008|garden",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "common": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|3008|social",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "growth": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|3009|reading",
+     "also": [],
+     "fails": [
+      "min_home"
+     ],
+     "phase_fails": {
+      "common": [
+       "min_home"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|3010|social",
+     "also": [],
+     "fails": [
+      "min_home"
+     ],
+     "phase_fails": {
+      "common": [
+       "min_home"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|42|control",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "growth": [
+       "leisure"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|42|social",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "growth": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|901|social",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "common": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|7|control",
+     "also": [],
+     "fails": [
+      "min_home"
+     ],
+     "phase_fails": {
+      "common": [
+       "min_home"
+      ]
+     }
+    },
+    {
+     "life": "v5|v5_route|123|control",
+     "also": [],
+     "fails": [
+      "min_home"
+     ],
+     "phase_fails": {
+      "common": [
+       "min_home",
+       "below20"
+      ]
+     }
+    }
+   ]
+  },
+  "cap2": {
+   "runs": 222,
+   "unique_trajectories": 162,
+   "pass": 162,
+   "phase_pass": 147,
+   "all_pass": false,
+   "min_home": 5.399999999999613,
+   "zero_hours": 0,
+   "max_below20": 0.059027777777777776,
+   "max_phase_below20": 0.10277777777777777,
+   "upkeep_range": [
+    0.05555555555555555,
+    0.06995884773662552
+   ],
+   "min_leisure": 0.446875,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 4,
+   "failing": [
+    {
+     "life": "v6|S|3002|probe_path|A",
+     "also": [
+      "v6|S|3002|grow=cap2|withdraw=cap2|learning|rep0|A",
+      "v6|S|3002|full|pair|cap2|A"
+     ],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|grow=cap2|withdraw=cap2|learning|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3003|grow=cap2|withdraw=cap2|frozen|rep2|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3005|grow=cap2|withdraw=cap2|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3006|grow=cap2|withdraw=cap2|frozen|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3006|grow=cap2|withdraw=cap2|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|probe_path|A",
+     "also": [
+      "v6|S|3008|grow=cap2|withdraw=cap2|learning|rep0|A",
+      "v6|S|3008|full|pair|cap2|A"
+     ],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap2|frozen|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap2|frozen|rep1|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap2|frozen|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap2|learning|rep1|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap2|learning|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3009|grow=cap2|withdraw=cap2|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3010|grow=cap2|withdraw=cap2|frozen|rep2|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3010|grow=cap2|withdraw=cap2|learning|rep2|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    }
+   ]
+  },
+  "rest4": {
+   "runs": 262,
+   "unique_trajectories": 212,
+   "pass": 212,
+   "phase_pass": 194,
+   "all_pass": false,
+   "min_home": 5.399999999999613,
+   "zero_hours": 0,
+   "max_below20": 0.0734375,
+   "max_phase_below20": 0.10138888888888889,
+   "upkeep_range": [
+    0.05555555555555555,
+    0.06893004115226338
+   ],
+   "min_leisure": 0.3458333333333333,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 5,
+   "failing": [
+    {
+     "life": "v6|v5_route|3004|control",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "common": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|v5_route|42|control",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "growth": [
+       "leisure"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3001|grow=cap2|withdraw=rest4|frozen|rep0|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3001|grow=cap2|withdraw=rest4|learning|rep0|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|grow=cap2|withdraw=rest4|learning|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|grow=cap2|withdraw=rest4|learning|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|full|pair|rest4|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3005|grow=cap2|withdraw=rest4|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3006|grow=cap2|withdraw=rest4|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=rest4|frozen|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=rest4|frozen|rep1|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=rest4|frozen|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=rest4|learning|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=rest4|learning|rep1|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=rest4|learning|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3010|grow=cap2|withdraw=rest4|frozen|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3010|grow=cap2|withdraw=rest4|frozen|rep2|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3010|grow=cap2|withdraw=rest4|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    }
+   ]
+  },
+  "other": {
+   "runs": 280,
+   "unique_trajectories": 271,
+   "pass": 271,
+   "phase_pass": 238,
+   "all_pass": false,
+   "min_home": 5.399999999999613,
+   "zero_hours": 0,
+   "max_below20": 0.06458333333333334,
+   "max_phase_below20": 0.10138888888888889,
+   "upkeep_range": [
+    0.05761316872427984,
+    0.0684156378600823
+   ],
+   "min_leisure": 0.45260416666666664,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 5,
+   "failing": [
+    {
+     "life": "v6|S|3001|grow=cap2|withdraw=cap4|frozen|rep0|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3001|grow=cap2|withdraw=cap4|learning|rep0|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3001|grow=cap2|withdraw=nocap|frozen|rep0|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3001|grow=cap2|withdraw=nocap|learning|rep0|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|grow=cap2|withdraw=cap4|learning|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|grow=cap2|withdraw=cap4|learning|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|grow=cap2|withdraw=nocap|learning|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|grow=cap2|withdraw=nocap|learning|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|full|social|cap4",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "common": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3002|full|pair|cap4|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3005|grow=cap2|withdraw=cap4|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3006|grow=cap2|withdraw=cap4|frozen|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3006|grow=cap2|withdraw=cap4|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3006|grow=cap2|withdraw=nocap|frozen|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3006|grow=cap2|withdraw=nocap|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap4|frozen|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap4|frozen|rep1|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap4|frozen|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap4|frozen|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap4|learning|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap4|learning|rep1|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap4|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=cap4|learning|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=nocap|frozen|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=nocap|frozen|rep1|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=nocap|frozen|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=nocap|learning|rep0|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=nocap|learning|rep1|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=nocap|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3008|grow=cap2|withdraw=nocap|learning|rep2|A",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "intervention": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3010|grow=cap2|withdraw=cap4|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3010|grow=cap2|withdraw=nocap|frozen|rep2|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    },
+    {
+     "life": "v6|S|3010|grow=cap2|withdraw=nocap|learning|rep1|B",
+     "also": [],
+     "fails": [],
+     "phase_fails": {
+      "withdrawal": [
+       "below20"
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "reading": {
+  "v5": {
+   "read_share": {
+    "control": 0.06087962962962963,
+    "reading": 0.08717592592592593,
+    "garden": 0.019444444444444445,
+    "social": 0.019490740740740743
+   },
+   "reading_minus_control": {
+    "n": 15,
+    "missing": 0,
+    "mean": 0.026296296296296297,
+    "median": 0.030555555555555558,
+    "positive": 10,
+    "negative": 5,
+    "ci95": [
+     0.0008333333333333313,
+     0.05157407407407408
+    ],
+    "per_seed": [
+     -0.029166666666666674,
+     -0.011111111111111113,
+     -0.000694444444444442,
+     0.0069444444444444475,
+     0.012499999999999997,
+     0.1138888888888889,
+     -0.061111111111111116,
+     -0.05277777777777778,
+     0.08888888888888889,
+     0.052083333333333336,
+     0.09097222222222222,
+     0.06527777777777778,
+     0.030555555555555558,
+     0.05277777777777777,
+     0.035416666666666666
+    ]
+   },
+   "entropy": 2.0826143722547363,
+   "entropy_whole_life": 2.2122292785436146
+  },
+  "v6": {
+   "read_share": {
+    "control": 0.047314814814814816,
+    "reading": 0.07847222222222222,
+    "garden": 0.018333333333333333,
+    "social": 0.02439814814814815
+   },
+   "reading_minus_control": {
+    "n": 15,
+    "missing": 0,
+    "mean": 0.031157407407407408,
+    "median": 0.034722222222222224,
+    "positive": 12,
+    "negative": 2,
+    "ci95": [
+     0.009212962962962963,
+     0.054768518518518515
+    ],
+    "per_seed": [
+     0.037500000000000006,
+     0.0,
+     0.04097222222222222,
+     0.011111111111111113,
+     0.0013888888888888978,
+     0.13472222222222222,
+     -0.029861111111111116,
+     -0.04236111111111111,
+     0.10555555555555556,
+     0.05347222222222223,
+     0.041666666666666664,
+     0.05694444444444444,
+     0.01666666666666667,
+     0.034722222222222224,
+     0.004861111111111111
+    ]
+   },
+   "entropy": 2.0829160063962253,
+   "entropy_whole_life": 2.214273068969196
+  },
+  "gap_change_v6_minus_v5": {
+   "n": 15,
+   "missing": 0,
+   "mean": 0.004861111111111111,
+   "median": 0.004166666666666666,
+   "positive": 9,
+   "negative": 6,
+   "ci95": [
+    -0.008981481481481481,
+    0.019444444444444448
+   ],
+   "per_seed": [
+    0.06666666666666668,
+    0.011111111111111113,
+    0.041666666666666664,
+    0.004166666666666666,
+    -0.0111111111111111,
+    0.020833333333333315,
+    0.03125,
+    0.010416666666666664,
+    0.016666666666666663,
+    0.001388888888888891,
+    -0.049305555555555554,
+    -0.008333333333333338,
+    -0.013888888888888888,
+    -0.018055555555555547,
+    -0.030555555555555555
+   ]
+  },
+  "verdict": {
+   "R1": true,
+   "R2": true,
+   "R3": true,
+   "pass": true
+  },
+  "R1_note": "R1 is a ratio to the v5 gap; with the v5 gap near 0 it is unstable (any small v6 gap passes or fails by noise). Kept as fixed on 2026-10-21."
+ },
+ "social": {
+  "cap4": {
+   "E1": true,
+   "E2": true,
+   "E3": false,
+   "B1": true,
+   "B2": false,
+   "adopt": false,
+   "values": {
+    "E1": {
+     "n": 10,
+     "missing": 0,
+     "mean": 0.25555555555555554,
+     "median": 0.18888888888888883,
+     "positive": 7,
+     "negative": 3,
+     "ci95": [
+      0.08222222222222218,
+      0.4466666666666666
+     ],
+     "per_seed": [
+      0.19999999999999987,
+      -0.06666666666666665,
+      0.1777777777777778,
+      0.09999999999999994,
+      0.4888888888888889,
+      -0.022222222222222292,
+      0.3333333333333334,
+      0.5444444444444444,
+      0.8888888888888887,
+      -0.08888888888888886
+     ]
+    },
+    "E2": {
+     "n": 10,
+     "missing": 0,
+     "mean": 0.7699999999999999,
+     "median": 0.8499999999999999,
+     "positive": 10,
+     "negative": 0,
+     "ci95": [
+      0.6466666666666665,
+      0.8816666666666666
+     ],
+     "per_seed": [
+      0.43333333333333335,
+      0.9833333333333334,
+      0.9833333333333332,
+      0.46666666666666634,
+      0.8499999999999999,
+      0.8500000000000001,
+      0.8166666666666667,
+      0.8499999999999999,
+      0.5666666666666667,
+      0.8999999999999999
+     ]
+    },
+    "E2_seeds": 10,
+    "E3": {
+     "n": 10,
+     "missing": 0,
+     "mean": 0.12666666666666662,
+     "median": 0.11666666666666647,
+     "positive": 6,
+     "negative": 4,
+     "ci95": [
+      0.0033333333333331883,
+      0.2566666666666667
+     ],
+     "per_seed": [
+      -0.16666666666666696,
+      -0.06666666666666643,
+      0.4666666666666668,
+      -0.033333333333333215,
+      0.19999999999999973,
+      0.033333333333333215,
+      0.20000000000000018,
+      0.2666666666666666,
+      -0.06666666666666687,
+      0.4333333333333331
+     ]
+    },
+    "B1": {
+     "min_condition": 100.0,
+     "min_home": 6.149999999999695,
+     "top_non_sleep_max": 0.4013888888888889,
+     "visit_share_mean": 0.08902777777777779,
+     "eat_share_min": 0.10902777777777778,
+     "upkeep_share_min": 0.058333333333333334,
+     "entropy_mean": 2.1297177135363734,
+     "entropy_cap2_mean": 2.028968894861737
+    },
+    "B2_rapid_mean": 0.4565763878085368
+   }
+  },
+  "rest4": {
+   "E1": true,
+   "E2": true,
+   "E3": true,
+   "B1": true,
+   "B2": true,
+   "adopt": true,
+   "values": {
+    "E1": {
+     "n": 10,
+     "missing": 0,
+     "mean": 0.1988888888888889,
+     "median": 0.1611111111111111,
+     "positive": 10,
+     "negative": 0,
+     "ci95": [
+      0.11888888888888889,
+      0.30333333333333334
+     ],
+     "per_seed": [
+      0.27777777777777773,
+      0.022222222222222216,
+      0.15555555555555547,
+      0.1333333333333334,
+      0.2333333333333333,
+      0.15555555555555553,
+      0.18888888888888888,
+      0.16666666666666666,
+      0.6000000000000001,
+      0.05555555555555558
+     ]
+    },
+    "E2": {
+     "n": 10,
+     "missing": 0,
+     "mean": 0.5083333333333333,
+     "median": 0.55,
+     "positive": 10,
+     "negative": 0,
+     "ci95": [
+      0.38166666666666665,
+      0.6283333333333333
+     ],
+     "per_seed": [
+      0.1333333333333333,
+      0.4666666666666667,
+      0.5833333333333334,
+      0.19999999999999996,
+      0.6833333333333333,
+      0.5833333333333334,
+      0.5166666666666666,
+      0.8166666666666668,
+      0.6666666666666665,
+      0.43333333333333324
+     ]
+    },
+    "E2_seeds": 9,
+    "E3": {
+     "n": 10,
+     "missing": 0,
+     "mean": 0.2,
+     "median": 0.18333333333333335,
+     "positive": 8,
+     "negative": 1,
+     "ci95": [
+      0.0733333333333334,
+      0.33333333333333337
+     ],
+     "per_seed": [
+      0.2333333333333334,
+      0.033333333333333215,
+      0.30000000000000004,
+      0.26666666666666683,
+      0.1333333333333333,
+      0.06666666666666665,
+      0.43333333333333335,
+      0.0,
+      -0.09999999999999987,
+      0.6333333333333333
+     ]
+    },
+    "B1": {
+     "min_condition": 100.0,
+     "min_home": 5.749999999998973,
+     "top_non_sleep_max": 0.4166666666666667,
+     "visit_share_mean": 0.05586805555555555,
+     "eat_share_min": 0.10902777777777778,
+     "upkeep_share_min": 0.058333333333333334,
+     "entropy_mean": 2.06530610254297,
+     "entropy_cap2_mean": 2.028968894861737
+    },
+    "B2_rapid_mean": 0.0
+   }
+  }
+ },
+ "social_verdicts_rounded_legacy": {
+  "cap4": {
+   "E1": true,
+   "E2": true,
+   "E3": false,
+   "B1": true,
+   "B2": false,
+   "E2_seeds": 10,
+   "adopt": false
+  },
+  "rest4": {
+   "E1": true,
+   "E2": true,
+   "E3": true,
+   "B1": true,
+   "B2": true,
+   "E2_seeds": 9,
+   "adopt": true
+  }
+ },
+ "first_meetings": {
+  "cap2": {
+   "A": {
+    "per_seed": [
+     489,
+     491,
+     489,
+     488,
+     494,
+     495,
+     489,
+     489,
+     488,
+     494
+    ],
+    "never_met": 0
+   },
+   "B": {
+    "per_seed": [
+     489,
+     491,
+     489,
+     488,
+     494,
+     495,
+     489,
+     489,
+     488,
+     494
+    ],
+    "never_met": 0
+   }
+  },
+  "cap4": {
+   "A": {
+    "per_seed": [
+     489,
+     491,
+     489,
+     488,
+     494,
+     495,
+     489,
+     489,
+     488,
+     494
+    ],
+    "never_met": 0
+   },
+   "B": {
+    "per_seed": [
+     489,
+     491,
+     489,
+     488,
+     494,
+     495,
+     489,
+     489,
+     488,
+     494
+    ],
+    "never_met": 0
+   }
+  },
+  "rest4": {
+   "A": {
+    "per_seed": [
+     489,
+     491,
+     489,
+     488,
+     494,
+     495,
+     489,
+     489,
+     488,
+     494
+    ],
+    "never_met": 0
+   },
+   "B": {
+    "per_seed": [
+     489,
+     491,
+     489,
+     488,
+     494,
+     495,
+     489,
+     489,
+     488,
+     494
+    ],
+    "never_met": 0
+   }
+  },
+  "nocap": {
+   "A": {
+    "per_seed": [
+     489,
+     491,
+     489,
+     488,
+     494,
+     495,
+     489,
+     489,
+     488,
+     494
+    ],
+    "never_met": 0
+   },
+   "B": {
+    "per_seed": [
+     489,
+     491,
+     489,
+     488,
+     494,
+     495,
+     489,
+     489,
+     488,
+     494
+    ],
+    "never_met": 0
+   }
+  }
+ },
+ "compat": {
+  "by_version": {
+   "v1-v3": {
+    "cases": 27,
+    "identical": 27
+   },
+   "v4": {
+    "cases": 20,
+    "identical": 20
+   },
+   "v5": {
+    "cases": 12,
+    "identical": 12
+   },
+   "v5_long": {
+    "cases": 12,
+    "identical": 12
+   },
+   "v6": {
+    "cases": 24,
+    "identical": 24
+   }
+  },
+  "pass": true
+ },
+ "life_counts": {
+  "runs": 824,
+  "unique_trajectories": 698
+ }
+}

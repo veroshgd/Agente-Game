@@ -1,0 +1,1998 @@
+{
+ "final": {
+  "P1_persistence_behaviour": false,
+  "P2_persistence_probe": true,
+  "P3_better_than_single": true,
+  "C1_change_behaviour": false,
+  "C2_change_probe_reversed": true,
+  "C3_not_just_lower_rate": true,
+  "K1_whole_common": false,
+  "K3_not_just_bonus": false,
+  "K5_probe_day0": true,
+  "H_whole_life": false,
+  "H_phase_not_above_control": false,
+  "S_social_kept": true,
+  "D_diversity": true,
+  "growth_counts_matched": true,
+  "compat_v1_v6": true,
+  "pass": false
+ },
+ "values": {
+  "interest_off_equals_single": true,
+  "phase_fails": {
+   "read_nodecision": 10,
+   "read_value": 13,
+   "interest": 12,
+   "interest_nodecision": 13,
+   "read_lowrate": 22,
+   "interest_flat": 15
+  },
+  "whole_pass": {
+   "read_nodecision": [
+    252,
+    252
+   ],
+   "read_value": [
+    332,
+    332
+   ],
+   "interest": [
+    330,
+    331
+   ],
+   "interest_nodecision": [
+    332,
+    332
+   ],
+   "read_lowrate": [
+    332,
+    332
+   ],
+   "interest_flat": [
+    332,
+    332
+   ]
+  },
+  "social_seeds_at_1_7": {
+   "read_nodecision": 18,
+   "read_value": 16,
+   "interest": 16,
+   "interest_nodecision": 16,
+   "read_lowrate": 18,
+   "interest_flat": 15
+  },
+  "P3_vs_single": {
+   "mean": 2.7016,
+   "ci95": [
+    2.0957,
+    3.3008
+   ]
+  },
+  "C3_vs_lowrate": {
+   "mean": -5.5611,
+   "ci95": [
+    -6.7158,
+    -4.3975
+   ]
+  },
+  "K3_vs_flat": {
+   "mean": 0.0063,
+   "ci95": [
+    -0.004,
+    0.0163
+   ]
+  }
+ },
+ "describe": {
+  "read_nodecision": {
+   "gap_all": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "gap_early": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "gap_late": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "gap_late_swap": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "keep_minus_swap": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe0": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe30": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe_keep60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe_swap60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe_keep60_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_start": {
+    "mean": 0.526,
+    "ci95": [
+     0.5065,
+     0.544
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_start": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_keep60": {
+    "mean": 0.0032,
+    "ci95": [
+     0.0024,
+     0.0042
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_keep60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "I_gap_swap60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "term_gap_keep60": {
+    "mean": 0.0028,
+    "ci95": [
+     0.0021,
+     0.0037
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pref_read_gap_keep60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "mean_abs_term": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0717,
+    "ci95": [
+     0.0681,
+     0.0753
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.3878,
+    "ci95": [
+     0.2956,
+     0.4828
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "entropy_common": {
+    "mean": 2.1419,
+    "ci95": [
+     2.1211,
+     2.1635
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  },
+  "read_value": {
+   "gap_all": {
+    "mean": 0.0143,
+    "ci95": [
+     0.0074,
+     0.0205
+    ],
+    "positive": 17,
+    "negative": 2
+   },
+   "gap_early": {
+    "mean": 0.0219,
+    "ci95": [
+     0.0118,
+     0.032
+    ],
+    "positive": 16,
+    "negative": 4
+   },
+   "gap_late": {
+    "mean": 0.0067,
+    "ci95": [
+     -0.0029,
+     0.0166
+    ],
+    "positive": 11,
+    "negative": 8
+   },
+   "gap_late_swap": {
+    "mean": -0.0135,
+    "ci95": [
+     -0.0243,
+     -0.0026
+    ],
+    "positive": 4,
+    "negative": 15
+   },
+   "keep_minus_swap": {
+    "mean": 0.0202,
+    "ci95": [
+     0.0072,
+     0.0333
+    ],
+    "positive": 15,
+    "negative": 4
+   },
+   "probe0": {
+    "mean": 24.0882,
+    "ci95": [
+     23.1918,
+     24.9523
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe30": {
+    "mean": 0.5402,
+    "ci95": [
+     -0.1671,
+     1.1725
+    ],
+    "positive": 14,
+    "negative": 6
+   },
+   "probe_keep60": {
+    "mean": 0.309,
+    "ci95": [
+     -0.3383,
+     0.9841
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "probe_swap60": {
+    "mean": -15.1075,
+    "ci95": [
+     -16.1223,
+     -13.9654
+    ],
+    "positive": 0,
+    "negative": 20
+   },
+   "probe_keep60_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_start": {
+    "mean": 0.526,
+    "ci95": [
+     0.5065,
+     0.544
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_start": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_keep60": {
+    "mean": 0.008,
+    "ci95": [
+     -0.0062,
+     0.0227
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "I_gap_keep60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "I_gap_swap60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "term_gap_keep60": {
+    "mean": 0.0059,
+    "ci95": [
+     -0.0064,
+     0.0187
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "pref_read_gap_keep60": {
+    "mean": 0.0135,
+    "ci95": [
+     -0.0005,
+     0.0272
+    ],
+    "positive": 13,
+    "negative": 7
+   },
+   "mean_abs_term": {
+    "mean": 0.0045,
+    "ci95": [
+     0.0042,
+     0.0049
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0768,
+    "ci95": [
+     0.0727,
+     0.081
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.3739,
+    "ci95": [
+     0.2106,
+     0.6017
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "entropy_common": {
+    "mean": 2.1358,
+    "ci95": [
+     2.1105,
+     2.1611
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  },
+  "interest": {
+   "gap_all": {
+    "mean": 0.005,
+    "ci95": [
+     -0.0019,
+     0.0118
+    ],
+    "positive": 12,
+    "negative": 8
+   },
+   "gap_early": {
+    "mean": 0.0231,
+    "ci95": [
+     0.0131,
+     0.0331
+    ],
+    "positive": 18,
+    "negative": 2
+   },
+   "gap_late": {
+    "mean": -0.0131,
+    "ci95": [
+     -0.0256,
+     -0.0009
+    ],
+    "positive": 6,
+    "negative": 14
+   },
+   "gap_late_swap": {
+    "mean": -0.0017,
+    "ci95": [
+     -0.0156,
+     0.0126
+    ],
+    "positive": 8,
+    "negative": 12
+   },
+   "keep_minus_swap": {
+    "mean": -0.0113,
+    "ci95": [
+     -0.0222,
+     -0.001
+    ],
+    "positive": 7,
+    "negative": 13
+   },
+   "probe0": {
+    "mean": 20.9668,
+    "ci95": [
+     20.0277,
+     21.9147
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe30": {
+    "mean": 5.9172,
+    "ci95": [
+     5.4651,
+     6.3726
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe_keep60": {
+    "mean": 3.0106,
+    "ci95": [
+     2.6269,
+     3.3945
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe_swap60": {
+    "mean": -6.878,
+    "ci95": [
+     -7.6048,
+     -6.0722
+    ],
+    "positive": 0,
+    "negative": 20
+   },
+   "probe_keep60_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_start": {
+    "mean": 0.526,
+    "ci95": [
+     0.5065,
+     0.544
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_start": {
+    "mean": 0.3399,
+    "ci95": [
+     0.3151,
+     0.3644
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "V_gap_keep60": {
+    "mean": 0.0012,
+    "ci95": [
+     -0.0127,
+     0.0152
+    ],
+    "positive": 10,
+    "negative": 10
+   },
+   "I_gap_keep60": {
+    "mean": 0.1134,
+    "ci95": [
+     0.1058,
+     0.1208
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_swap60": {
+    "mean": 0.0362,
+    "ci95": [
+     0.0217,
+     0.0526
+    ],
+    "positive": 19,
+    "negative": 1
+   },
+   "term_gap_keep60": {
+    "mean": 0.0573,
+    "ci95": [
+     0.05,
+     0.0647
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pref_read_gap_keep60": {
+    "mean": -0.0149,
+    "ci95": [
+     -0.0299,
+     -0.0001
+    ],
+    "positive": 5,
+    "negative": 15
+   },
+   "mean_abs_term": {
+    "mean": 0.0041,
+    "ci95": [
+     0.0036,
+     0.0045
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0759,
+    "ci95": [
+     0.0715,
+     0.08
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.3856,
+    "ci95": [
+     0.2433,
+     0.555
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "entropy_common": {
+    "mean": 2.1392,
+    "ci95": [
+     2.1183,
+     2.1605
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  },
+  "interest_nodecision": {
+   "gap_all": {
+    "mean": 0.0143,
+    "ci95": [
+     0.0074,
+     0.0205
+    ],
+    "positive": 17,
+    "negative": 2
+   },
+   "gap_early": {
+    "mean": 0.0219,
+    "ci95": [
+     0.0118,
+     0.032
+    ],
+    "positive": 16,
+    "negative": 4
+   },
+   "gap_late": {
+    "mean": 0.0067,
+    "ci95": [
+     -0.0029,
+     0.0166
+    ],
+    "positive": 11,
+    "negative": 8
+   },
+   "gap_late_swap": {
+    "mean": -0.0135,
+    "ci95": [
+     -0.0243,
+     -0.0026
+    ],
+    "positive": 4,
+    "negative": 15
+   },
+   "keep_minus_swap": {
+    "mean": 0.0202,
+    "ci95": [
+     0.0072,
+     0.0333
+    ],
+    "positive": 15,
+    "negative": 4
+   },
+   "probe0": {
+    "mean": 24.0882,
+    "ci95": [
+     23.1918,
+     24.9523
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe30": {
+    "mean": 0.5402,
+    "ci95": [
+     -0.1671,
+     1.1725
+    ],
+    "positive": 14,
+    "negative": 6
+   },
+   "probe_keep60": {
+    "mean": 0.309,
+    "ci95": [
+     -0.3383,
+     0.9841
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "probe_swap60": {
+    "mean": -15.1075,
+    "ci95": [
+     -16.1223,
+     -13.9654
+    ],
+    "positive": 0,
+    "negative": 20
+   },
+   "probe_keep60_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_start": {
+    "mean": 0.526,
+    "ci95": [
+     0.5065,
+     0.544
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_start": {
+    "mean": 0.3399,
+    "ci95": [
+     0.3151,
+     0.3644
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "V_gap_keep60": {
+    "mean": 0.008,
+    "ci95": [
+     -0.0062,
+     0.0227
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "I_gap_keep60": {
+    "mean": 0.1031,
+    "ci95": [
+     0.0975,
+     0.1086
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_swap60": {
+    "mean": 0.0367,
+    "ci95": [
+     0.0237,
+     0.0496
+    ],
+    "positive": 18,
+    "negative": 2
+   },
+   "term_gap_keep60": {
+    "mean": 0.0059,
+    "ci95": [
+     -0.0064,
+     0.0187
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "pref_read_gap_keep60": {
+    "mean": 0.0135,
+    "ci95": [
+     -0.0005,
+     0.0272
+    ],
+    "positive": 13,
+    "negative": 7
+   },
+   "mean_abs_term": {
+    "mean": 0.0045,
+    "ci95": [
+     0.0042,
+     0.0049
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0768,
+    "ci95": [
+     0.0727,
+     0.081
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.3739,
+    "ci95": [
+     0.2106,
+     0.6017
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "entropy_common": {
+    "mean": 2.1358,
+    "ci95": [
+     2.1105,
+     2.1611
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  },
+  "read_lowrate": {
+   "gap_all": {
+    "mean": 0.0192,
+    "ci95": [
+     0.0114,
+     0.0266
+    ],
+    "positive": 18,
+    "negative": 2
+   },
+   "gap_early": {
+    "mean": 0.0408,
+    "ci95": [
+     0.0315,
+     0.0503
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "gap_late": {
+    "mean": -0.0025,
+    "ci95": [
+     -0.0135,
+     0.0077
+    ],
+    "positive": 9,
+    "negative": 11
+   },
+   "gap_late_swap": {
+    "mean": 0.0019,
+    "ci95": [
+     -0.0103,
+     0.0135
+    ],
+    "positive": 13,
+    "negative": 7
+   },
+   "keep_minus_swap": {
+    "mean": -0.0044,
+    "ci95": [
+     -0.0164,
+     0.0059
+    ],
+    "positive": 11,
+    "negative": 8
+   },
+   "probe0": {
+    "mean": 24.9769,
+    "ci95": [
+     24.2052,
+     25.7417
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe30": {
+    "mean": 11.0253,
+    "ci95": [
+     10.3305,
+     11.7463
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe_keep60": {
+    "mean": 6.5031,
+    "ci95": [
+     6.0695,
+     6.9394
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe_swap60": {
+    "mean": -1.317,
+    "ci95": [
+     -2.1217,
+     -0.4949
+    ],
+    "positive": 5,
+    "negative": 15
+   },
+   "probe_keep60_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_start": {
+    "mean": 0.5449,
+    "ci95": [
+     0.5318,
+     0.5574
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_start": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_keep60": {
+    "mean": 0.1403,
+    "ci95": [
+     0.1309,
+     0.1498
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_keep60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "I_gap_swap60": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "term_gap_keep60": {
+    "mean": 0.1239,
+    "ci95": [
+     0.1156,
+     0.1322
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pref_read_gap_keep60": {
+    "mean": 0.0073,
+    "ci95": [
+     -0.0055,
+     0.0201
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "mean_abs_term": {
+    "mean": 0.0066,
+    "ci95": [
+     0.0059,
+     0.0073
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0809,
+    "ci95": [
+     0.0751,
+     0.0871
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.6011,
+    "ci95": [
+     0.3539,
+     0.8744
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "entropy_common": {
+    "mean": 2.1277,
+    "ci95": [
+     2.1045,
+     2.1524
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  },
+  "interest_flat": {
+   "gap_all": {
+    "mean": -0.0013,
+    "ci95": [
+     -0.0085,
+     0.0057
+    ],
+    "positive": 9,
+    "negative": 11
+   },
+   "gap_early": {
+    "mean": 0.0,
+    "ci95": [
+     -0.0122,
+     0.0116
+    ],
+    "positive": 9,
+    "negative": 11
+   },
+   "gap_late": {
+    "mean": -0.0026,
+    "ci95": [
+     -0.0131,
+     0.0076
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "gap_late_swap": {
+    "mean": 0.0012,
+    "ci95": [
+     -0.0137,
+     0.016
+    ],
+    "positive": 9,
+    "negative": 10
+   },
+   "keep_minus_swap": {
+    "mean": -0.0039,
+    "ci95": [
+     -0.0149,
+     0.0079
+    ],
+    "positive": 9,
+    "negative": 11
+   },
+   "probe0": {
+    "mean": 0.0,
+    "ci95": [
+     -0.0,
+     0.0
+    ],
+    "positive": 9,
+    "negative": 5
+   },
+   "probe30": {
+    "mean": -0.0,
+    "ci95": [
+     -0.0,
+     0.0
+    ],
+    "positive": 4,
+    "negative": 4
+   },
+   "probe_keep60": {
+    "mean": -0.0,
+    "ci95": [
+     -0.0,
+     0.0
+    ],
+    "positive": 3,
+    "negative": 5
+   },
+   "probe_swap60": {
+    "mean": 0.0,
+    "ci95": [
+     -0.0,
+     0.0
+    ],
+    "positive": 3,
+    "negative": 2
+   },
+   "probe_keep60_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "V_gap_start": {
+    "mean": 0.526,
+    "ci95": [
+     0.5065,
+     0.544
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_start": {
+    "mean": 0.3399,
+    "ci95": [
+     0.3151,
+     0.3644
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "V_gap_keep60": {
+    "mean": -0.0071,
+    "ci95": [
+     -0.0166,
+     0.0018
+    ],
+    "positive": 10,
+    "negative": 10
+   },
+   "I_gap_keep60": {
+    "mean": 0.1063,
+    "ci95": [
+     0.0994,
+     0.1131
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "I_gap_swap60": {
+    "mean": 0.0359,
+    "ci95": [
+     0.0244,
+     0.0477
+    ],
+    "positive": 18,
+    "negative": 2
+   },
+   "term_gap_keep60": {
+    "mean": 0.0502,
+    "ci95": [
+     0.0443,
+     0.0559
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pref_read_gap_keep60": {
+    "mean": -0.0057,
+    "ci95": [
+     -0.0168,
+     0.005
+    ],
+    "positive": 8,
+    "negative": 12
+   },
+   "mean_abs_term": {
+    "mean": 0.0233,
+    "ci95": [
+     0.0224,
+     0.0243
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0757,
+    "ci95": [
+     0.0714,
+     0.0798
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.4589,
+    "ci95": [
+     0.255,
+     0.7028
+    ],
+    "positive": 19,
+    "negative": 1
+   },
+   "entropy_common": {
+    "mean": 2.132,
+    "ci95": [
+     2.1068,
+     2.1575
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  }
+ },
+ "gap_windows": {
+  "read_nodecision": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "read_value": [
+   0.0369,
+   0.0194,
+   0.0096,
+   0.0212,
+   -0.0123,
+   0.011
+  ],
+  "interest": [
+   0.0494,
+   0.0119,
+   0.0079,
+   0.0163,
+   -0.0379,
+   -0.0175
+  ],
+  "interest_nodecision": [
+   0.0369,
+   0.0194,
+   0.0096,
+   0.0212,
+   -0.0123,
+   0.011
+  ],
+  "read_lowrate": [
+   0.0917,
+   0.024,
+   0.0069,
+   -0.0231,
+   0.0096,
+   0.006
+  ],
+  "interest_flat": [
+   0.0206,
+   -0.0156,
+   -0.005,
+   0.0102,
+   -0.021,
+   0.0029
+  ]
+ },
+ "swap_gap_windows": {
+  "read_nodecision": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "read_value": [
+   0.0369,
+   0.0194,
+   0.0096,
+   -0.0017,
+   -0.0096,
+   -0.0294
+  ],
+  "interest": [
+   0.0494,
+   0.0119,
+   0.0079,
+   0.0175,
+   -0.0225,
+   -0.0002
+  ],
+  "interest_nodecision": [
+   0.0369,
+   0.0194,
+   0.0096,
+   -0.0017,
+   -0.0096,
+   -0.0294
+  ],
+  "read_lowrate": [
+   0.0917,
+   0.024,
+   0.0069,
+   -0.0223,
+   0.015,
+   0.0129
+  ],
+  "interest_flat": [
+   0.0206,
+   -0.0156,
+   -0.005,
+   0.0277,
+   -0.0073,
+   -0.0167
+  ]
+ },
+ "failing": {
+  "read_nodecision": [
+   {
+    "life": "read_nodecision|pair|3006|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_nodecision|route|3009|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_nodecision|route|6002|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_nodecision|pair|6006|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_nodecision|plastic|6006|away",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_nodecision|pair|6007|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_nodecision|pair|6007|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_nodecision|pair|6007|rep2|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_nodecision|route|6008|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_nodecision|route|6010|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   }
+  ],
+  "read_value": [
+   {
+    "life": "read_value|pair|3002|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_value|pair|3004|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_value|pair|3005|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_value|route|3009|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_value|route|6002|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_value|pair|6005|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_value|pair|6006|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_value|pair|6006|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_value|pair|6006|rep2|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_value|route|6008|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_value|pair|6008|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_value|route|6010|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_value|matched|6010|clear|swap",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   }
+  ],
+  "interest": [
+   {
+    "life": "interest|matched|3001|clear|swap",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest|matched|3005|hard|swap",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest|pair|3008|rep0|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest|route|3009|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest|pair|3009|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest|route|6002|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest|pair|6005|rep0|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest|pair|6006|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20",
+     "min_home"
+    ]
+   },
+   {
+    "life": "interest|pair|6006|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest|matched|6006|clear|swap",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest|route|6008|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest|route|6010|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   }
+  ],
+  "interest_nodecision": [
+   {
+    "life": "interest_nodecision|pair|3002|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_nodecision|pair|3004|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_nodecision|pair|3005|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_nodecision|route|3009|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest_nodecision|route|6002|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest_nodecision|pair|6005|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_nodecision|pair|6006|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_nodecision|pair|6006|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_nodecision|pair|6006|rep2|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_nodecision|route|6008|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest_nodecision|pair|6008|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_nodecision|route|6010|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest_nodecision|matched|6010|clear|swap",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   }
+  ],
+  "read_lowrate": [
+   {
+    "life": "read_lowrate|pair|3001|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|3002|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|3002|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|3002|rep2|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|plastic|3002|stay",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|plastic|3002|away",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|3003|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|3003|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|3003|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|3003|rep2|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|plastic|3004|stay",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|3008|rep0|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|route|3009|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_lowrate|route|6002|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|6006|rep0|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|6006|rep1|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|6006|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|6006|rep2|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|matched|6007|hard|swap",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|route|6008|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "read_lowrate|pair|6009|rep1|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "read_lowrate|route|6010|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   }
+  ],
+  "interest_flat": [
+   {
+    "life": "interest_flat|pair|3001|rep1|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|plastic|3002|stay",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|pair|3004|rep1|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|plastic|3008|away",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|route|3009|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest_flat|route|6002|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest_flat|pair|6005|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|pair|6007|rep0|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|pair|6007|rep0|B",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|route|6008|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest_flat|pair|6009|rep0|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|pair|6009|rep1|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|pair|6009|rep2|A",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   },
+   {
+    "life": "interest_flat|route|6010|control",
+    "also": [],
+    "phase_fails": [
+     "leisure"
+    ]
+   },
+   {
+    "life": "interest_flat|matched|6010|hard|swap",
+    "also": [],
+    "phase_fails": [
+     "below20"
+    ]
+   }
+  ]
+ }
+}

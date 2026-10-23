@@ -1,0 +1,430 @@
+{
+ "config_id": "5258d0e0adb8",
+ "arms": {
+  "v5": {
+   "entropy_common": 2.0864,
+   "garden_gap": 0.0343,
+   "kinds_last_week_min": 5.75,
+   "pair_B_minus_A_spont": 0.2933,
+   "plastic_read_after_away_minus_stay": -0.0059,
+   "plastic_read_during_away_minus_stay": -0.0093,
+   "plastic_recovery_ratio": 1.0592,
+   "read_gap": 0.0034,
+   "read_gap_late": 0.0099,
+   "read_mean_all_routes": 0.0545,
+   "social_minus_garden_spont": 0.2392,
+   "top_non_sleep_common_max": 0.404,
+   "tv_late": 0.0875,
+   "tv_mean_routes": 0.0619,
+   "visit_share_common": 0.041
+  },
+  "v6": {
+   "entropy_common": 2.0826,
+   "garden_gap": 0.0374,
+   "kinds_last_week_min": 5.75,
+   "pair_B_minus_A_spont": 0.5611,
+   "plastic_read_after_away_minus_stay": 0.0094,
+   "plastic_read_during_away_minus_stay": -0.0082,
+   "plastic_recovery_ratio": 1.385,
+   "read_gap": -0.001,
+   "read_gap_late": -0.0054,
+   "read_mean_all_routes": 0.0496,
+   "social_minus_garden_spont": 0.5167,
+   "top_non_sleep_common_max": 0.4053,
+   "tv_late": 0.0816,
+   "tv_mean_routes": 0.0663,
+   "visit_share_common": 0.0446
+  },
+  "base": {
+   "entropy_common": 2.1157,
+   "garden_gap": 0.0224,
+   "kinds_last_week_min": 5.9,
+   "pair_B_minus_A_spont": 0.2439,
+   "plastic_read_after_away_minus_stay": -0.0046,
+   "plastic_read_during_away_minus_stay": 0.0041,
+   "plastic_recovery_ratio": 1.1125,
+   "read_gap": 0.0005,
+   "read_gap_late": -0.006,
+   "read_mean_all_routes": 0.0484,
+   "social_minus_garden_spont": 0.4792,
+   "top_non_sleep_common_max": 0.3948,
+   "tv_late": 0.0676,
+   "tv_mean_routes": 0.0477,
+   "visit_share_common": 0.0492
+  }
+ },
+ "safety": {
+  "v5": {
+   "runs": 252,
+   "unique_trajectories": 252,
+   "pass": 229,
+   "phase_pass": 190,
+   "all_pass": false,
+   "min_home": 0.0,
+   "zero_hours": 16,
+   "max_below20": 0.1073,
+   "max_phase_below20": 0.1556,
+   "upkeep_range": [
+    0.0556,
+    0.0664
+   ],
+   "min_leisure": 0.3427,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 4
+  },
+  "v6": {
+   "runs": 252,
+   "unique_trajectories": 252,
+   "pass": 252,
+   "phase_pass": 222,
+   "all_pass": false,
+   "min_home": 5.05,
+   "zero_hours": 0,
+   "max_below20": 0.072,
+   "max_phase_below20": 0.1042,
+   "upkeep_range": [
+    0.0556,
+    0.0658
+   ],
+   "min_leisure": 0.3438,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 4
+  },
+  "base": {
+   "runs": 252,
+   "unique_trajectories": 252,
+   "pass": 252,
+   "phase_pass": 244,
+   "all_pass": false,
+   "min_home": 5.0,
+   "zero_hours": 0,
+   "max_below20": 0.0583,
+   "max_phase_below20": 0.1014,
+   "upkeep_range": [
+    0.0556,
+    0.0667
+   ],
+   "min_leisure": 0.3333,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 5
+  }
+ },
+ "contrasts": {
+  "base - v6": {
+   "read_gap": {
+    "n": 20,
+    "mean": 0.0015,
+    "ci95": [
+     -0.022,
+     0.0271
+    ],
+    "positive": 7,
+    "negative": 13
+   },
+   "garden_gap": {
+    "n": 20,
+    "mean": -0.015,
+    "ci95": [
+     -0.0379,
+     0.006
+    ],
+    "positive": 7,
+    "negative": 12
+   },
+   "tv_mean_routes": {
+    "n": 20,
+    "mean": -0.0186,
+    "ci95": [
+     -0.0311,
+     -0.0087
+    ],
+    "positive": 5,
+    "negative": 15
+   },
+   "plastic_read_after_away_minus_stay": {
+    "n": 20,
+    "mean": -0.014,
+    "ci95": [
+     -0.0372,
+     0.0101
+    ],
+    "positive": 6,
+    "negative": 14
+   }
+  },
+  "base - v5": {
+   "read_gap": {
+    "n": 20,
+    "mean": -0.0029,
+    "ci95": [
+     -0.0243,
+     0.0208
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "garden_gap": {
+    "n": 20,
+    "mean": -0.0119,
+    "ci95": [
+     -0.0358,
+     0.0101
+    ],
+    "positive": 8,
+    "negative": 12
+   },
+   "tv_mean_routes": {
+    "n": 20,
+    "mean": -0.0142,
+    "ci95": [
+     -0.0266,
+     -0.0039
+    ],
+    "positive": 6,
+    "negative": 14
+   },
+   "plastic_read_after_away_minus_stay": {
+    "n": 20,
+    "mean": 0.0013,
+    "ci95": [
+     -0.0215,
+     0.0248
+    ],
+    "positive": 10,
+    "negative": 10
+   }
+  }
+ },
+ "final": {
+  "A1_base_safe_every_unique_life": true,
+  "A2_phase_fails_not_above_v6": true,
+  "A3_social_kept": true,
+  "A4_diversity": true,
+  "compat_v1_v6": true,
+  "phase_A_base_confirmed": true,
+  "candidate_eval": {
+   "candidate": "eval",
+   "sent_to_validation": false,
+   "reasons": [
+    "safety 251/252 on dev",
+    "eval - eval_flat reading gap CI crosses 0",
+    "E does not differ by growth route at the end of the common phase"
+   ]
+  },
+  "_values": {
+   "phase_fails": {
+    "v5": 62,
+    "v6": 30,
+    "base": 8
+   },
+   "cost_vs_v6": {
+    "read_gap": {
+     "n": 20,
+     "missing": 0,
+     "mean": 0.0015,
+     "median": -0.0128,
+     "positive": 7,
+     "negative": 13,
+     "ci95": [
+      -0.022,
+      0.0271
+     ],
+     "per_seed": [
+      -0.025,
+      -0.0188,
+      -0.025,
+      0.0194,
+      -0.0257,
+      -0.0028,
+      -0.0069,
+      -0.0479,
+      -0.0076,
+      0.0021,
+      -0.1104,
+      0.0431,
+      0.1563,
+      0.0833,
+      -0.0181,
+      0.0778,
+      -0.0437,
+      0.0424,
+      -0.0354,
+      -0.0264
+     ]
+    },
+    "garden_gap": {
+     "n": 20,
+     "missing": 0,
+     "mean": -0.015,
+     "median": -0.008,
+     "positive": 7,
+     "negative": 12,
+     "ci95": [
+      -0.0379,
+      0.006
+     ],
+     "per_seed": [
+      0.0264,
+      -0.0083,
+      -0.0111,
+      -0.0424,
+      0.0,
+      -0.0229,
+      0.0493,
+      -0.0403,
+      -0.0681,
+      -0.0076,
+      0.0083,
+      -0.0104,
+      -0.1604,
+      0.0118,
+      -0.066,
+      -0.075,
+      0.0757,
+      -0.0049,
+      0.0042,
+      0.0424
+     ]
+    },
+    "tv_mean_routes": {
+     "n": 20,
+     "missing": 0,
+     "mean": -0.0186,
+     "median": -0.0132,
+     "positive": 5,
+     "negative": 15,
+     "ci95": [
+      -0.0311,
+      -0.0087
+     ],
+     "per_seed": [
+      -0.0179,
+      0.0009,
+      -0.0132,
+      -0.0115,
+      -0.0169,
+      -0.0132,
+      0.0074,
+      -0.0249,
+      -0.0473,
+      0.0023,
+      0.0113,
+      0.0024,
+      -0.1115,
+      -0.0115,
+      -0.0241,
+      -0.0256,
+      -0.0418,
+      -0.0091,
+      -0.0145,
+      -0.0131
+     ]
+    }
+   },
+   "cost_vs_v5": {
+    "read_gap": {
+     "n": 20,
+     "missing": 0,
+     "mean": -0.0029,
+     "median": 0.0021,
+     "positive": 11,
+     "negative": 9,
+     "ci95": [
+      -0.0243,
+      0.0208
+     ],
+     "per_seed": [
+      -0.0472,
+      -0.0236,
+      0.0035,
+      0.0181,
+      -0.0465,
+      0.0222,
+      0.0146,
+      -0.0299,
+      -0.0201,
+      0.0083,
+      -0.0924,
+      0.0326,
+      0.1542,
+      0.034,
+      0.0007,
+      0.0236,
+      -0.0493,
+      0.0319,
+      -0.0806,
+      -0.0125
+     ]
+    },
+    "garden_gap": {
+     "n": 20,
+     "missing": 0,
+     "mean": -0.0119,
+     "median": -0.0059,
+     "positive": 8,
+     "negative": 12,
+     "ci95": [
+      -0.0358,
+      0.0101
+     ],
+     "per_seed": [
+      0.066,
+      -0.0104,
+      0.0292,
+      -0.0389,
+      0.0139,
+      -0.0299,
+      0.0368,
+      -0.041,
+      -0.0535,
+      -0.0174,
+      -0.0007,
+      -0.0104,
+      -0.1611,
+      -0.0014,
+      -0.0736,
+      -0.0757,
+      0.066,
+      0.0076,
+      0.0222,
+      0.034
+     ]
+    },
+    "tv_mean_routes": {
+     "n": 20,
+     "missing": 0,
+     "mean": -0.0142,
+     "median": -0.01,
+     "positive": 6,
+     "negative": 14,
+     "ci95": [
+      -0.0266,
+      -0.0039
+     ],
+     "per_seed": [
+      0.0201,
+      0.0108,
+      -0.0147,
+      -0.0067,
+      -0.0105,
+      -0.0102,
+      0.0017,
+      -0.0221,
+      -0.039,
+      -0.0097,
+      0.0182,
+      0.0029,
+      -0.1029,
+      -0.0154,
+      -0.0231,
+      -0.0345,
+      -0.0374,
+      -0.0064,
+      -0.0059,
+      0.0005
+     ]
+    }
+   }
+  }
+ }
+}

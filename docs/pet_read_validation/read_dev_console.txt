@@ -1,0 +1,504 @@
+{
+ "final": {
+  "K1_lasting_difference": true,
+  "K2_persistence": false,
+  "K3_not_just_bonus": true,
+  "K4_changeable": true,
+  "K5_state_matched_probe": true,
+  "H_whole_life": true,
+  "H_phase_not_above_control": false,
+  "S_social_kept": true,
+  "D_diversity": true,
+  "growth_counts_matched": true,
+  "compat_v1_v6": true,
+  "pass": false
+ },
+ "phase_fails": {
+  "read_flat": 6,
+  "read_nodecision": 9,
+  "read_value": 13
+ },
+ "describe": {
+  "read_flat": {
+   "gap_all": {
+    "mean": -0.0005,
+    "ci95": [
+     -0.0098,
+     0.0091
+    ],
+    "positive": 9,
+    "negative": 11
+   },
+   "gap_late": {
+    "mean": -0.0063,
+    "ci95": [
+     -0.0211,
+     0.0077
+    ],
+    "positive": 8,
+    "negative": 11
+   },
+   "gap_early": {
+    "mean": 0.0053,
+    "ci95": [
+     -0.0058,
+     0.0167
+    ],
+    "positive": 10,
+    "negative": 8
+   },
+   "keep_minus_swap": {
+    "mean": -0.0102,
+    "ci95": [
+     -0.0241,
+     0.0026
+    ],
+    "positive": 7,
+    "negative": 12
+   },
+   "probe0": {
+    "mean": 0.0,
+    "ci95": [
+     -0.0,
+     0.0
+    ],
+    "positive": 9,
+    "negative": 5
+   },
+   "probe0_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe30": {
+    "mean": -0.1249,
+    "ci95": [
+     -2.0435,
+     1.7717
+    ],
+    "positive": 10,
+    "negative": 10
+   },
+   "term_start_gap": {
+    "mean": 0.4588,
+    "ci95": [
+     0.4417,
+     0.4753
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "term_end_gap": {
+    "mean": 0.0089,
+    "ci95": [
+     -0.0015,
+     0.0188
+    ],
+    "positive": 14,
+    "negative": 6
+   },
+   "natural_gap": {
+    "mean": 0.0012,
+    "ci95": [
+     -0.0077,
+     0.0107
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.3056,
+    "ci95": [
+     0.2256,
+     0.3822
+    ],
+    "positive": 18,
+    "negative": 1
+   },
+   "entropy_common": {
+    "mean": 2.1477,
+    "ci95": [
+     2.1239,
+     2.1716
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0801,
+    "ci95": [
+     0.0755,
+     0.0848
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  },
+  "read_nodecision": {
+   "gap_all": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "gap_late": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "gap_early": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "keep_minus_swap": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe0": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe0_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe30": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "term_start_gap": {
+    "mean": 0.4588,
+    "ci95": [
+     0.4417,
+     0.4753
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "term_end_gap": {
+    "mean": 0.0028,
+    "ci95": [
+     0.0021,
+     0.0037
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "natural_gap": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.3878,
+    "ci95": [
+     0.2956,
+     0.4828
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "entropy_common": {
+    "mean": 2.1419,
+    "ci95": [
+     2.1211,
+     2.1635
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0717,
+    "ci95": [
+     0.0681,
+     0.0753
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  },
+  "read_value": {
+   "gap_all": {
+    "mean": 0.0143,
+    "ci95": [
+     0.0074,
+     0.0205
+    ],
+    "positive": 17,
+    "negative": 2
+   },
+   "gap_late": {
+    "mean": 0.0067,
+    "ci95": [
+     -0.0029,
+     0.0166
+    ],
+    "positive": 11,
+    "negative": 8
+   },
+   "gap_early": {
+    "mean": 0.0219,
+    "ci95": [
+     0.0118,
+     0.032
+    ],
+    "positive": 16,
+    "negative": 4
+   },
+   "keep_minus_swap": {
+    "mean": 0.0202,
+    "ci95": [
+     0.0072,
+     0.0333
+    ],
+    "positive": 15,
+    "negative": 4
+   },
+   "probe0": {
+    "mean": 24.0882,
+    "ci95": [
+     23.1918,
+     24.9523
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "probe0_off": {
+    "mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "positive": 0,
+    "negative": 0
+   },
+   "probe30": {
+    "mean": 2.7973,
+    "ci95": [
+     0.9135,
+     4.5917
+    ],
+    "positive": 15,
+    "negative": 5
+   },
+   "term_start_gap": {
+    "mean": 0.4588,
+    "ci95": [
+     0.4417,
+     0.4753
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "term_end_gap": {
+    "mean": 0.0059,
+    "ci95": [
+     -0.0064,
+     0.0187
+    ],
+    "positive": 11,
+    "negative": 9
+   },
+   "natural_gap": {
+    "mean": 0.0405,
+    "ci95": [
+     0.0193,
+     0.0684
+    ],
+    "positive": 17,
+    "negative": 3
+   },
+   "pair_B_minus_A_spont": {
+    "mean": 0.3739,
+    "ci95": [
+     0.2106,
+     0.6017
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "entropy_common": {
+    "mean": 2.1358,
+    "ci95": [
+     2.1105,
+     2.1611
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "read_mean_matched": {
+    "mean": 0.0768,
+    "ci95": [
+     0.0727,
+     0.081
+    ],
+    "positive": 20,
+    "negative": 0
+   },
+   "growth_reads": {
+    "mean": 92.45,
+    "ci95": [
+     81.15,
+     104.4
+    ],
+    "positive": 20,
+    "negative": 0
+   }
+  }
+ },
+ "gap_windows": {
+  "read_flat": [
+   0.0387,
+   -0.0125,
+   -0.0104,
+   -0.0096,
+   0.0027,
+   -0.0119
+  ],
+  "read_nodecision": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "read_value": [
+   0.0369,
+   0.0194,
+   0.0096,
+   0.0212,
+   -0.0123,
+   0.011
+  ]
+ },
+ "safety": {
+  "read_flat": {
+   "runs": 372,
+   "unique_trajectories": 372,
+   "pass": 372,
+   "phase_pass": 366,
+   "all_pass": false,
+   "min_home": 5.3,
+   "zero_hours": 0,
+   "max_below20": 0.0599,
+   "max_phase_below20": 0.0889,
+   "upkeep_range": [
+    0.0556,
+    0.0667
+   ],
+   "min_leisure": 0.351,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 5,
+   "failing": []
+  },
+  "read_nodecision": {
+   "runs": 372,
+   "unique_trajectories": 252,
+   "pass": 252,
+   "phase_pass": 243,
+   "all_pass": false,
+   "min_home": 3.85,
+   "zero_hours": 0,
+   "max_below20": 0.0602,
+   "max_phase_below20": 0.0944,
+   "upkeep_range": [
+    0.0556,
+    0.0651
+   ],
+   "min_leisure": 0.3464,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 6,
+   "failing": []
+  },
+  "read_value": {
+   "runs": 372,
+   "unique_trajectories": 372,
+   "pass": 372,
+   "phase_pass": 359,
+   "all_pass": false,
+   "min_home": 5.05,
+   "zero_hours": 0,
+   "max_below20": 0.0617,
+   "max_phase_below20": 0.1306,
+   "upkeep_range": [
+    0.0556,
+    0.0658
+   ],
+   "min_leisure": 0.3448,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 5,
+   "failing": []
+  }
+ },
+ "social_seeds_at_1_7": {
+  "read_flat": 16,
+  "read_nodecision": 18,
+  "read_value": 16
+ },
+ "K3_vs_flat": {
+  "mean": 0.0148,
+  "ci95": [
+   0.005,
+   0.025
+  ]
+ }
+}

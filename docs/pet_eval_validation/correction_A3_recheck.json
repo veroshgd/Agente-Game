@@ -1,0 +1,72 @@
+{
+ "dev|v5": {
+  "seeds_at_or_above_1_7": 8,
+  "positive": 17,
+  "mean": 0.09833333333333333,
+  "ci95": [
+   0.04833333333333332,
+   0.1472222222222222
+  ],
+  "A3_as_written": false,
+  "A3_as_coded": false
+ },
+ "dev|v6": {
+  "seeds_at_or_above_1_7": 16,
+  "positive": 19,
+  "mean": 0.29833333333333334,
+  "ci95": [
+   0.22111111111111112,
+   0.37722222222222224
+  ],
+  "A3_as_written": true,
+  "A3_as_coded": true
+ },
+ "dev|base": {
+  "seeds_at_or_above_1_7": 18,
+  "positive": 20,
+  "mean": 0.3877777777777778,
+  "ci95": [
+   0.2955555555555555,
+   0.48277777777777775
+  ],
+  "A3_as_written": true,
+  "A3_as_coded": true
+ },
+ "validation|v5": {
+  "seeds_at_or_above_1_7": 12,
+  "positive": 19,
+  "mean": 0.29333333333333333,
+  "ci95": [
+   0.14166666666666666,
+   0.46722222222222226
+  ],
+  "A3_as_written": false,
+  "A3_as_coded": true
+ },
+ "validation|v6": {
+  "seeds_at_or_above_1_7": 20,
+  "positive": 20,
+  "mean": 0.5611111111111111,
+  "ci95": [
+   0.4,
+   0.7427777777777778
+  ],
+  "A3_as_written": true,
+  "A3_as_coded": true
+ },
+ "validation|base": {
+  "seeds_at_or_above_1_7": 13,
+  "positive": 19,
+  "mean": 0.24388888888888888,
+  "ci95": [
+   0.16833333333333333,
+   0.3227777777777777
+  ],
+  "A3_as_written": false,
+  "A3_as_coded": true
+ },
+ "pause_validation|pause_rest4 (S, same wording)": {
+  "seeds_at_or_above_1_7": 17,
+  "positive": 19
+ }
+}

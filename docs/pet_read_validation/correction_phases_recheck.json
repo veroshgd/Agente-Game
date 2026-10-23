@@ -1,0 +1,2147 @@
+{
+ "config_id": "2939f7f243eb",
+ "steps": [
+  "frozen",
+  "phases",
+  "phases_union"
+ ],
+ "base2_dev": {
+  "counts": {
+   "base": {
+    "frozen": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 243,
+     "phase_fails": 9,
+     "failing": [
+      {
+       "life": "base|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      }
+     ]
+    },
+    "phases": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 242,
+     "phase_fails": 10,
+     "failing": [
+      {
+       "life": "base|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|plastic|6006|away",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      }
+     ]
+    },
+    "phases_union": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 242,
+     "phase_fails": 10,
+     "trajectories_with_several_phase_marks": 0,
+     "checks_lost_by_first_run_dedupe": [],
+     "failing": [
+      {
+       "life": "base|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|route|3009|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base|route|6002|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|plastic|6006|away",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|route|6008|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base|route|6010|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      }
+     ]
+    }
+   },
+   "base2": {
+    "frozen": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 242,
+     "phase_fails": 10,
+     "failing": [
+      {
+       "life": "base2|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6005|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      }
+     ]
+    },
+    "phases": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 241,
+     "phase_fails": 11,
+     "failing": [
+      {
+       "life": "base2|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6005|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|plastic|6006|away",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      }
+     ]
+    },
+    "phases_union": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 241,
+     "phase_fails": 11,
+     "trajectories_with_several_phase_marks": 0,
+     "checks_lost_by_first_run_dedupe": [],
+     "failing": [
+      {
+       "life": "base2|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|route|3009|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base2|route|6002|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base2|pair|6005|rep1|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|plastic|6006|away",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|route|6008|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base2|route|6010|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "behaviour_unchanged": {
+   "fingerprints_identical": true,
+   "rng_end_identical": true
+  },
+  "plastic_6006": {
+   "base|stay": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 23.80000000000056,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.07916666666666666,
+     "min_home": 12.300000000000372,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.044444444444444446,
+     "min_home": 9.749999999999613,
+     "fails": []
+    },
+    "recovery": {
+     "below20": 0.05520833333333333,
+     "min_home": 13.849999999998849,
+     "fails": []
+    }
+   },
+   "base|away": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 23.80000000000056,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.07916666666666666,
+     "min_home": 12.300000000000372,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.10555555555555556,
+     "min_home": 6.549999999999578,
+     "fails": [
+      "below20"
+     ]
+    },
+    "recovery": {
+     "below20": 0.046875,
+     "min_home": 10.249999999998105,
+     "fails": []
+    }
+   },
+   "base2|stay": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 23.80000000000056,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.07916666666666666,
+     "min_home": 12.300000000000372,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.044444444444444446,
+     "min_home": 9.749999999999613,
+     "fails": []
+    },
+    "recovery": {
+     "below20": 0.05520833333333333,
+     "min_home": 13.849999999998849,
+     "fails": []
+    }
+   },
+   "base2|away": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 23.80000000000056,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.07916666666666666,
+     "min_home": 12.300000000000372,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.10555555555555556,
+     "min_home": 6.549999999999578,
+     "fails": [
+      "below20"
+     ]
+    },
+    "recovery": {
+     "below20": 0.046875,
+     "min_home": 10.249999999998105,
+     "fails": []
+    }
+   }
+  }
+ },
+ "base2_review_7021_7040": {
+  "counts": {
+   "base": {
+    "frozen": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 244,
+     "phase_fails": 8,
+     "failing": [
+      {
+       "life": "base|route|7021|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|7022|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|7033|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|7034|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|route|7035|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|7036|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|7039|rep0|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|7040|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      }
+     ]
+    },
+    "phases": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 243,
+     "phase_fails": 9,
+     "failing": [
+      {
+       "life": "base|route|7021|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|7022|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|7033|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|7034|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|route|7035|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|route|7036|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|7039|rep0|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|plastic|7039|stay",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base|pair|7040|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      }
+     ]
+    },
+    "phases_union": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 243,
+     "phase_fails": 9,
+     "trajectories_with_several_phase_marks": 0,
+     "checks_lost_by_first_run_dedupe": [],
+     "failing": [
+      {
+       "life": "base|route|7021|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base|route|7022|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base|route|7033|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base|pair|7034|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|route|7035|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base|route|7036|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base|pair|7039|rep0|A",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|plastic|7039|stay",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base|pair|7040|rep2|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      }
+     ]
+    }
+   },
+   "base2": {
+    "frozen": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 244,
+     "phase_fails": 8,
+     "failing": [
+      {
+       "life": "base2|route|7021|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|7022|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|7033|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|7034|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|7035|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|7036|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|7039|rep0|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|7040|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      }
+     ]
+    },
+    "phases": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 243,
+     "phase_fails": 9,
+     "failing": [
+      {
+       "life": "base2|route|7021|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|7022|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|7033|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|7034|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|7035|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|route|7036|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|7039|rep0|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|plastic|7039|stay",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "base2|pair|7040|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      }
+     ]
+    },
+    "phases_union": {
+     "runs": 252,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 243,
+     "phase_fails": 9,
+     "trajectories_with_several_phase_marks": 0,
+     "checks_lost_by_first_run_dedupe": [],
+     "failing": [
+      {
+       "life": "base2|route|7021|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base2|route|7022|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base2|route|7033|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base2|pair|7034|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|route|7035|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base2|route|7036|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "base2|pair|7039|rep0|A",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|plastic|7039|stay",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "base2|pair|7040|rep2|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "behaviour_unchanged": {
+   "fingerprints_identical": true,
+   "rng_end_identical": true
+  },
+  "plastic_6006": {}
+ },
+ "read_dev": {
+  "counts": {
+   "read_nodecision": {
+    "frozen": {
+     "runs": 372,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 243,
+     "phase_fails": 9,
+     "failing": [
+      {
+       "life": "read_nodecision|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      }
+     ]
+    },
+    "phases": {
+     "runs": 372,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 242,
+     "phase_fails": 10,
+     "failing": [
+      {
+       "life": "read_nodecision|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|plastic|6006|away",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "intervention": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_nodecision|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      }
+     ]
+    },
+    "phases_union": {
+     "runs": 372,
+     "unique_trajectories": 252,
+     "pass": 252,
+     "phase_pass": 242,
+     "phase_fails": 10,
+     "trajectories_with_several_phase_marks": 20,
+     "checks_lost_by_first_run_dedupe": [],
+     "failing": [
+      {
+       "life": "read_nodecision|pair|3006|rep2|A",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_nodecision|route|3009|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_nodecision|route|6002|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_nodecision|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_nodecision|plastic|6006|away",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep1|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_nodecision|pair|6007|rep2|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_nodecision|route|6008|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_nodecision|route|6010|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      }
+     ]
+    }
+   },
+   "read_value": {
+    "frozen": {
+     "runs": 372,
+     "unique_trajectories": 372,
+     "pass": 372,
+     "phase_pass": 359,
+     "phase_fails": 13,
+     "failing": [
+      {
+       "life": "read_value|pair|3002|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|3004|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|3005|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_value|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6005|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6006|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6006|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6008|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_value|matched|6010|clear|swap",
+       "also": [],
+       "phase_fails": {
+        "swap": [
+         "below20"
+        ]
+       }
+      }
+     ]
+    },
+    "phases": {
+     "runs": 372,
+     "unique_trajectories": 372,
+     "pass": 372,
+     "phase_pass": 359,
+     "phase_fails": 13,
+     "failing": [
+      {
+       "life": "read_value|pair|3002|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|3004|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|3005|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_value|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6005|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6006|rep1|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6006|rep2|B",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_value|pair|6008|rep2|A",
+       "also": [],
+       "phase_fails": {
+        "withdrawal": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_value|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_value|matched|6010|clear|swap",
+       "also": [],
+       "phase_fails": {
+        "swap": [
+         "below20"
+        ]
+       }
+      }
+     ]
+    },
+    "phases_union": {
+     "runs": 372,
+     "unique_trajectories": 372,
+     "pass": 372,
+     "phase_pass": 359,
+     "phase_fails": 13,
+     "trajectories_with_several_phase_marks": 0,
+     "checks_lost_by_first_run_dedupe": [],
+     "failing": [
+      {
+       "life": "read_value|pair|3002|rep1|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_value|pair|3004|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_value|pair|3005|rep1|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_value|route|3009|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_value|route|6002|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_value|pair|6005|rep2|A",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_value|pair|6006|rep0|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_value|pair|6006|rep1|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_value|pair|6006|rep2|B",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_value|route|6008|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_value|pair|6008|rep2|A",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_value|route|6010|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_value|matched|6010|clear|swap",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      }
+     ]
+    }
+   },
+   "read_flat": {
+    "frozen": {
+     "runs": 372,
+     "unique_trajectories": 372,
+     "pass": 372,
+     "phase_pass": 366,
+     "phase_fails": 6,
+     "failing": [
+      {
+       "life": "read_flat|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|matched|6006|hard|swap",
+       "also": [],
+       "phase_fails": {
+        "swap": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|matched|6007|hard|swap",
+       "also": [],
+       "phase_fails": {
+        "swap": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      }
+     ]
+    },
+    "phases": {
+     "runs": 372,
+     "unique_trajectories": 372,
+     "pass": 372,
+     "phase_pass": 366,
+     "phase_fails": 6,
+     "failing": [
+      {
+       "life": "read_flat|route|3009|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|route|6002|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|matched|6006|hard|swap",
+       "also": [],
+       "phase_fails": {
+        "swap": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|matched|6007|hard|swap",
+       "also": [],
+       "phase_fails": {
+        "swap": [
+         "below20"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|route|6008|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      },
+      {
+       "life": "read_flat|route|6010|control",
+       "also": [],
+       "phase_fails": {
+        "growth": [
+         "leisure"
+        ]
+       }
+      }
+     ]
+    },
+    "phases_union": {
+     "runs": 372,
+     "unique_trajectories": 372,
+     "pass": 372,
+     "phase_pass": 366,
+     "phase_fails": 6,
+     "trajectories_with_several_phase_marks": 0,
+     "checks_lost_by_first_run_dedupe": [],
+     "failing": [
+      {
+       "life": "read_flat|route|3009|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_flat|route|6002|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_flat|matched|6006|hard|swap",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_flat|matched|6007|hard|swap",
+       "also": [],
+       "phase_fails": [
+        "below20"
+       ]
+      },
+      {
+       "life": "read_flat|route|6008|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      },
+      {
+       "life": "read_flat|route|6010|control",
+       "also": [],
+       "phase_fails": [
+        "leisure"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "behaviour_unchanged": {
+   "fingerprints_identical": true,
+   "rng_end_identical": true
+  },
+  "plastic_6006": {
+   "read_nodecision|stay": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 23.80000000000056,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.07916666666666666,
+     "min_home": 12.300000000000372,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.044444444444444446,
+     "min_home": 9.749999999999613,
+     "fails": []
+    },
+    "recovery": {
+     "below20": 0.05520833333333333,
+     "min_home": 13.849999999998849,
+     "fails": []
+    }
+   },
+   "read_nodecision|away": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 23.80000000000056,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.07916666666666666,
+     "min_home": 12.300000000000372,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.10555555555555556,
+     "min_home": 6.549999999999578,
+     "fails": [
+      "below20"
+     ]
+    },
+    "recovery": {
+     "below20": 0.046875,
+     "min_home": 10.249999999998105,
+     "fails": []
+    }
+   },
+   "read_value|stay": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 26.999999999999837,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.035416666666666666,
+     "min_home": 14.199999999999466,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.03194444444444444,
+     "min_home": 15.899999999998217,
+     "fails": []
+    },
+    "recovery": {
+     "below20": 0.03958333333333333,
+     "min_home": 10.59999999999689,
+     "fails": []
+    }
+   },
+   "read_value|away": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 26.999999999999837,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.035416666666666666,
+     "min_home": 14.199999999999466,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.02638888888888889,
+     "min_home": 13.449999999998845,
+     "fails": []
+    },
+    "recovery": {
+     "below20": 0.013541666666666667,
+     "min_home": 15.799999999996801,
+     "fails": []
+    }
+   },
+   "read_flat|stay": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 22.849999999999923,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.0,
+     "min_home": 20.699999999999918,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.07222222222222222,
+     "min_home": 11.649999999999368,
+     "fails": []
+    },
+    "recovery": {
+     "below20": 0.016666666666666666,
+     "min_home": 14.649999999997952,
+     "fails": []
+    }
+   },
+   "read_flat|away": {
+    "growth": {
+     "below20": 0.0,
+     "min_home": 22.849999999999923,
+     "fails": []
+    },
+    "common": {
+     "below20": 0.0,
+     "min_home": 20.699999999999918,
+     "fails": []
+    },
+    "intervention": {
+     "below20": 0.05,
+     "min_home": 13.74999999999874,
+     "fails": []
+    },
+    "recovery": {
+     "below20": 0.03229166666666667,
+     "min_home": 14.549999999998343,
+     "fails": []
+    }
+   }
+  }
+ },
+ "verdicts": {
+  "base2_dev_phase_not_above_base": {
+   "frozen": false,
+   "phases": false,
+   "phases_union": false
+  },
+  "read_dev_H_phase_not_above_control": {
+   "frozen": false,
+   "phases": false,
+   "phases_union": false
+  }
+ }
+}

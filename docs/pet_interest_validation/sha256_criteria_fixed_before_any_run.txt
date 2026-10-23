@@ -1,0 +1,6 @@
+# 2026-10-23 round 4: criteria fixed in pet/validate_interest.py BEFORE any run (dev included); recheck module before its run
+bc394d3b4acfc30b84ec3adb8b612eff485321f5ca20d8847868219d20b75d62 *pet/validate_interest.py
+3b69d728005c61be860f4ad716a6c44efe4274c1698e23c7a7e11c73e282c6e6 *pet/engine.py
+67b5acb4e03adf4c157868369f233daeb6002ba0e9fe704d7fb8e88be201f784 *pet/recheck_read_phases.py
+4ca77f12ffbfc189f374232290895fa923b0a702ac9c24bb610a0ff84ac5721d *pet/lifestats.py
+ff5d2663bde970b8fc9cbd78bd3eb7930d83c19b7a8476d0a558f3070a5602bd *pet/validate_read.py

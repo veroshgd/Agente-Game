@@ -1,0 +1,226 @@
+{
+ "final": {
+  "H_rest4_every_unique_whole_life": true,
+  "S_rest4": true,
+  "R": true,
+  "compat_v1_v6": true,
+  "adopt_v6": true,
+  "warning_phase_share_fails": {
+   "v5": 11,
+   "cap2": 15,
+   "rest4": 18,
+   "other": 33
+  }
+ },
+ "home": {
+  "v5": {
+   "runs": 60,
+   "unique_trajectories": 60,
+   "pass": 54,
+   "phase_pass": 49,
+   "all_pass": false,
+   "min_home": 0.0,
+   "zero_hours": 6,
+   "max_below20": 0.0682,
+   "max_phase_below20": 0.091,
+   "upkeep_range": [
+    0.0583,
+    0.0672
+   ],
+   "min_leisure": 0.3453,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 6
+  },
+  "cap2": {
+   "runs": 222,
+   "unique_trajectories": 162,
+   "pass": 162,
+   "phase_pass": 147,
+   "all_pass": false,
+   "min_home": 5.4,
+   "zero_hours": 0,
+   "max_below20": 0.059,
+   "max_phase_below20": 0.1028,
+   "upkeep_range": [
+    0.0556,
+    0.07
+   ],
+   "min_leisure": 0.4469,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 4
+  },
+  "rest4": {
+   "runs": 262,
+   "unique_trajectories": 212,
+   "pass": 212,
+   "phase_pass": 194,
+   "all_pass": false,
+   "min_home": 5.4,
+   "zero_hours": 0,
+   "max_below20": 0.0734,
+   "max_phase_below20": 0.1014,
+   "upkeep_range": [
+    0.0556,
+    0.0689
+   ],
+   "min_leisure": 0.3458,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 5
+  },
+  "other": {
+   "runs": 280,
+   "unique_trajectories": 271,
+   "pass": 271,
+   "phase_pass": 238,
+   "all_pass": false,
+   "min_home": 5.4,
+   "zero_hours": 0,
+   "max_below20": 0.0646,
+   "max_phase_below20": 0.1014,
+   "upkeep_range": [
+    0.0576,
+    0.0684
+   ],
+   "min_leisure": 0.4526,
+   "min_condition": 100.0,
+   "min_kinds_last_week": 5
+  }
+ },
+ "reading": {
+  "v5": {
+   "read_share": {
+    "control": 0.0609,
+    "reading": 0.0872,
+    "garden": 0.0194,
+    "social": 0.0195
+   },
+   "reading_minus_control": {
+    "n": 15,
+    "missing": 0,
+    "mean": 0.0263,
+    "median": 0.0306,
+    "positive": 10,
+    "negative": 5,
+    "ci95": [
+     0.0008,
+     0.0516
+    ],
+    "per_seed": [
+     -0.0292,
+     -0.0111,
+     -0.0007,
+     0.0069,
+     0.0125,
+     0.1139,
+     -0.0611,
+     -0.0528,
+     0.0889,
+     0.0521,
+     0.091,
+     0.0653,
+     0.0306,
+     0.0528,
+     0.0354
+    ]
+   },
+   "entropy": 2.0826,
+   "entropy_whole_life": 2.2122
+  },
+  "v6": {
+   "read_share": {
+    "control": 0.0473,
+    "reading": 0.0785,
+    "garden": 0.0183,
+    "social": 0.0244
+   },
+   "reading_minus_control": {
+    "n": 15,
+    "missing": 0,
+    "mean": 0.0312,
+    "median": 0.0347,
+    "positive": 12,
+    "negative": 2,
+    "ci95": [
+     0.0092,
+     0.0548
+    ],
+    "per_seed": [
+     0.0375,
+     0.0,
+     0.041,
+     0.0111,
+     0.0014,
+     0.1347,
+     -0.0299,
+     -0.0424,
+     0.1056,
+     0.0535,
+     0.0417,
+     0.0569,
+     0.0167,
+     0.0347,
+     0.0049
+    ]
+   },
+   "entropy": 2.0829,
+   "entropy_whole_life": 2.2143
+  },
+  "gap_change_v6_minus_v5": {
+   "n": 15,
+   "missing": 0,
+   "mean": 0.0049,
+   "median": 0.0042,
+   "positive": 9,
+   "negative": 6,
+   "ci95": [
+    -0.009,
+    0.0194
+   ],
+   "per_seed": [
+    0.0667,
+    0.0111,
+    0.0417,
+    0.0042,
+    -0.0111,
+    0.0208,
+    0.0312,
+    0.0104,
+    0.0167,
+    0.0014,
+    -0.0493,
+    -0.0083,
+    -0.0139,
+    -0.0181,
+    -0.0306
+   ]
+  },
+  "verdict": {
+   "R1": true,
+   "R2": true,
+   "R3": true,
+   "pass": true
+  }
+ },
+ "social": {
+  "cap4": {
+   "E1": true,
+   "E2": true,
+   "E3": false,
+   "B1": true,
+   "B2": false,
+   "adopt": false
+  },
+  "rest4": {
+   "E1": true,
+   "E2": true,
+   "E3": true,
+   "B1": true,
+   "B2": true,
+   "adopt": true
+  }
+ },
+ "life_counts": {
+  "runs": 824,
+  "unique_trajectories": 698
+ }
+}
