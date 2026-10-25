@@ -1,0 +1,3 @@
+# 2026-10-25 round 9: launcher and its tests before the one validation run
+78c65ee760c27be808af2f48bc99a07e2dbf06ec4e26f55ebd1e2058a4f0f571 *pet/run_foresight_validation.py
+da5e9c8292f6a9f407dc2b063c71343612d2bb3ce86d3f159644e7bc2c777e4c *tests/test_pet_foresight_launcher.py

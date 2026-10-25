@@ -1,0 +1,4 @@
+# 2026-10-25 round 6: conditions, metrics and rules R0-R4 fixed in pet/diag_plan.py BEFORE any run on dev seeds (smoke on 9999 only)
+f4fe054f6065f8c78854196b1c3a1802a2056e964c7a870452d6a91a7512630e *pet/diag_plan.py
+49ef0d055bef51779d631a2f6a088069491ad0106aaa9286afa9350a9dfe38dc *pet/engine.py
+4153b731b9790bc667464c9e652ba3b44d36e074794a0453cc7217c90e5e166a *pet/diag_interest.py

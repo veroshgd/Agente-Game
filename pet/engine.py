@@ -131,7 +131,24 @@ READ_VALUE_WEIGHT = 60.0     # = PREF_WEIGHT (same bound as the v5 liking; fixed
 # mean of the two (no second bonus): READ_VALUE_WEIGHT * (conf * (S - REF) + (I - REF)) / 2 * gates.
 INTEREST_RATE = 1 / 7        # one week of fully clear results consolidates ~63% (fixed by rule, not tuned)
 READ_LOWRATE_ALPHA_MIN = 0.01   # control 'just a lower learning rate': the single value with a 5x lower floor
+# Round 5 (2026-10-25, pet/diag_interest.py; diagnostics, NOT a rule version). explain_read_value()
+# re-made the choice without the reading term only when the CHOSEN action carried it, so a negative
+# term that pushed the pet from reading to something else was never counted (hard-book pets 3001,
+# 6006, 6010: 51 / 35 / 74 such hours in 60 days, logged 0). With PetAgent.read_audit the whole
+# choice is re-made every hour and every legal candidate's parts are recorded. Pure: no state, no
+# random draw. pref_score_off / pref_goal_off / goal_read_bonus_off split the v5 liking and the plan
+# channels for ablations on copies; all off by default.
 LEISURE_GOALS = ('learn', 'see_the_world')   # = core DISCRETIONARY_GOALS
+# Experiment 'home foresight' (2026-10-25, round 8, pet/validate_foresight.py; NOT a rule version).
+# When the ordered morning update would START a leisure plan (no plan, or a different type than the open
+# one), it first projects the home over the plan's minimum stay with the known ageing and no repair:
+#   projected = shelter - SHELTER_AGEING * 24 * core.GOAL_MIN_DAYS          (= shelter - 16.8)
+# using the home at the entry of the update (before that hour's ageing). If projected < HOME_FORESIGHT_FLOOR,
+# that leisure candidate is left out and the existing rules choose among the rest (same sort, same tie
+# order as without it; no candidate left = no new plan, as the core does with no candidate). Continuing
+# the open plan is never affected. Pure: it reads only the current state, no future event, no random draw.
+SHELTER_AGEING = 0.35        # per hour, = sim.Agent.tick's ageing (no named constant there; checked in tests)
+HOME_FORESIGHT_FLOOR = 20    # = the v4 safe-home standard's 'below 20' line (fixed by rule, not tuned)
 # Why the neighbor could not meet. Invitations skip 'away' and 'full', never 'off_hours'.
 NEIGHBOR_FREE, NEIGHBOR_OFF_HOURS, NEIGHBOR_AWAY, NEIGHBOR_FULL = 'free', 'off_hours', 'away', 'full'
 NEIGHBOR_REST = 'rest'       # resting after a shared activity (only when a rest interval is set)
@@ -176,6 +193,7 @@ class PetAgent(core.Agent):
         self.ordered_goals = False               # experiment base 'ordered': done / stalled / switched in order
         self.home_emergency_unmute = False       # experiment base: no improve_home satiation below HOME_INTERRUPT_BELOW
         self.emergency_no_margin = False         # experiment base2: below HOME_INTERRUPT_BELOW the trigger needs no switch margin
+        self.home_foresight = False              # experiment round 8: no new leisure plan the home would not outlast (ordered only)
         # Experiment 'reading outcome' (see READ_*). Off for every rule version.
         self.reading_outcome = False
         self.read_value_in_decision = True       # ablation: False = world and learning as usual, never in a choice
@@ -188,6 +206,14 @@ class PetAgent(core.Agent):
         self.read_interest_in_decision = True    # ablation: False = I learnt, the term stays the round-3 one
         self.read_alpha_min = EVAL_ALPHA_MIN     # control: READ_LOWRATE_ALPHA_MIN = single value, lower rate
         self.read_I, self.read_today = READ_VALUE_REF, 0
+        # Round 5 diagnostics (see above). Off for every rule version.
+        self.read_audit = False                  # full counterfactual + candidate parts in every decision record
+        self.pref_score_off = False              # ablation: v5 liking out of action scores only
+        self.pref_goal_off = False               # ablation: v5 liking out of goal formation only
+        self.goal_read_bonus_off = False         # ablation: the current plan neither boosts nor damps 'read'
+        # Round 6 (2026-10-25, pet/diag_plan.py): the two halves of goal_read_bonus_off, apart.
+        self.goal_read_offtask_off = False       # ablation: a plan without a 'read' weight no longer damps 'read'
+        self.goal_read_learn_bonus_off = False   # ablation: a plan with a 'read' weight ('learn') no longer boosts it
         # Experiment 'evaluation' (see EVAL_*). Off for every rule version.
         self.evaluation = False                  # learn and record Q
         self.eval_in_decision = True             # ablation: False = learns, never used in choices
@@ -259,7 +285,9 @@ class PetAgent(core.Agent):
             # or 'stalled' because no level beat the old best, was muted 6 days while the home
             # fell to 0-3 (dev 6008, 6009, 6006). Pure: no random draw.
             out = [(g, pri + self._satiation(g, day) if g == 'improve_home' else pri, src) for g, pri, src in out]
-        if self.rules < 5 or self.pref_off:
+        if self.rules < 5 or self.pref_off or self.pref_goal_off:
+            if self.pref_goal_off:
+                self.goal_pref_boost = {}
             return out
         # v5: what it has come to like also shapes what it sets out to do for a few days.
         # Only the leisure goals, gated by slack like the core's own leisure goals, and by
@@ -342,6 +370,8 @@ class PetAgent(core.Agent):
             self._plan_log(day, 'ended', g, pri=pri, reason='interrupt')
             self._close_goal(day, 'switched')
             cands = self.propose_goals(day)
+        if self.home_foresight and cands:
+            cands = self._foresight_filter(cands, day)
         if cands:
             cands.sort(key=lambda x: -x[1])
             best_type, best_pri, best_src = cands[0]
@@ -359,6 +389,22 @@ class PetAgent(core.Agent):
                 g['priority'] = best_pri
         if self.rules >= 5 and self.goal is not None and self.goal is not before:
             self.goal['pref_boost'] = round(getattr(self, 'goal_pref_boost', {}).get(self.goal['type'], 0.0), 4)
+
+    def foresight_projection(self):
+        return self.shelter - SHELTER_AGEING * 24 * core.GOAL_MIN_DAYS
+
+    def _foresight_filter(self, cands, day):
+        """Experiment 'home foresight': leave out leisure plans that would START with a home that cannot stay
+        >= HOME_FORESIGHT_FLOOR over GOAL_MIN_DAYS without repair. Order of the rest unchanged."""
+        proj = self.foresight_projection()
+        if proj >= HOME_FORESIGHT_FLOOR:
+            return cands
+        cur = self.goal['type'] if self.goal else None
+        kept = [c for c in cands if c[0] not in LEISURE_GOALS or c[0] == cur]
+        if len(kept) != len(cands):
+            self._plan_log(day, 'foresight_excluded', self.goal, projected=proj,
+                           excluded=[c[0] for c in cands if c not in kept], left=[c[0] for c in kept])
+        return kept
 
     # ---- experiment 'pause': stash the interrupted plan, re-weigh it after the repair
     def _plan_log(self, day, event, goal, **extra):
@@ -452,7 +498,7 @@ class PetAgent(core.Agent):
         """v5: (contribution, preference key) of the long-term liking for this action.
         Explore takes the best sub-activity available right now (max, not sum), so a
         second option never adds attraction by itself and no liking is counted twice."""
-        if self.rules < 5 or self.pref_off:
+        if self.rules < 5 or self.pref_off or self.pref_score_off:
             return 0.0, None
         if action == 'read':
             key = 'read'
@@ -734,6 +780,65 @@ class PetAgent(core.Agent):
             without = self.choice_without_read_value(day)
             rec['read_value_decisive'] = without != action
             rec['read_value_choice_without'] = without
+        if self.read_audit:
+            rec['audit'] = self.read_audit_record(action, day)
+        return rec
+
+    # ---- round 5 diagnostics
+    def goal_bonus(self, action):
+        if action == 'read' and self.goal is not None:
+            boosts = bool(core.GOAL_ACTIONS.get(self.goal['type'], {}).get('read'))     # only 'learn'
+            if (self.goal_read_bonus_off or (boosts and self.goal_read_learn_bonus_off)
+                    or (not boosts and self.goal_read_offtask_off)):
+                return 0.0
+        return super().goal_bonus(action)
+
+    def read_term_parts(self):
+        """(S part, I part) of read_value_term(): the short-term evaluation and the long-term interest."""
+        n = self.read_n
+        short = 0.0 if n <= 0 else n / (n + EVAL_N0) * (self.read_V - READ_VALUE_REF)
+        if self.read_interest and self.read_interest_in_decision:
+            return short / 2, (self.read_I - READ_VALUE_REF) / 2
+        return short, 0.0
+
+    def _choice_with(self, day, **tmp):
+        """The whole legal choice re-made with some attributes set for the moment (restored after)."""
+        saved = {k: getattr(self, k) for k in tmp}
+        try:
+            for k, v in tmp.items():
+                setattr(self, k, v)
+            return self.choose(day)
+        finally:
+            for k, v in saved.items():
+                setattr(self, k, v)
+
+    def read_audit_record(self, action, day):
+        """Every legal candidate's score; read's rank, its gap to the chosen action, its parts, and the
+        whole choice re-made without each part. Promote / suppress: the reading term made the pet read /
+        kept it from reading. Pure (the tests check state and rng)."""
+        sc = {a: s for a in core.ACTIONS for s in [self.score(a, day)] if s is not None}
+        order = sorted(sc, key=lambda a: (sc[a], a), reverse=True)
+        rec = {'chosen': action, 'scores': sc}
+        if 'read' not in sc:
+            return rec
+        gate = self.need_gate() * (1 - self.home_need()) if self.reading_outcome and self.read_value_in_decision else 0.0
+        s_raw, i_raw = self.read_term_parts()
+        pref, _ = self.preference_part('read', day)
+        rival = max(sc[a] for a in sc if a != 'read') if len(sc) > 1 else None
+        rec.update(read_rank=order.index('read') + 1, read_gap=sc['read'] - (sc[action] if action != 'read' else rival),
+                   S=READ_VALUE_WEIGHT * s_raw * gate, I=READ_VALUE_WEIGHT * i_raw * gate, pref=pref,
+                   goal=self.goal_bonus('read'), goal_type=self.goal['type'] if self.goal else None,
+                   boredom=self.boredom('read'), gate=self.need_gate(), home_need=self.home_need(),
+                   body=(self.hunger, self.energy, self.shelter))
+        cf = {'term': self._choice_with(day, read_value_in_decision=False),
+              'S': self._choice_with(day, read_n=0.0),
+              'I': self._choice_with(day, read_I=READ_VALUE_REF),
+              'pref': self._choice_with(day, pref_score_off=True),
+              'goal': self._choice_with(day, goal_read_bonus_off=True)}
+        rec['without'] = cf
+        rec['effect'] = {k: ('promote' if action == 'read' and w != 'read' else
+                             'suppress' if action != 'read' and w == 'read' else
+                             'other' if w != action else None) for k, w in cf.items()}
         return rec
 
     def act(self, action, day, hour=0):

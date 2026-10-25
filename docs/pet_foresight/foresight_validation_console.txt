@@ -1,0 +1,97 @@
+{
+ "final": {
+  "E1_gap_60d": true,
+  "E2_gap_days_30_60": true,
+  "E3_more_than_current": true,
+  "H1_whole_life": true,
+  "H2_phase_not_above_current": true,
+  "L1_leisure_kept": true,
+  "R1_reading_not_lower": true,
+  "S_social_kept": true,
+  "D_diversity": true,
+  "compat_v1_v6": true,
+  "pass": true
+ },
+ "checks": {},
+ "safety": {
+  "current": {
+   "unique_trajectories": 531,
+   "pass": 530,
+   "phase_fails": 11,
+   "min_home": 2.45,
+   "failing": [
+    "current|route|7041|control",
+    "current|route|7042|control",
+    "current|matched|7044|clear|swap",
+    "current|route|7045|control",
+    "current|pair|7045|rep1|A",
+    "current|pair|7047|rep1|A",
+    "current|matched|7047|clear|swap",
+    "current|route|7052|control",
+    "current|route|7057|control",
+    "current|route|7059|control",
+    "current|route|7060|control"
+   ]
+  },
+  "no_offtask": {
+   "unique_trajectories": 572,
+   "pass": 571,
+   "phase_fails": 24,
+   "min_home": 5.05,
+   "failing": [
+    "no_offtask|route|7041|control",
+    "no_offtask|pair|7041|rep0|B",
+    "no_offtask|route|7042|control",
+    "no_offtask|pair|7043|rep1|A",
+    "no_offtask|matched|7043|hard|swap",
+    "no_offtask|pair|7045|rep0|B",
+    "no_offtask|pair|7045|rep1|B",
+    "no_offtask|pair|7045|rep2|B",
+    "no_offtask|plastic|7045|away",
+    "no_offtask|pair|7046|rep1|B",
+    "no_offtask|pair|7046|rep2|B",
+    "no_offtask|pair|7048|rep1|A",
+    "no_offtask|matched|7050|hard|swap",
+    "no_offtask|pair|7051|rep1|B",
+    "no_offtask|plastic|7051|away",
+    "no_offtask|route|7052|control",
+    "no_offtask|pair|7054|rep0|B",
+    "no_offtask|pair|7054|rep1|B",
+    "no_offtask|pair|7054|rep2|B",
+    "no_offtask|route|7057|control",
+    "no_offtask|pair|7057|rep1|B",
+    "no_offtask|route|7059|control",
+    "no_offtask|route|7060|control",
+    "no_offtask|reading|7045|rep0|hard"
+   ]
+  },
+  "foresight": {
+   "unique_trajectories": 530,
+   "pass": 530,
+   "phase_fails": 6,
+   "min_home": 6.75,
+   "failing": [
+    "foresight|route|7041|control",
+    "foresight|route|7042|control",
+    "foresight|route|7052|control",
+    "foresight|route|7057|control",
+    "foresight|route|7059|control",
+    "foresight|route|7060|control"
+   ]
+  },
+  "both": {
+   "unique_trajectories": 572,
+   "pass": 572,
+   "phase_fails": 6,
+   "min_home": 8.05,
+   "failing": [
+    "both|route|7041|control",
+    "both|route|7042|control",
+    "both|route|7052|control",
+    "both|route|7057|control",
+    "both|route|7059|control",
+    "both|route|7060|control"
+   ]
+  }
+ }
+}

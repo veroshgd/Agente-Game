@@ -1,0 +1,57 @@
+{
+ "verdict": {
+  "reading_factor_supported": {
+   "no_close": true,
+   "no_sat": false,
+   "both": true
+  },
+  "reading_conclusion": "supported: no_close, both",
+  "social_A_adds_adaptation_beyond_B2": true,
+  "social_amplification_flag": true
+ },
+ "checks": {
+  "read_current_R1_equals_round12_B2": true,
+  "social_B2_equals_round12_B2": true,
+  "social_ref_equals_round12_ref": true,
+  "social_A_equals_round11_A": true,
+  "read_same_growth": true,
+  "read_instrument_ok": true,
+  "read_both_equals_no_close": true,
+  "social_trace_instrument_ok": {
+   "B2": true,
+   "B2A": true
+  }
+ },
+ "compat": true,
+ "dR1": {
+  "no_close": {
+   "mean": -0.0203,
+   "ci95": [
+    -0.0282,
+    -0.0131
+   ]
+  },
+  "no_sat": {
+   "mean": -0.0018,
+   "ci95": [
+    -0.0055,
+    0.0018
+   ]
+  },
+  "both": {
+   "mean": -0.0203,
+   "ci95": [
+    -0.0282,
+    -0.0131
+   ]
+  }
+ },
+ "interaction": {
+  "mean": 0.0018,
+  "ci95": [
+   -0.0018,
+   0.0055
+  ]
+ }
+}
+exit=0

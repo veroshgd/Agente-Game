@@ -1,0 +1,7 @@
+# 2026-10-25 round 12: B2 formula, arms, reuse of round-11 CRITERIA and the diagnosis fixed BEFORE any dev run (smoke on 9999 only)
+85c95397d7884779126efe696806e7658c81295c5e7987c55fa748a6b7325e19 *pet/social_interest_b2.py
+c80be9ab668b9306df8f36623cea31cf6bef428f6773b831be6b0a4476b96d6e *pet/validate_social_b2.py
+a6cc9d1d3a823ef82ac4c812dad90f84b421ff6a8a48b6967102b466107d702e *tests/test_pet_social_b2.py
+24e168c097aa495b32ccf60eb3df3d9262f3136867dbda903463d508f42861bd *pet/validate_social.py
+988137086866e5154710da568fc3948b66c0dc7f561dfefeaacb7358d761f2af *pet/social_interest.py
+2b4404d38aa63fee9ddc6eca76c49741d04457751f39d7e8b2453d8b2dafffa8 *pet/engine.py

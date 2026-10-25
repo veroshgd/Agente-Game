@@ -1,0 +1,4 @@
+# 2026-10-25 round 8: candidate, conditions and CRITERIA fixed in pet/validate_foresight.py BEFORE any dev run (smoke on 9999 only)
+b9d0d9520d90b60a1dd551508317134caf4c7a3ebad3cc838c526403d1c727d8 *pet/validate_foresight.py
+2b4404d38aa63fee9ddc6eca76c49741d04457751f39d7e8b2453d8b2dafffa8 *pet/engine.py
+268a14bf2e3662afef38c5f496f8cfeb125226b9761a78a3f01cfda097886ca4 *tests/test_pet_foresight.py

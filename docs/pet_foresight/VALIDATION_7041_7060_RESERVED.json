@@ -1,0 +1,33 @@
+{
+ "reserved_at": "2026-10-25T11:35:49+01:00",
+ "pid": 11276,
+ "hashes": {
+  "pet/engine.py": "2b4404d38aa63fee9ddc6eca76c49741d04457751f39d7e8b2453d8b2dafffa8",
+  "pet/validate_foresight.py": "b9d0d9520d90b60a1dd551508317134caf4c7a3ebad3cc838c526403d1c727d8",
+  "tests/test_pet_foresight.py": "268a14bf2e3662afef38c5f496f8cfeb125226b9761a78a3f01cfda097886ca4"
+ },
+ "config_id": "1cde71e7a863",
+ "seeds": [
+  7041,
+  7042,
+  7043,
+  7044,
+  7045,
+  7046,
+  7047,
+  7048,
+  7049,
+  7050,
+  7051,
+  7052,
+  7053,
+  7054,
+  7055,
+  7056,
+  7057,
+  7058,
+  7059,
+  7060
+ ],
+ "note": "seeds 7041-7060 are used from this moment, whatever the outcome; never delete"
+}

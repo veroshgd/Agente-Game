@@ -1,0 +1,274 @@
+{
+ "case": "6006/rep2/hard/no_offtask",
+ "fingerprint": "a9489033e78a59d5",
+ "rng": "c0770f975fab9418",
+ "entries": [
+  {
+   "day": 44,
+   "home": 40.39999999999998,
+   "goal": "stock_food",
+   "age": 3,
+   "in_min_stay": false,
+   "core_closes": null,
+   "progress": 0.16666666666666666,
+   "pri": {
+    "improve_home": 0.3877520452232757,
+    "stock_food": 0.5833333333333334,
+    "learn": 0.2566742620456899,
+    "see_the_world": 0.19737403523731126
+   },
+   "trigger_home": false,
+   "repair_lead": -0.19558128811005765,
+   "margin": 0.25,
+   "common_day": 24
+  },
+  {
+   "day": 45,
+   "home": 31.999999999999943,
+   "goal": "stock_food",
+   "age": 4,
+   "in_min_stay": false,
+   "core_closes": null,
+   "progress": 0.3333333333333333,
+   "pri": {
+    "improve_home": 0.6980748157506603,
+    "stock_food": 0.4666666666666666,
+    "learn": 0.4984971531295956,
+    "see_the_world": 0.670344672005861
+   },
+   "trigger_home": false,
+   "repair_lead": 0.2314081490839937,
+   "margin": 0.25,
+   "common_day": 25
+  },
+  {
+   "day": 46,
+   "home": 23.59999999999991,
+   "goal": "stock_food",
+   "age": 5,
+   "in_min_stay": false,
+   "core_closes": null,
+   "progress": 0.6666666666666666,
+   "pri": {
+    "improve_home": 1.0082662608150248,
+    "stock_food": 0.2333333333333333,
+    "learn": 0.9700075236028409,
+    "see_the_world": 1.2854172192622626
+   },
+   "trigger_home": false,
+   "repair_lead": 0.7749329274816915,
+   "margin": 0.25,
+   "common_day": 26
+  },
+  {
+   "day": 47,
+   "home": 15.19999999999988,
+   "goal": "see_the_world",
+   "age": 1,
+   "in_min_stay": true,
+   "core_closes": null,
+   "progress": 0.7,
+   "pri": {
+    "improve_home": 1.3179754699930326,
+    "stock_food": 0.2333333333333333,
+    "learn": 0.9463243789090857,
+    "see_the_world": 1.2172113470253738
+   },
+   "trigger_home": false,
+   "repair_lead": 0.1007641229676588,
+   "margin": 0.25,
+   "common_day": 27
+  },
+  {
+   "day": 48,
+   "home": 6.799999999999889,
+   "goal": "see_the_world",
+   "age": 2,
+   "in_min_stay": false,
+   "core_closes": "done",
+   "progress": 1.0,
+   "pri": {
+    "improve_home": 1.630288049479598,
+    "stock_food": 0.4083333333333333,
+    "learn": 0.5768099278160634,
+    "see_the_world": 0.7168374572128572
+   },
+   "trigger_home": true,
+   "repair_lead": 0.9134505922667407,
+   "margin": 0.25,
+   "common_day": 28
+  },
+  {
+   "day": 49,
+   "home": 42.399999999999864,
+   "goal": "improve_home",
+   "age": 1,
+   "in_min_stay": true,
+   "core_closes": null,
+   "progress": 0.5299999999999983,
+   "pri": {
+    "improve_home": 0.31128012435828195,
+    "stock_food": 0.4083333333333333,
+    "learn": 0.6113743761965142,
+    "see_the_world": 0.13785595256591487
+   },
+   "trigger_home": false,
+   "repair_lead": 0.0,
+   "margin": 0.25,
+   "common_day": 29
+  },
+  {
+   "day": 50,
+   "home": 55.99999999999983,
+   "goal": "improve_home",
+   "age": 2,
+   "in_min_stay": false,
+   "core_closes": null,
+   "progress": 0.6999999999999978,
+   "pri": {
+    "improve_home": 0.09915341630752239,
+    "stock_food": 0.4083333333333333,
+    "learn": 0.6074495030430592,
+    "see_the_world": 0.3080272853818027
+   },
+   "trigger_home": false,
+   "repair_lead": 0.0,
+   "margin": 0.25,
+   "common_day": 30
+  },
+  {
+   "day": 51,
+   "home": 47.599999999999795,
+   "goal": "learn",
+   "age": 1,
+   "in_min_stay": true,
+   "core_closes": null,
+   "progress": 0.5833333333333334,
+   "pri": {
+    "improve_home": 0.1888970452729196,
+    "stock_food": 0.2916666666666667,
+    "learn": 0.9435875475771395,
+    "see_the_world": 0.8237583299890678
+   },
+   "trigger_home": false,
+   "repair_lead": -0.7546905023042199,
+   "margin": 0.25,
+   "common_day": 31
+  },
+  {
+   "day": 52,
+   "home": 39.19999999999976,
+   "goal": "learn",
+   "age": 2,
+   "in_min_stay": false,
+   "core_closes": "done",
+   "progress": 1.0,
+   "pri": {
+    "improve_home": 0.4356887773989351,
+    "stock_food": 0.5249999999999999,
+    "learn": 0.40382525347198495,
+    "see_the_world": 0.2247619046025437
+   },
+   "trigger_home": false,
+   "repair_lead": 0.03186352392695013,
+   "margin": 0.25,
+   "common_day": 32
+  },
+  {
+   "day": 53,
+   "home": 30.799999999999727,
+   "goal": "stock_food",
+   "age": 1,
+   "in_min_stay": true,
+   "core_closes": null,
+   "progress": 0.75,
+   "pri": {
+    "improve_home": 0.7456615431478794,
+    "stock_food": 0.175,
+    "learn": 0.29780165771817324,
+    "see_the_world": 1.190821457257894
+   },
+   "trigger_home": false,
+   "repair_lead": 0.5706615431478794,
+   "margin": 0.25,
+   "common_day": 33
+  },
+  {
+   "day": 54,
+   "home": 22.399999999999693,
+   "goal": "stock_food",
+   "age": 2,
+   "in_min_stay": false,
+   "core_closes": null,
+   "progress": 0.6666666666666666,
+   "pri": {
+    "improve_home": 1.0555359147993866,
+    "stock_food": 0.2333333333333333,
+    "learn": 0.42138301811856704,
+    "see_the_world": 1.2771004082413462
+   },
+   "trigger_home": false,
+   "repair_lead": 0.8222025814660533,
+   "margin": 0.25,
+   "common_day": 34
+  },
+  {
+   "day": 55,
+   "home": 13.99999999999967,
+   "goal": "see_the_world",
+   "age": 1,
+   "in_min_stay": true,
+   "core_closes": null,
+   "progress": 0.7,
+   "pri": {
+    "improve_home": 1.364950378345808,
+    "stock_food": 0.175,
+    "learn": 0.5482468057214314,
+    "see_the_world": 1.2066017444651624
+   },
+   "trigger_home": true,
+   "repair_lead": 0.15834863388064546,
+   "margin": 0.25,
+   "common_day": 35
+  },
+  {
+   "day": 56,
+   "home": 5.599999999999678,
+   "goal": "see_the_world",
+   "age": 2,
+   "in_min_stay": false,
+   "core_closes": "done",
+   "progress": 1.0,
+   "pri": {
+    "improve_home": 1.6770014294090947,
+    "stock_food": 0.35,
+    "learn": 0.43147033791937267,
+    "see_the_world": 0.852002573929286
+   },
+   "trigger_home": true,
+   "repair_lead": 0.8249988554798087,
+   "margin": 0.25,
+   "common_day": 36
+  },
+  {
+   "day": 57,
+   "home": 41.19999999999965,
+   "goal": "improve_home",
+   "age": 1,
+   "in_min_stay": true,
+   "core_closes": null,
+   "progress": 0.5149999999999956,
+   "pri": {
+    "improve_home": 0.3587596402733571,
+    "stock_food": 0.2333333333333333,
+    "learn": 0.8788065669286146,
+    "see_the_world": 0.660183662628413
+   },
+   "trigger_home": false,
+   "repair_lead": 0.0,
+   "margin": 0.25,
+   "common_day": 37
+  }
+ ],
+ "same_life_as_recheck_plan_days": true
+}

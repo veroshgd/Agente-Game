@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT / 'tests' / 'fixtures'))
 import pet.engine as engine
 from pet import recheck_read_phases as RP
 from pet import validate_interest as VI
+from pet import run_foresight_validation as RV
 from pet import validate_read as VR
 from pet.engine import RULES, Session
 from make_rules_baseline_v5 import behavior_digest
@@ -177,6 +178,8 @@ def test_probe_isolates_the_reading_memory_and_never_touches_the_life():
 
 
 def test_criteria_fixed_and_validation_seeds_unused():
-    assert VI.seeds_unused() and VI.VALIDATION_SEEDS[0] == 7041
+    # 2026-10-25 round 9: 7041-7060 are no longer free; no earlier round listed them, and they were used once,
+    # only by the guarded foresight validation (reservation record).
+    assert RV.seeds_used_only_by_this_validation() and VI.VALIDATION_SEEDS[0] == 7041
     assert VI.CANDIDATE == 'interest' and VI.CRITERIA['P1_min_late_gap'] == 0.005
     assert VI.CRITERIA['C1_min_keep_minus_swap'] == 0.01

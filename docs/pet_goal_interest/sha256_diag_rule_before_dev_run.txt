@@ -1,0 +1,3 @@
+# 2026-10-25 round 5: decision rule G1-G3 fixed in pet/diag_interest.py BEFORE any run on dev seeds (smoke on 9999 only)
+4153b731b9790bc667464c9e652ba3b44d36e074794a0453cc7217c90e5e166a *pet/diag_interest.py
+4d94b0376702410dc32c8efa94eee111b394306ac2ec73bd875343ffd9a6bf1b *pet/engine.py

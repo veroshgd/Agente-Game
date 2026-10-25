@@ -190,5 +190,7 @@ def test_probe_copies_never_touch_the_life():
 def test_criteria_fixed_and_validation_seeds_unused():
     used = (set(VE.DEV_SEEDS) | set(VE.VALIDATION_SEEDS) | set(VP.VALIDATION_SEEDS) | set(V6.VALIDATION_SEEDS)
             | set(V6.SPENT_SEEDS) | set(VR.DEV_SEEDS))
-    assert not set(VR.VALIDATION_SEEDS) & used and VR.VALIDATION_SEEDS[0] == 7041
+    assert not set(VR.VALIDATION_SEEDS) & used and VR.VALIDATION_SEEDS[0] == 7041   # no earlier round used them
+    from pet import run_foresight_validation as RV
+    assert RV.seeds_used_only_by_this_validation()        # round 9: used once since, by the foresight validation
     assert VR.CRITERIA['K1_min_gap'] == 0.01 and VR.CANDIDATE == 'read_value'

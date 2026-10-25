@@ -1,0 +1,105 @@
+{
+ "final": {
+  "P1_read_persists": true,
+  "P2_read_persists_late": true,
+  "P3_social_persists": false,
+  "P4_social_persists_late": true,
+  "G_interest_moves_out": true,
+  "R1_reading_adapts": false,
+  "R2_social_adapts": false,
+  "L1_learning_adds_read": true,
+  "L2_learning_adds_social": true,
+  "N0_none_identical": true,
+  "N1_growth_identical": true,
+  "H1_whole_life": true,
+  "H2_phase_not_above_ref": true,
+  "M_maintenance": true,
+  "S_social_pair": true,
+  "D_diversity": true,
+  "compat_v1_v6": true,
+  "pass": false
+ },
+ "checks": {
+  "same_as_round11": {
+   "ref": true,
+   "none": true,
+   "B": true
+  }
+ },
+ "instrument": {
+  "B": true,
+  "B2": true
+ },
+ "values": {
+  "P1": {
+   "mean": 0.0173,
+   "ci95": [
+    0.0115,
+    0.0227
+   ]
+  },
+  "P2": {
+   "mean": 0.0056,
+   "ci95": [
+    0.0009,
+    0.0103
+   ]
+  },
+  "P3": {
+   "mean": 0.1263,
+   "ci95": [
+    0.0961,
+    0.1565
+   ]
+  },
+  "P4": {
+   "mean": 0.0742,
+   "ci95": [
+    0.0483,
+    0.0997
+   ]
+  },
+  "G": {
+   "mean": 0.0801,
+   "ci95": [
+    0.0641,
+    0.0962
+   ]
+  },
+  "R1": {
+   "mean": -0.0044,
+   "ci95": [
+    -0.0068,
+    -0.0016
+   ]
+  },
+  "R2": {
+   "mean": -0.1161,
+   "ci95": [
+    -0.1443,
+    -0.09
+   ]
+  },
+  "L1": {
+   "mean": -0.0044,
+   "ci95": [
+    -0.0068,
+    -0.0016
+   ]
+  },
+  "L2": {
+   "mean": -0.1161,
+   "ci95": [
+    -0.1443,
+    -0.09
+   ]
+  },
+  "M": {
+   "mean": -0.0001,
+   "ci95": [
+    -0.0002,
+    0.0
+   ]
+  }
+ }
+}

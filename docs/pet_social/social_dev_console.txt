@@ -1,0 +1,143 @@
+{
+ "final": {
+  "P1_read_persists": true,
+  "P2_read_persists_late": true,
+  "P3_social_persists": true,
+  "P4_social_persists_late": true,
+  "G_interest_moves_out": true,
+  "R1_reading_adapts": false,
+  "R2_social_adapts": true,
+  "L1_learning_adds_read": true,
+  "L2_learning_adds_social": true,
+  "N0_none_identical": true,
+  "N1_growth_identical": true,
+  "H1_whole_life": true,
+  "H2_phase_not_above_ref": true,
+  "M_maintenance": true,
+  "S_social_pair": true,
+  "D_diversity": true,
+  "compat_v1_v6": true,
+  "pass": false
+ },
+ "checks": {
+  "ref_catalogue_is_validated_candidate": true
+ },
+ "safety": {
+  "ref": {
+   "unique_trajectories": 790,
+   "pass": 790,
+   "phase_fails": 4,
+   "min_home": 8.05
+  },
+  "B": {
+   "unique_trajectories": 1718,
+   "pass": 1718,
+   "phase_fails": 4,
+   "min_home": 8.05
+  },
+  "A": {
+   "unique_trajectories": 1664,
+   "pass": 1664,
+   "phase_fails": 5,
+   "min_home": 7.25
+  },
+  "B_sym": {
+   "unique_trajectories": 1570,
+   "pass": 1570,
+   "phase_fails": 6,
+   "min_home": 6.9
+  }
+ },
+ "values": {
+  "P1": {
+   "mean": 0.0202,
+   "ci95": [
+    0.0147,
+    0.0255
+   ],
+   "positive": 18,
+   "negative": 2
+  },
+  "P2": {
+   "mean": 0.0102,
+   "ci95": [
+    0.0064,
+    0.0138
+   ],
+   "positive": 18,
+   "negative": 2
+  },
+  "P3": {
+   "mean": 0.3156,
+   "ci95": [
+    0.2797,
+    0.3563
+   ],
+   "positive": 20,
+   "negative": 0
+  },
+  "P4": {
+   "mean": 0.1421,
+   "ci95": [
+    0.1161,
+    0.1718
+   ],
+   "positive": 20,
+   "negative": 0
+  },
+  "G": {
+   "mean": 0.1668,
+   "ci95": [
+    0.1509,
+    0.1833
+   ],
+   "positive": 20,
+   "negative": 0
+  },
+  "R1": {
+   "mean": -0.0059,
+   "ci95": [
+    -0.0099,
+    -0.0023
+   ],
+   "positive": 6,
+   "negative": 14
+  },
+  "R2": {
+   "mean": -0.2274,
+   "ci95": [
+    -0.2621,
+    -0.1953
+   ],
+   "positive": 0,
+   "negative": 20
+  },
+  "L1": {
+   "mean": -0.0059,
+   "ci95": [
+    -0.0099,
+    -0.0023
+   ],
+   "positive": 6,
+   "negative": 14
+  },
+  "L2": {
+   "mean": -0.2274,
+   "ci95": [
+    -0.2621,
+    -0.1953
+   ],
+   "positive": 0,
+   "negative": 20
+  },
+  "M": {
+   "mean": 0.0001,
+   "ci95": [
+    -0.0002,
+    0.0004
+   ],
+   "positive": 6,
+   "negative": 4
+  }
+ }
+}

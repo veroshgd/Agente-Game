@@ -1,0 +1,6 @@
+# 2026-10-25 round 11: arms, plan-penalty treatment, design and CRITERIA fixed in pet/validate_social.py BEFORE any dev run (smoke on 9999 only)
+24e168c097aa495b32ccf60eb3df3d9262f3136867dbda903463d508f42861bd *pet/validate_social.py
+988137086866e5154710da568fc3948b66c0dc7f561dfefeaacb7358d761f2af *pet/social_interest.py
+2b4404d38aa63fee9ddc6eca76c49741d04457751f39d7e8b2453d8b2dafffa8 *pet/engine.py
+b9d0d9520d90b60a1dd551508317134caf4c7a3ebad3cc838c526403d1c727d8 *pet/validate_foresight.py
+455df41252221e9649f047422f3f5d8db7f851f30a43d4d8630efe8cdc6faae4 *tests/test_pet_social_interest.py
